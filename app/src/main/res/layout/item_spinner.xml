@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/custom_text_spinner"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerVertical="true"
+    android:fontFamily="@font/montserrat_medium"
+    android:textStyle="bold"
+    android:textColor="@color/primary"
+    android:textSize="@dimen/_12sdp"
+    android:layout_marginStart="@dimen/_25sdp"
+
+    tools:text="CC:00:BE:00:00:04">
+</TextView>

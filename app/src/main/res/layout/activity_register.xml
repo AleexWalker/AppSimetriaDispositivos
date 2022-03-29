@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradiente"
+    tools:context=".auth.Register">
+
+    <ImageView
+        android:id="@+id/logoSimetriaRegister"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/simetria"
+        tools:ignore="ImageContrastCheck" />
+
+    <ImageView
+        android:id="@+id/simetriaSinLogoRegister"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:src="@drawable/simetria_sin_logo"
+        android:layout_marginStart="@dimen/_30sdp"
+        android:layout_marginEnd="@dimen/_30sdp"
+
+        app:layout_constraintTop_toBottomOf="@+id/logoSimetriaRegister"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/textoRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_100sdp"
+        android:layout_marginStart="@dimen/_30sdp"
+        android:text="REGISTER"
+        android:fontFamily="@font/montserrat_medium"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+
+        app:layout_constraintTop_toBottomOf="@+id/simetriaSinLogoRegister"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/usuarioRegister"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginStart="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginEnd="@dimen/_30sdp"
+        android:background="@drawable/inputs_seleccion"
+        android:drawableStart="@drawable/ic_account"
+        android:drawablePadding="12dp"
+        android:ems="10"
+        android:fontFamily="@font/montserrat_medium"
+        android:hint="Username"
+        android:padding="12dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="14sp"
+        android:inputType="textShortMessage"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textoRegister"
+        tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+
+    <EditText
+        android:id="@+id/contraseñaRegister"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginStart="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginEnd="@dimen/_30sdp"
+        android:background="@drawable/inputs_seleccion"
+        android:drawableStart="@drawable/ic_lock"
+        android:drawablePadding="12dp"
+        android:ems="10"
+        android:fontFamily="@font/montserrat_medium"
+        android:hint="Password"
+        android:padding="12dp"
+        android:textColorHint="@color/white"
+        android:textSize="14sp"
+        android:textColor="@color/white"
+        android:inputType="textPassword"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/usuarioRegister"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <EditText
+        android:id="@+id/confirmarContraseñaRegister"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginStart="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginEnd="@dimen/_30sdp"
+        android:background="@drawable/inputs_seleccion"
+        android:drawableStart="@drawable/ic_lock"
+        android:drawablePadding="12dp"
+        android:ems="10"
+        android:fontFamily="@font/montserrat_medium"
+        android:hint="Confirm Password"
+        android:padding="12dp"
+        android:textColorHint="@color/white"
+        android:textSize="14sp"
+        android:textColor="@color/white"
+        android:inputType="textPassword"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/contraseñaRegister"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/botonRegister"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="@dimen/_11sdp"
+        android:layout_marginStart="@dimen/_30sdp"
+        android:layout_marginEnd="@dimen/_30sdp"
+        app:cardCornerRadius="@dimen/_20sdp"
+        android:backgroundTint="#0256a7"
+        app:cardElevation="@dimen/_20sdp"
+
+        app:layout_constraintTop_toBottomOf="@+id/confirmarContraseñaRegister"
+        app:layout_constraintLeft_toLeftOf="parent">
+
+        <TextView
+            android:id="@+id/textoBotonLogin"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="Register New User"
+            android:fontFamily="@font/montserrat_medium"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"/>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <LinearLayout
+        android:id="@+id/layoutRegistrarRegister"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:layout_marginStart="@dimen/_30sdp"
+        android:layout_marginEnd="@dimen/_30sdp"
+
+        app:layout_constraintTop_toBottomOf="@+id/botonRegister"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/textoCuentaRegister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="5dp"
+            android:text="Have a certified account?"
+            android:textSize="11sp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/montserrat_medium"/>
+
+        <TextView
+            android:id="@+id/textoLoginRegister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginStart="10dp"
+            android:text="LOG IN"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:textColor="#0256a7"
+            android:fontFamily="@font/montserrat_medium"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="155dp"
+        android:layout_marginEnd="156dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/simetria1" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1031909805397",
+    "project_id": "appsimetria",
+    "storage_bucket": "appsimetria.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1031909805397:android:93f15f7c44d907fd0d33dc",
+        "android_client_info": {
+          "package_name": "com.example.appsimetria"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1031909805397-guvmnvruac29nc4k6hkikhr06c8l4j72.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC_fOVPnflXAXZftV7ddPQd-Qnh9td4jeQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1031909805397-guvmnvruac29nc4k6hkikhr06c8l4j72.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

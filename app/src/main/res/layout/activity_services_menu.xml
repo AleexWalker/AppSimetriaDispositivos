@@ -1,0 +1,1101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ServicesMenu"
+    android:background="@color/card_bvackground">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintArribaOpciones"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_125sdp"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@color/primary">
+
+    <ImageView
+        android:id="@+id/imagenAtras"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:src="@drawable/back1"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:contentDescription="@string/desc" />
+
+    <ImageView
+        android:id="@+id/logoSimetria"
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="100dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/simetria"
+        android:contentDescription="@string/desc" />
+
+    <ImageView
+        android:id="@+id/simetriaSinLogoLogIn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_30sdp"
+        android:src="@drawable/simetria_sin_logo"
+        android:layout_marginStart="@dimen/_30sdp"
+        android:layout_marginEnd="@dimen/_30sdp"
+
+        app:layout_constraintTop_toBottomOf="@+id/logoSimetria"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:contentDescription="@string/desc" />
+
+    <ImageView
+        android:id="@+id/imagenMenu"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_18sdp"
+        android:src="@drawable/menu1"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:contentDescription="@string/desc" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardEscaneo"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_32sdp"
+        android:layout_marginTop="@dimen/_110sdp"
+        android:layout_marginStart="@dimen/_30sdp"
+        android:layout_marginEnd="@dimen/_30sdp"
+        android:translationZ="@dimen/_100sdp"
+
+        app:strokeWidth="@dimen/_1sdp"
+        app:strokeColor="@color/color_simetria_7"
+        app:cardCornerRadius="@dimen/_50sdp"
+        app:cardElevation="@dimen/_5sdp"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:translationZ="@dimen/_100sdp">
+
+            <TextView
+                android:id="@id/textoEscaneoActivo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_9sdp"
+                android:textColor="#002b52"
+                android:fontFamily="@font/montserrat_medium"
+                android:textStyle="bold"
+
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="@dimen/_12sdp"/>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardEscaneoImagen"
+                android:layout_width="@dimen/_28sdp"
+                android:layout_height="@dimen/_28sdp"
+                app:cardCornerRadius="@dimen/_30sdp"
+
+                app:strokeWidth="@dimen/_1sdp"
+                app:strokeColor="@color/color_simetria_7"
+
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_2sdp"
+                android:layout_marginStart="@dimen/_250sdp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/primary">
+
+                    <ImageView
+                        android:id="@+id/imagenAdd"
+                        android:layout_width="@dimen/_18sdp"
+                        android:layout_height="@dimen/_18sdp"
+                        android:src="@drawable/barcode3"
+
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:contentDescription="@string/desc" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:id="@+id/textoEscaneoActivo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_8sdp"
+                android:textAlignment="viewStart"
+
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginStart="@dimen/_15sdp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/textoServicios"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Servicios"
+        android:textColor="@color/primary_text_and_stroke"
+        android:textSize="@dimen/_18sdp"
+        android:textStyle="bold"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardEscaneo"
+        app:layout_constraintBottom_toTopOf="@+id/constraintMenuAdd"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:fontFamily="@font/montserrat_medium"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintMenuAdd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintTop_toBottomOf="@+id/textoServicios"
+        app:layout_constraintStart_toStartOf="parent"
+
+        android:layout_marginTop="@dimen/_5sdp">
+
+        <TextView
+            android:id="@+id/textoServiciosAdd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Añadir/reubicar dispositivo en memoria"
+            android:textColor="@color/primary_text_and_stroke"
+            android:textSize="@dimen/_7sdp"
+            android:textStyle="bold"
+
+            app:layout_constraintStart_toStartOf="@id/cardAltaMaps"
+            app:layout_constraintTop_toTopOf="parent"
+
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:fontFamily="@font/montserrat_medium"/>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardAltaMaps"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_55sdp"
+            android:layout_marginStart="@dimen/_35sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:translationZ="@dimen/_100sdp"
+
+            app:strokeColor="@color/primary_text_and_stroke"
+            app:strokeWidth="@dimen/_1sdp"
+
+            app:cardCornerRadius="@dimen/_30sdp"
+            app:cardElevation="@dimen/_5sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textoServiciosAdd"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:layout_marginBottom="@dimen/_10sdp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/primary"
+                android:translationZ="20dp">
+
+                <ImageView
+                    android:id="@+id/imagenDispositiveAdd"
+                    android:layout_width="@dimen/_15sdp"
+                    android:layout_height="@dimen/_15sdp"
+                    android:src="@drawable/barcode"
+
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toTopOf="@+id/imagenCalendarAdd"
+                    app:layout_constraintEnd_toEndOf="parent"
+
+                    android:layout_marginEnd="@dimen/_180sdp"
+                    android:contentDescription="@string/desc" />
+
+                <ImageView
+                    android:id="@+id/imagenCalendarAdd"
+                    android:layout_width="@dimen/_14sdp"
+                    android:layout_height="@dimen/_14sdp"
+                    android:src="@drawable/calendar"
+
+                    app:layout_constraintTop_toBottomOf="@+id/imagenDispositiveAdd"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+
+                    android:layout_marginEnd="@dimen/_180sdp"
+                    android:contentDescription="@string/desc" />
+
+                <TextView
+                    android:id="@+id/textoUltimoEscaneoAdd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_7sdp"
+                    android:textStyle="bold"
+                    android:textColor="@color/primary_text_and_stroke"
+                    android:fontFamily="@font/montserrat_medium"
+
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toTopOf="@+id/textoDiaAdd"
+                    app:layout_constraintStart_toEndOf="@+id/imagenDispositiveAdd"
+                    android:layout_marginStart="@dimen/_7sdp"/>
+
+                <TextView
+                    android:id="@+id/textoDiaAdd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_7sdp"
+                    android:textStyle="bold"
+                    android:textColor="@color/primary_text_and_stroke"
+                    android:fontFamily="@font/montserrat_medium"
+
+                    app:layout_constraintTop_toBottomOf="@+id/textoUltimoEscaneoAdd"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/imagenCalendarAdd"
+
+                    android:layout_marginStart="@dimen/_7sdp"
+                    android:layout_marginTop="@dimen/_2sdp" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardImagenAdd2"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginStart="@dimen/_20sdp"
+
+            app:strokeColor="@color/white"
+            app:strokeWidth="@dimen/_1sdp"
+
+            app:cardCornerRadius="@dimen/_100sdp"
+            app:cardElevation="@dimen/_7sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+            android:layout_marginTop="@dimen/_2sdp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/color_simetria_7"
+                android:translationZ="20dp">
+
+                <ImageView
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:src="@drawable/add2"
+                    android:translationZ="20dp"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:contentDescription="@string/desc" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintMenuDelete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintTop_toBottomOf="@+id/constraintMenuAdd"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/textoServiciosDelete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Eliminar disposivito en memoria/existente"
+            android:textColor="@color/primary_text_and_stroke"
+            android:textSize="@dimen/_7sdp"
+            android:textStyle="bold"
+
+            app:layout_constraintStart_toStartOf="@id/cardEliminarMaps"
+            app:layout_constraintTop_toTopOf="parent"
+
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:fontFamily="@font/montserrat_medium"/>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardEliminarMaps"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_55sdp"
+            android:layout_marginStart="@dimen/_35sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+
+            app:strokeColor="@color/primary_text_and_stroke"
+            app:strokeWidth="@dimen/_1sdp"
+
+            app:cardCornerRadius="@dimen/_30sdp"
+            app:cardElevation="@dimen/_7sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textoServiciosDelete"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_2sdp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/primary"
+                android:translationZ="20dp">
+
+                <ImageView
+                    android:id="@+id/imagenDispositiveDelete"
+                    android:layout_width="@dimen/_15sdp"
+                    android:layout_height="@dimen/_15sdp"
+                    android:src="@drawable/barcode"
+
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toTopOf="@+id/imagenCalendarDelete"
+                    app:layout_constraintEnd_toEndOf="parent"
+
+                    android:layout_marginEnd="@dimen/_180sdp"
+                    android:contentDescription="@string/desc" />
+
+                <ImageView
+                    android:id="@+id/imagenCalendarDelete"
+                    android:layout_width="@dimen/_14sdp"
+                    android:layout_height="@dimen/_14sdp"
+                    android:src="@drawable/calendar"
+
+                    app:layout_constraintTop_toBottomOf="@+id/imagenDispositiveDelete"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+
+                    android:layout_marginEnd="@dimen/_180sdp"
+                    android:contentDescription="@string/desc" />
+
+                <TextView
+                    android:id="@+id/textoUltimoEscaneoDelete"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_7sdp"
+                    android:textStyle="bold"
+                    android:textColor="@color/primary_text_and_stroke"
+                    android:fontFamily="@font/montserrat_medium"
+
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toTopOf="@+id/textoDiaDelete"
+                    app:layout_constraintStart_toEndOf="@+id/imagenDispositiveDelete"
+                    android:layout_marginStart="@dimen/_7sdp"/>
+
+                <TextView
+                    android:id="@+id/textoDiaDelete"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_7sdp"
+                    android:textStyle="bold"
+                    android:textColor="@color/primary_text_and_stroke"
+                    android:fontFamily="@font/montserrat_medium"
+
+                    app:layout_constraintTop_toBottomOf="@+id/textoUltimoEscaneoDelete"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/imagenCalendarDelete"
+
+                    android:layout_marginStart="@dimen/_7sdp"
+                    android:layout_marginTop="@dimen/_2sdp" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardImagenEliminar2"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginStart="@dimen/_20sdp"
+
+            app:strokeWidth="@dimen/_1sdp"
+            app:strokeColor="@color/white"
+
+            app:cardCornerRadius="@dimen/_100sdp"
+            app:cardElevation="@dimen/_7sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+            android:layout_marginTop="@dimen/_2sdp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/color_simetria_7"
+                android:translationZ="20dp">
+
+                <ImageView
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:src="@drawable/cross2"
+                    android:translationZ="20dp"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:contentDescription="@string/desc" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintMenuAdicional"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintTop_toBottomOf="@+id/constraintMenuModify"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/textoServiciosAmpliacion1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Menu 1"
+            android:textColor="@color/primary_text_and_stroke"
+            android:textSize="@dimen/_7sdp"
+            android:textStyle="bold"
+
+            app:layout_constraintStart_toStartOf="@id/cardAmpliacionMaps"
+            app:layout_constraintTop_toTopOf="parent"
+
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:fontFamily="@font/montserrat_medium"/>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardAmpliacionMaps"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_55sdp"
+            android:layout_marginStart="@dimen/_35sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+
+            app:strokeColor="@color/primary_text_and_stroke"
+            app:strokeWidth="@dimen/_1sdp"
+
+            app:cardCornerRadius="@dimen/_30sdp"
+            app:cardElevation="@dimen/_7sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textoServiciosAmpliacion1"
+            android:layout_marginBottom="@dimen/_10sdp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/primary"
+                android:translationZ="20dp">
+
+                <ImageView
+                    android:id="@+id/imagenDispositiveAmpliacion1"
+                    android:layout_width="@dimen/_15sdp"
+                    android:layout_height="@dimen/_15sdp"
+                    android:src="@drawable/barcode"
+
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toTopOf="@+id/imagenCalendarAmpliacion1"
+                    app:layout_constraintEnd_toEndOf="parent"
+
+                    android:layout_marginEnd="@dimen/_180sdp"
+                    android:contentDescription="@string/desc" />
+
+                <ImageView
+                    android:id="@+id/imagenCalendarAmpliacion1"
+                    android:layout_width="@dimen/_14sdp"
+                    android:layout_height="@dimen/_14sdp"
+                    android:src="@drawable/calendar"
+
+                    app:layout_constraintTop_toBottomOf="@+id/imagenDispositiveAmpliacion1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+
+                    android:layout_marginEnd="@dimen/_180sdp"
+                    android:contentDescription="@string/desc" />
+
+                <TextView
+                    android:id="@+id/textoUltimoEscaneoAmpliacion1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_7sdp"
+                    android:textStyle="bold"
+                    android:textColor="@color/primary_text_and_stroke"
+                    android:fontFamily="@font/montserrat_medium"
+
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toTopOf="@+id/textoDiaAmpliacion1"
+                    app:layout_constraintStart_toEndOf="@+id/imagenDispositiveAmpliacion1"
+                    android:layout_marginStart="@dimen/_7sdp"/>
+
+                <TextView
+                    android:id="@+id/textoDiaAmpliacion1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_7sdp"
+                    android:textStyle="bold"
+                    android:textColor="@color/primary_text_and_stroke"
+                    android:fontFamily="@font/montserrat_medium"
+
+                    app:layout_constraintTop_toBottomOf="@+id/textoUltimoEscaneoAmpliacion1"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/imagenCalendarAmpliacion1"
+
+                    android:layout_marginStart="@dimen/_7sdp"
+                    android:layout_marginTop="@dimen/_2sdp" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardImagenAmpliacion2"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:translationZ="@dimen/_100sdp"
+
+            app:strokeWidth="@dimen/_1sdp"
+            app:strokeColor="@color/white"
+
+            app:cardCornerRadius="@dimen/_100sdp"
+            app:cardElevation="@dimen/_7sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+            android:layout_marginTop="@dimen/_2sdp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/color_simetria_7"
+                android:translationZ="20dp">
+
+                <ImageView
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:src="@drawable/add2"
+                    android:translationZ="20dp"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:contentDescription="@string/desc" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintMenuModify"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintTop_toBottomOf="@+id/constraintMenuDelete"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/textoServiciosModify"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Modificación de dispositivos"
+            android:textColor="@color/primary_text_and_stroke"
+            android:textSize="@dimen/_7sdp"
+            android:textStyle="bold"
+
+            app:layout_constraintStart_toStartOf="@id/cardModificarMaps"
+            app:layout_constraintTop_toTopOf="parent"
+
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:fontFamily="@font/montserrat_medium"/>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardModificarMaps"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_55sdp"
+            android:layout_marginStart="@dimen/_35sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+
+            app:strokeColor="@color/primary_text_and_stroke"
+            app:strokeWidth="@dimen/_1sdp"
+
+            app:cardCornerRadius="@dimen/_30sdp"
+            app:cardElevation="@dimen/_7sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textoServiciosModify"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:layout_marginBottom="@dimen/_10sdp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/primary"
+                android:translationZ="20dp">
+
+                <ImageView
+                    android:id="@+id/imagenDispositiveModify"
+                    android:layout_width="@dimen/_15sdp"
+                    android:layout_height="@dimen/_15sdp"
+                    android:src="@drawable/barcode"
+
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toTopOf="@+id/imagenCalendarModify"
+                    app:layout_constraintEnd_toEndOf="parent"
+
+                    android:layout_marginEnd="@dimen/_180sdp"
+                    android:contentDescription="@string/desc" />
+
+                <ImageView
+                    android:id="@+id/imagenCalendarModify"
+                    android:layout_width="@dimen/_14sdp"
+                    android:layout_height="@dimen/_14sdp"
+                    android:src="@drawable/calendar"
+
+                    app:layout_constraintTop_toBottomOf="@+id/imagenDispositiveModify"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+
+                    android:layout_marginEnd="@dimen/_180sdp"
+                    android:contentDescription="@string/desc" />
+
+                <TextView
+                    android:id="@+id/textoUltimoEscaneoModify"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_7sdp"
+                    android:textStyle="bold"
+                    android:textColor="@color/primary_text_and_stroke"
+                    android:fontFamily="@font/montserrat_medium"
+
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toTopOf="@+id/textoDiaModify"
+                    app:layout_constraintStart_toEndOf="@+id/imagenDispositiveModify"
+                    android:layout_marginStart="@dimen/_7sdp"/>
+
+                <TextView
+                    android:id="@+id/textoDiaModify"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_7sdp"
+                    android:textStyle="bold"
+                    android:textColor="@color/primary_text_and_stroke"
+                    android:fontFamily="@font/montserrat_medium"
+
+                    app:layout_constraintTop_toBottomOf="@+id/textoUltimoEscaneoModify"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/imagenCalendarModify"
+
+                    android:layout_marginStart="@dimen/_7sdp"
+                    android:layout_marginTop="@dimen/_2sdp" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardImagenModify2"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginStart="@dimen/_20sdp"
+
+            app:strokeWidth="@dimen/_1sdp"
+            app:strokeColor="@color/white"
+
+            app:cardCornerRadius="@dimen/_100sdp"
+            app:cardElevation="@dimen/_7sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+            android:layout_marginTop="@dimen/_2sdp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/color_simetria_7"
+                android:translationZ="20dp">
+
+                <ImageView
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:src="@drawable/modificar"
+                    android:translationZ="20dp"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:contentDescription="@string/desc" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/prueba"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/primary_text_and_stroke"
+        android:textSize="@dimen/_12sdp"
+        android:textStyle="bold"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:fontFamily="@font/montserrat_medium"/>
+
+    <ImageView
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_10sdp"
+        android:src="@drawable/logo_rombos"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="@dimen/_5sdp"
+
+        android:contentDescription="@string/desc" />
+
+
+    <!--
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardBajaOpciones"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginEnd="@dimen/_15sdp"
+        android:backgroundTint="@android:color/transparent"
+
+        app:strokeWidth="0.5dp"
+        app:strokeColor="@color/white"
+
+        app:cardCornerRadius="@dimen/_30sdp"
+        app:cardElevation="@dimen/_50sdp"
+
+        app:layout_constraintTop_toBottomOf="@id/cardAltaOpciones"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/gradiente_item3">
+
+            <ImageView
+                android:id="@+id/imagenDeleteOpciones"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/cross2"
+                android:layout_marginStart="@dimen/_10sdp"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textoDeleteOpciones"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:fontFamily="@font/montserrat_medium"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="@dimen/_15sdp"
+
+                android:text="Eliminar un DISPOSITIVO"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imagenDeleteOpciones"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/localizacion"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:src="@drawable/marker"
+
+                app:layout_constraintTop_toBottomOf="@id/textoDeleteOpciones"
+                app:layout_constraintStart_toEndOf="@+id/imagenDeleteOpciones"/>
+
+            <TextView
+                android:id="@+id/textoLocalizacion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Castellón de la Plana"
+                android:fontFamily="@font/montserrat_medium"
+                android:textColor="@color/white"
+                android:layout_marginTop="2dp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:textSize="@dimen/_8sdp"
+
+                app:layout_constraintStart_toEndOf="@+id/localizacion"
+                app:layout_constraintTop_toBottomOf="@id/textoDeleteOpciones"/>
+
+            <ImageView
+                android:id="@+id/checkDelete"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="@dimen/_240sdp"
+                android:src="@drawable/circulo_blanco2"
+
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardModificarOpciones"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginEnd="@dimen/_15sdp"
+        android:backgroundTint="@android:color/transparent"
+
+        app:strokeWidth="0.5dp"
+        app:strokeColor="@color/white"
+
+        app:cardCornerRadius="@dimen/_30sdp"
+        app:cardElevation="@dimen/_50sdp"
+
+        app:layout_constraintTop_toBottomOf="@id/cardBajaOpciones"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/gradiente_item2">
+
+            <ImageView
+                android:id="@+id/imagenModify"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/modificar"
+                android:layout_marginStart="@dimen/_10sdp"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textoModifyOpciones"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:fontFamily="@font/montserrat_medium"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="@dimen/_15sdp"
+                android:text="Modificar un DISPOSITIVO"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imagenModify"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/localizacionModify"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:src="@drawable/marker"
+
+                app:layout_constraintTop_toBottomOf="@id/textoModifyOpciones"
+                app:layout_constraintStart_toEndOf="@+id/imagenModify"/>
+
+            <TextView
+                android:id="@+id/textoLocalizacionModify"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Castellón de la Plana"
+                android:fontFamily="@font/montserrat_medium"
+                android:textColor="@color/white"
+                android:layout_marginTop="2dp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:textSize="@dimen/_8sdp"
+
+                app:layout_constraintStart_toEndOf="@+id/localizacionModify"
+                app:layout_constraintTop_toBottomOf="@id/textoModifyOpciones"/>
+
+            <ImageView
+                android:id="@+id/checkModify"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="@dimen/_240sdp"
+                android:src="@drawable/circulo_blanco2"
+
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardAmpliacion1Opciones"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginEnd="@dimen/_15sdp"
+        android:backgroundTint="@android:color/transparent"
+
+        app:strokeWidth="0.5dp"
+        app:strokeColor="@color/white"
+
+        app:cardCornerRadius="@dimen/_30sdp"
+        app:cardElevation="@dimen/_50sdp"
+
+        app:layout_constraintTop_toBottomOf="@id/cardModificarOpciones"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/gradiente_item4">
+
+            <ImageView
+                android:id="@+id/imagenAmpliacion1"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/modificar"
+                android:layout_marginStart="@dimen/_10sdp"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textoAmpliacion1Opciones"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:fontFamily="@font/montserrat_medium"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="@dimen/_15sdp"
+                android:text="Menu de AMPLIACION 1 "
+                android:textColor="@color/white"
+                android:textStyle="bold"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imagenAmpliacion1"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/localizacionAmpliacion1"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:src="@drawable/marker"
+
+                app:layout_constraintTop_toBottomOf="@id/textoAmpliacion1Opciones"
+                app:layout_constraintStart_toEndOf="@+id/imagenAmpliacion1"/>
+
+            <TextView
+                android:id="@+id/textoLocalizacionAmpliacion1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Castellón de la Plana"
+                android:fontFamily="@font/montserrat_medium"
+                android:textColor="@color/white"
+                android:layout_marginTop="2dp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:textSize="@dimen/_8sdp"
+
+                app:layout_constraintStart_toEndOf="@+id/localizacionAmpliacion1"
+                app:layout_constraintTop_toBottomOf="@id/textoAmpliacion1Opciones"/>
+
+            <ImageView
+                android:id="@+id/checkAmpliacion"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="@dimen/_240sdp"
+                android:src="@drawable/circulo_blanco2"
+
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+    -->
+</androidx.constraintlayout.widget.ConstraintLayout>

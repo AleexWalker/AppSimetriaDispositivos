@@ -1,0 +1,24 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.AppSimetria" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="android:statusBarColor" tools:targetApi="l">@color/primary</item>
+    </style>
+
+    <style name="Theme.AppSimetria.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+
+        <!-- enable window content transitions -->
+        <item name="android:windowContentTransitions">true</item>
+
+        <!-- specify transitions -->
+        <item name="android:windowEnterTransition">@anim/fadein</item>
+        <item name="android:windowExitTransition">@anim/fadeout</item>
+    </style>
+
+    <style name="Theme.AppSimetria.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.AppSimetria.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+</resources>

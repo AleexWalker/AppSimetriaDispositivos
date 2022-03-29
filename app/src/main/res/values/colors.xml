@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#009FFF</color>
+    <color name="background">#F7F7FA</color>
+    <color name="card_bvackground">#FFFFFF</color>
+
+    <!--Text Colors -->
+    <color name="primary_text_and_stroke">#002753</color>
+    <color name="secondary_text">#9B9A9D</color>
+    <color name="white">#ffffff</color>
+    <color name="letra_boton">#27325F</color>
+    <color name="textModify">#FFFFFF</color>
+
+    <!--Item Colors -->
+    <color name="dashboard_item_1">#ec407a</color>
+    <color name="dashboard_item_2">#8B72FF</color>
+    <color name="dashboard_item_3">#2CC2EA</color>
+    <color name="dashboard_item_4">#ffb300</color>
+    <color name="dashboard_item_5">#66bb6a</color>
+
+    <!--Cambiar color de la statusBar-->
+    <color name="primary_statusbar">#009FFF</color>
+    <color name="secondary_statusbar">#000000</color>
+
+    <!--Colores del LogoSimetría-->
+    <color name="menu_opciones_card_add">#9CCC65</color>
+    <color name="menu_opciones_card_delete">#E57373</color>
+    <color name="menu_opciones_card_modify">#64B5F6</color>
+    <color name="menu_opciones_card_ampliacion">#9575CD</color>
+
+    <color name="color_simetria_1">#ffe2cc</color>
+    <color name="color_simetria_2">#ff8f37</color>
+    <color name="color_simetria_3">#ff6800</color>
+
+    <color name="color_simetria_4">#c6deef</color>
+    <color name="color_simetria_5">#0082c1</color>
+    <color name="color_simetria_6">#0056ab</color>
+    <color name="color_simetria_7">#002753</color>
+
+    <!--Colores MaterialColor-->
+    <color name="material_color_rojo_2">#ba000d</color>
+    <color name="material_color_rojo_1">#f44336</color>
+    <color name="material_color_rojo_3">#ff7961</color>
+
+</resources>
