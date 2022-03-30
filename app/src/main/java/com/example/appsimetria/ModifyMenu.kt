@@ -12,12 +12,9 @@ import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Toast
-import com.example.appsimetria.auth.Login
-import com.google.android.gms.maps.model.LatLng
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.FirebaseFirestoreSettings
 import kotlinx.android.synthetic.main.activity_modify_menu.*
-import kotlinx.android.synthetic.main.activity_services_menu.*
 import java.lang.Exception
 
 class ModifyMenu : AppCompatActivity() {
@@ -62,6 +59,25 @@ class ModifyMenu : AppCompatActivity() {
                     .document(spinner_dispositivos.selectedItem.toString())
                     .addSnapshotListener { value, error ->
                         dispositivoModify.text = value!!.id
+                        val direccionCalle: String = value.getString("Calle") + ", " +
+                                    value.getString("Numero") + ","
+                                    textoCalle.text = direccionCalle
+
+                        val direccionCodigoPostal: String = value.getString("Codigo Postal").toString()
+                        textoCodigoPostal.text = direccionCodigoPostal
+
+                        val direccionLocalidad: String = value.getString("Localidad").toString() + ","
+                        textoLocalidad.text = direccionLocalidad
+
+                        val direccionCiudad: String = value.getString("Ciudad").toString()
+                        textoCiudad.text = direccionCiudad
+
+                        val direccionComunidad = value.getString("Comunidad") + ","
+                        textoComunidad.text = direccionComunidad
+
+                        val direccionPais = value.getString("Pais")
+                        textoPais.text = direccionPais
+
                         val latModifyHtml: String = "<b>" + "Latitud: " + "</b>" + value.getString("Latitud"); latModify.text = Html.fromHtml(latModifyHtml)
                         val lngModifyHtml: String = "<b>" + "Longitud: " + "</b>" + value.getString("Longitud"); lngModify.text = Html.fromHtml(lngModifyHtml)
 

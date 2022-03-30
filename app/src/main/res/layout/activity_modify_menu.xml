@@ -15,6 +15,7 @@
 
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        android:animationCache="true"
         android:background="@color/primary">
 
         <ImageView
@@ -116,12 +117,12 @@
 
         <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_300sdp"
+            android:layout_height="@dimen/_215sdp"
 
             app:cardBackgroundColor="@color/primary_text_and_stroke"
-            app:strokeWidth="@dimen/_1sdp"
+            app:strokeWidth="0.5dp"
             app:strokeColor="@color/primary_text_and_stroke"
-            app:cardCornerRadius="@dimen/_20sdp"
+            app:cardCornerRadius="@dimen/_5sdp"
             app:cardElevation="@dimen/_8sdp"
 
             app:layout_constraintTop_toTopOf="parent"
@@ -163,22 +164,22 @@
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_1sdp"
 
-                    android:background="#80FFFFFF"
+                    android:background="#FFFFFF"
 
                     app:layout_constraintTop_toBottomOf="@+id/dispositivoModify"
-                    app:layout_constraintBottom_toTopOf="@+id/constraintCardModify"
+                    app:layout_constraintBottom_toTopOf="@+id/constraintCardModify1"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
 
-                    android:layout_marginStart="@dimen/_50sdp"
-                    android:layout_marginEnd="@dimen/_50sdp"/>
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginEnd="@dimen/_20sdp"/>
 
                 <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/constraintCardModify"
+                    android:id="@+id/constraintCardModify2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
 
-                    app:layout_constraintTop_toBottomOf="@+id/dispositivoModify"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintCardModify1"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     android:layout_marginTop="@dimen/_25sdp">
@@ -200,16 +201,15 @@
                         android:layout_height="wrap_content"
 
                         android:text="CC:00:BE:00:00:04"
-                        android:textSize="@dimen/_10sdp"
+                        android:textSize="@dimen/_8sdp"
                         android:fontFamily="@font/montserrat_medium"
                         android:textColor="@color/white"
 
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintStart_toEndOf="@+id/imagenLatLngCardModify"
                         app:layout_constraintBottom_toTopOf="@+id/lngModify"
-                        app:layout_constraintEnd_toEndOf="parent"
 
-                        android:layout_marginEnd="@dimen/_10sdp"/>
+                        android:layout_marginStart="@dimen/_20sdp" />
 
                     <TextView
                         android:id="@+id/lngModify"
@@ -217,16 +217,15 @@
                         android:layout_height="wrap_content"
 
                         android:text="CC:00:BE:00:00:04"
-                        android:textSize="@dimen/_10sdp"
+                        android:textSize="@dimen/_8sdp"
                         android:fontFamily="@font/montserrat_medium"
                         android:textColor="@color/white"
 
                         app:layout_constraintTop_toBottomOf="@+id/latModify"
                         app:layout_constraintStart_toEndOf="@+id/imagenLatLngCardModify"
-                        app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintBottom_toBottomOf="parent"
 
-                        android:layout_marginEnd="@dimen/_10sdp"/>
+                        android:layout_marginStart="@dimen/_20sdp" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -234,22 +233,22 @@
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_1sdp"
 
-                    android:background="#80FFFFFF"
+                    android:background="@color/white"
 
-                    app:layout_constraintTop_toBottomOf="@+id/constraintCardModify"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintCardModify1"
                     app:layout_constraintBottom_toTopOf="@+id/constraintCardModify2"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
 
-                    android:layout_marginStart="@dimen/_50sdp"
-                    android:layout_marginEnd="@dimen/_50sdp"/>
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginEnd="@dimen/_20sdp"/>
 
                 <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/constraintCardModify2"
+                    android:id="@+id/constraintCardModify3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
 
-                    app:layout_constraintTop_toBottomOf="@+id/constraintCardModify"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintCardModify2"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     android:layout_marginTop="@dimen/_25sdp">
@@ -270,34 +269,32 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
 
-                        android:text="CC:00:BE:00:00:04"
-                        android:textSize="@dimen/_10sdp"
+                        android:text="Fecha"
+                        android:textSize="@dimen/_8sdp"
                         android:fontFamily="@font/montserrat_medium"
                         android:textColor="@color/white"
 
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintStart_toEndOf="@+id/imagenCalendarCardModify"
                         app:layout_constraintBottom_toTopOf="@+id/horaModify"
-                        app:layout_constraintEnd_toEndOf="parent"
 
-                        android:layout_marginEnd="@dimen/_10sdp"/>
+                        android:layout_marginStart="@dimen/_20sdp" />
 
                     <TextView
                         android:id="@+id/horaModify"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
 
-                        android:text="CC:00:BE:00:00:04"
-                        android:textSize="@dimen/_10sdp"
+                        android:text="Hora"
+                        android:textSize="@dimen/_8sdp"
                         android:fontFamily="@font/montserrat_medium"
                         android:textColor="@color/white"
 
                         app:layout_constraintTop_toBottomOf="@+id/fechaModify"
                         app:layout_constraintStart_toEndOf="@+id/imagenCalendarCardModify"
-                        app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintBottom_toBottomOf="parent"
 
-                        android:layout_marginEnd="@dimen/_10sdp"/>
+                        android:layout_marginStart="@dimen/_20sdp"/>
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -305,22 +302,22 @@
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_1sdp"
 
-                    android:background="#80FFFFFF"
+                    android:background="@color/white"
 
                     app:layout_constraintTop_toBottomOf="@+id/constraintCardModify2"
                     app:layout_constraintBottom_toTopOf="@+id/constraintCardModify3"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
 
-                    android:layout_marginStart="@dimen/_50sdp"
-                    android:layout_marginEnd="@dimen/_50sdp"/>
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginEnd="@dimen/_20sdp"/>
 
                 <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/constraintCardModify3"
+                    android:id="@+id/constraintCardModify1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
 
-                    app:layout_constraintTop_toBottomOf="@+id/constraintCardModify2"
+                    app:layout_constraintTop_toBottomOf="@+id/dispositivoModify"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     android:layout_marginTop="@dimen/_25sdp">
@@ -334,41 +331,110 @@
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintBottom_toBottomOf="parent"
 
-                        android:src="@drawable/calendar2"/>
+                        android:src="@drawable/city"/>
 
                     <TextView
-                        android:id="@+id/usuarioModify"
+                        android:id="@+id/textoCalle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:textStyle="bold"
 
-                        android:text="CC:00:BE:00:00:04"
-                        android:textSize="@dimen/_10sdp"
+                        android:text="Calle"
+                        android:textSize="@dimen/_7sdp"
                         android:fontFamily="@font/montserrat_medium"
                         android:textColor="@color/white"
 
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintStart_toEndOf="@+id/imagenUsuarioCardModify"
-                        app:layout_constraintBottom_toTopOf="@+id/telefonoModify"
-                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toTopOf="@+id/textoLocalidad"
 
-                        android:layout_marginEnd="@dimen/_10sdp"/>
+                        android:layout_marginStart="@dimen/_20sdp"/>
 
                     <TextView
-                        android:id="@+id/telefonoModify"
+                        android:id="@+id/textoCodigoPostal"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:textStyle="bold"
 
-                        android:text="CC:00:BE:00:00:04"
-                        android:textSize="@dimen/_10sdp"
+                        android:text="Codigo Postal"
+                        android:textSize="@dimen/_7sdp"
                         android:fontFamily="@font/montserrat_medium"
                         android:textColor="@color/white"
 
-                        app:layout_constraintTop_toBottomOf="@+id/usuarioModify"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintBottom_toTopOf="@+id/textoCiudad"
+
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginEnd="@dimen/_30sdp"/>
+
+
+                    <TextView
+                        android:id="@+id/textoLocalidad"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="Localidad"
+                        android:textSize="@dimen/_7sdp"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:textColor="@color/white"
+
                         app:layout_constraintStart_toEndOf="@+id/imagenUsuarioCardModify"
+                        app:layout_constraintTop_toBottomOf="@+id/textoCalle"
+                        app:layout_constraintBottom_toTopOf="@+id/textoComunidad"
+
+                        android:layout_marginStart="@dimen/_20sdp"/>
+
+                    <TextView
+                        android:id="@+id/textoCiudad"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="Ciudad"
+                        android:textSize="@dimen/_7sdp"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:textColor="@color/white"
+
+                        app:layout_constraintTop_toTopOf="@+id/textoLocalidad"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toTopOf="@+id/textoComunidad"
+
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginEnd="@dimen/_30sdp"/>
+
+                    <TextView
+                        android:id="@+id/textoComunidad"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="Comunidad"
+                        android:textSize="@dimen/_7sdp"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:textColor="@color/white"
+
+                        app:layout_constraintTop_toBottomOf="@+id/textoLocalidad"
+                        app:layout_constraintStart_toEndOf="@+id/imagenUsuarioCardModify"
+                        app:layout_constraintBottom_toBottomOf="parent"
+
+                        android:layout_marginStart="@dimen/_20sdp"/>
+
+                    <TextView
+                        android:id="@+id/textoPais"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="Pais"
+                        android:textSize="@dimen/_7sdp"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:textColor="@color/white"
+
+                        app:layout_constraintTop_toTopOf="@+id/textoComunidad"
+                        app:layout_constraintTop_toBottomOf="@+id/textoLocalidad"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintBottom_toBottomOf="parent"
 
-                        android:layout_marginEnd="@dimen/_10sdp"/>
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginEnd="@dimen/_30sdp"/>
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 

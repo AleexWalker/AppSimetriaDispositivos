@@ -27,12 +27,10 @@ import com.google.android.gms.maps.model.*
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
-import com.google.protobuf.MapEntryLite
 import kotlinx.android.synthetic.main.activity_new_dispositive_maps.*
 import kotlinx.android.synthetic.main.custom_toast_maps_add_1.*
 import java.text.SimpleDateFormat
 import java.util.*
-import kotlin.collections.ArrayList
 import kotlin.collections.HashMap
 
 class NewDispositiveMaps : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMarkerClickListener, GoogleMap.OnMarkerDragListener, GoogleMap.OnMyLocationButtonClickListener {
@@ -48,7 +46,18 @@ class NewDispositiveMaps : AppCompatActivity(), OnMapReadyCallback, GoogleMap.On
 
     private var latitud: Double = 0.0
     private var longitud: Double = 0.0
-    private var numMap: Int = 0
+
+    private var numero: String = ""
+    private var localidad: String = ""
+    private var ciudad: String = ""
+    private var comunidad: String = ""
+    private var pais: String = ""
+    private var calle: String = ""
+    private var codigoPostal: String = ""
+
+    private var prueba1: String = ""
+    private var prueba2: String = ""
+    private var prueba3: String = ""
 
     companion object {
         private const val LOCATION_REQUEST_CODE = 1
@@ -148,9 +157,6 @@ class NewDispositiveMaps : AppCompatActivity(), OnMapReadyCallback, GoogleMap.On
 
                 latitud = location.latitude
                 longitud = location.longitude
-
-                val direccion: MutableList<Address> = geocoder.getFromLocation(latitud, longitud, 1) as ArrayList<Address>
-                Log.e("A1", direccion[0].toString())
             }
         }
     }
@@ -210,14 +216,29 @@ class NewDispositiveMaps : AppCompatActivity(), OnMapReadyCallback, GoogleMap.On
     }
 
     private fun writeDispositivo(dispositivo: Dispositivo) {
+        val listGeocoder: List<Address> = geocoder.getFromLocation(latitud, longitud, 1)
+
         val data = HashMap<String, Any>()
+
         data["ID"] = dispositivo.id
         data["Latitud"] = dispositivo.latitud
         data["Longitud"] = dispositivo.longitud
         data["Fecha"] = dispositivo.fecha
         data["Hora"] = dispositivo.hora
 
-        baseDatos.collection("Dispositivos").document(resultScanner)
+        data["Localidad"] = listGeocoder[0].locality
+        data["Localidad"] = listGeocoder[0].locality
+        data["Numero"] = listGeocoder[0].featureName
+        data["Ciudad"] = listGeocoder[0].subAdminArea
+        data["Comunidad"] = listGeocoder[0].adminArea
+        data["Pais"] = listGeocoder[0].countryName
+        data["Calle"] = listGeocoder[0].thoroughfare
+        data["Codigo Postal"] = listGeocoder[0].postalCode
+
+
+        baseDatos
+            .collection("Dispositivos")
+            .document(resultScanner)
             .set(data)
             .addOnSuccessListener { Log.d(TAG, "Successfly written") }
             .addOnFailureListener { Log.w(TAG, "Failed to be written!") }
@@ -228,6 +249,6 @@ class NewDispositiveMaps : AppCompatActivity(), OnMapReadyCallback, GoogleMap.On
     }
 
     private fun getCurrentTime(): String {
-        return SimpleDateFormat("E, hh:mm", Locale.getDefault()).format(Date())
+        return SimpleDateFormat("E HH:mm", Locale.getDefault()).format(Date())
     }
 }

@@ -4,10 +4,10 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/constraintToastLogin1">
+    android:id="@+id/constraintToastOpciones2">
 
     <com.google.android.material.card.MaterialCardView
-        android:id="@+id/CardToastLogin1"
+        android:id="@+id/CardToastOpciones2"
         android:layout_width="wrap_content"
         android:layout_height="30dp"
 
@@ -28,11 +28,10 @@
             android:background="#0256a7">
 
             <TextView
-                android:id="@+id/textoToastLogin1"
+                android:id="@+id/textoToastOpciones2"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center_horizontal|center_vertical"
-                android:text="¡User/Password incorrectos!"
                 android:fontFamily="@font/montserrat_medium"
                 android:layout_marginStart="@dimen/_15sdp"
                 android:layout_marginEnd="@dimen/_15sdp"
@@ -46,7 +45,6 @@
                 app:layout_constraintBottom_toBottomOf="parent"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-
 
     </com.google.android.material.card.MaterialCardView>
 

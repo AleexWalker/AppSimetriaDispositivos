@@ -17,6 +17,7 @@ import com.google.zxing.integration.android.IntentIntegrator
 import kotlinx.android.synthetic.main.activity_services_menu.*
 import kotlinx.android.synthetic.main.custom_toast_maps_add_1.*
 import kotlinx.android.synthetic.main.custom_toast_opciones_1.*
+import kotlinx.android.synthetic.main.custom_toast_opciones_2.*
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -91,6 +92,7 @@ class ServicesMenu : AppCompatActivity() {
                 toastPersonalizadoOpciones1()
             } else {
                 Toast.makeText(this, "Dispositivo Escaneado: " + result.contents.substring(0, result.contents.length - 4), Toast.LENGTH_LONG).show()
+
                 resultScanner = result.contents.substring(0, result.contents.length - 4)
                 saveData(resultScanner)
                 loadData()
@@ -194,7 +196,8 @@ class ServicesMenu : AppCompatActivity() {
     }
 
     private fun toastPersonalizadoOpciones2() {
-        val layoutToast =  layoutInflater.inflate(R.layout.custom_toast_opciones_2, constraintToastMaps1)
+        val layoutToast =  layoutInflater.inflate(R.layout.custom_toast_opciones_2, constraintToastOpciones2)
+
         Toast(this).apply {
             duration = Toast.LENGTH_SHORT
             setGravity(Gravity.BOTTOM, 0, 200)
