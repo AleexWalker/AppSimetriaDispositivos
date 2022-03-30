@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/card_bvackground"
+    tools:context=".dispositives.DispositiveMenu">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintArribaOpciones"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_125sdp"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:animationCache="true"
+        android:background="@color/primary">
+
+        <ImageView
+            android:id="@+id/imagenAtrasModify"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:src="@drawable/back1"
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:contentDescription="@string/desc" />
+
+        <ImageView
+            android:id="@+id/logoSimetria"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="100dp"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/simetria"
+            android:contentDescription="@string/desc" />
+
+        <ImageView
+            android:id="@+id/simetriaSinLogoLogIn"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_30sdp"
+            android:src="@drawable/simetria_sin_logo"
+            android:layout_marginStart="@dimen/_30sdp"
+            android:layout_marginEnd="@dimen/_30sdp"
+
+            app:layout_constraintTop_toBottomOf="@+id/logoSimetria"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:contentDescription="@string/desc" />
+
+        <ImageView
+            android:id="@+id/imagenMenu"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_18sdp"
+            android:src="@drawable/menu1"
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:contentDescription="@string/desc" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardEscaneoList"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_32sdp"
+        android:translationZ="@dimen/_100sdp"
+
+        app:strokeWidth="@dimen/_1sdp"
+        app:strokeColor="@color/color_simetria_7"
+        app:cardCornerRadius="@dimen/_50sdp"
+        app:cardElevation="@dimen/_5sdp"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        android:layout_marginTop="@dimen/_110sdp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+            <AutoCompleteTextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="IDENTIFICADOR"
+                android:textSize="@dimen/_10sdp"
+
+                android:textColorHint="@color/cardview_dark_background"
+                android:textAlignment="center"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp">
+            </AutoCompleteTextView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/textoServiciosList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Servicios"
+        android:textColor="@color/primary_text_and_stroke"
+        android:textSize="@dimen/_18sdp"
+        android:textStyle="bold"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardEscaneoList"
+        app:layout_constraintBottom_toTopOf="@+id/recyclerList"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:fontFamily="@font/montserrat_medium"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerList"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_350sdp"
+
+        app:layout_constraintTop_toBottomOf="@+id/textoServiciosList"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
+
+        tools:listitem="@layout/item_dispositivo"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

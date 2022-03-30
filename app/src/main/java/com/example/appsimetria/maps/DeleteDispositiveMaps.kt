@@ -6,7 +6,9 @@ import android.content.ContentValues.TAG
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.content.res.Resources
+import android.graphics.Bitmap
 import android.graphics.Color
+import android.graphics.drawable.BitmapDrawable
 import android.graphics.drawable.ColorDrawable
 import android.location.Location
 import androidx.appcompat.app.AppCompatActivity
@@ -15,7 +17,6 @@ import android.util.Log
 import android.view.Gravity
 import android.view.LayoutInflater
 import android.widget.Toast
-import androidx.appcompat.app.AlertDialog
 import androidx.core.app.ActivityCompat
 import com.example.appsimetria.R
 import com.example.appsimetria.ServicesMenu
@@ -25,11 +26,8 @@ import com.google.android.gms.location.LocationServices
 import com.google.android.gms.maps.*
 
 import com.google.android.gms.maps.model.*
-import com.google.android.libraries.maps.GoogleMapOptions
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.FirebaseFirestoreSettings
-import com.google.firebase.firestore.ktx.firestore
-import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_delete_dispositive_maps.*
 import kotlinx.android.synthetic.main.custom_close_dialog.view.*
 import kotlinx.android.synthetic.main.custom_toast_maps_add_1.*
@@ -46,8 +44,6 @@ class DeleteDispositiveMaps : AppCompatActivity(), OnMapReadyCallback, GoogleMap
 
     private var latitud: Double = 0.0
     private var longitud: Double = 0.0
-    private var starterLatMarker: Double = 0.0
-    private var starterLngMarker: Double = 0.0
 
     companion object {
         private const val LOCATION_REQUEST_CODE = 1
@@ -181,6 +177,7 @@ class DeleteDispositiveMaps : AppCompatActivity(), OnMapReadyCallback, GoogleMap
         val marker: Marker? = mMap.addMarker(MarkerOptions()
             .title(title)
             .flat(false)
+            .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED))
             .position(currentLatLong)
             .draggable(true)
             .visible(true))
@@ -223,6 +220,12 @@ class DeleteDispositiveMaps : AppCompatActivity(), OnMapReadyCallback, GoogleMap
             setGravity(Gravity.BOTTOM, 0, 90)
             view = layoutToast
         }.show()
+    }
+
+    @SuppressLint("UseCompatLoadingForDrawables")
+    private fun customMarker(): Bitmap {
+        val bitmapImage: BitmapDrawable = resources.getDrawable(R.drawable.marker) as BitmapDrawable
+        return Bitmap.createScaledBitmap(bitmapImage.bitmap, 100, 100, false)
     }
 
     private fun rechargeMap() {

@@ -1,21 +1,19 @@
-package com.example.appsimetria
+package com.example.appsimetria.dispositives
 
 import android.annotation.SuppressLint
-import android.content.ContentValues
 import android.content.Intent
 import android.graphics.PorterDuff
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Html
-import android.util.Log
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
-import android.widget.Toast
+import com.example.appsimetria.R
+import com.example.appsimetria.ServicesMenu
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.FirebaseFirestoreSettings
 import kotlinx.android.synthetic.main.activity_modify_menu.*
-import java.lang.Exception
 
 class ModifyMenu : AppCompatActivity() {
 

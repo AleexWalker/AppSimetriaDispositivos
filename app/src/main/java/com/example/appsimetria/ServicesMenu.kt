@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
+import android.graphics.drawable.AnimatedVectorDrawable
 import android.os.Bundle
 import android.view.*
 import android.widget.PopupMenu
@@ -11,11 +12,11 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import com.example.appsimetria.auth.Login
+import com.example.appsimetria.dispositives.ModifyMenu
 import com.example.appsimetria.maps.DeleteDispositiveMaps
 import com.example.appsimetria.maps.NewDispositiveMaps
 import com.google.zxing.integration.android.IntentIntegrator
 import kotlinx.android.synthetic.main.activity_services_menu.*
-import kotlinx.android.synthetic.main.custom_toast_maps_add_1.*
 import kotlinx.android.synthetic.main.custom_toast_opciones_1.*
 import kotlinx.android.synthetic.main.custom_toast_opciones_2.*
 import java.text.SimpleDateFormat
@@ -28,6 +29,7 @@ class ServicesMenu : AppCompatActivity() {
     private var latitud: Double = 0.0
     private var longitud: Double = 0.0
 
+    @SuppressLint("UseCompatLoadingForDrawables")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_services_menu)
@@ -35,8 +37,11 @@ class ServicesMenu : AppCompatActivity() {
         startFunctions()
 
         imagenAtras.setOnClickListener {
-            startActivity(Intent(this, Login::class.java))
+            val rotar = getDrawable(R.drawable.ad_rotation) as AnimatedVectorDrawable
+            imagenAtras.setImageDrawable(rotar)
+            rotar.start()
 
+            startActivity(Intent(this, Login::class.java))
             overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
         }
 

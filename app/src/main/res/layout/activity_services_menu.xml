@@ -23,7 +23,7 @@
         android:layout_height="40dp"
         android:layout_marginStart="@dimen/_20sdp"
         android:layout_marginTop="@dimen/_15sdp"
-        android:src="@drawable/back1"
+        android:src="@drawable/ic_back1"
 
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -74,6 +74,7 @@
         android:id="@+id/cardEscaneo"
         android:layout_width="wrap_content"
         android:layout_height="@dimen/_32sdp"
+
         android:layout_marginTop="@dimen/_110sdp"
         android:layout_marginStart="@dimen/_30sdp"
         android:layout_marginEnd="@dimen/_30sdp"
