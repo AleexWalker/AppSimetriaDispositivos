@@ -29,7 +29,8 @@ class ModifyMenu : AppCompatActivity() {
 
         spinner_dispositivos.background.setColorFilter(resources.getColor(R.color.primary), PorterDuff.Mode.SRC_ATOP);
 
-        baseDatos.collection("Dispositivos")
+        baseDatos
+            .collection("Dispositivos")
             .get()
             .addOnCompleteListener { task ->
                 if (task.isSuccessful) {

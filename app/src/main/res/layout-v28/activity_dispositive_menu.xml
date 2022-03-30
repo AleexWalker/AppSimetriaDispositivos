@@ -102,7 +102,6 @@
                 android:textSize="@dimen/_10sdp"
                 android:textColor="@color/cardview_dark_background"
                 android:fontFamily="@font/montserrat_medium"
-                android:outlineAmbientShadowColor="@color/cardview_dark_background"
 
                 android:textColorHint="@color/cardview_dark_background"
                 android:textAlignment="center"

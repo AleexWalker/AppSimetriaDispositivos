@@ -47,18 +47,6 @@ class NewDispositiveMaps : AppCompatActivity(), OnMapReadyCallback, GoogleMap.On
     private var latitud: Double = 0.0
     private var longitud: Double = 0.0
 
-    private var numero: String = ""
-    private var localidad: String = ""
-    private var ciudad: String = ""
-    private var comunidad: String = ""
-    private var pais: String = ""
-    private var calle: String = ""
-    private var codigoPostal: String = ""
-
-    private var prueba1: String = ""
-    private var prueba2: String = ""
-    private var prueba3: String = ""
-
     companion object {
         private const val LOCATION_REQUEST_CODE = 1
     }
