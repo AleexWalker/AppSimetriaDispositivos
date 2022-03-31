@@ -98,13 +98,22 @@
                 android:id="@+id/autoCompleteDispositivo"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+
                 android:hint="IDENTIFICADOR"
-                android:textSize="@dimen/_10sdp"
+                android:textSize="@dimen/_14sdp"
                 android:textColor="@color/cardview_dark_background"
                 android:fontFamily="@font/montserrat_medium"
+                android:completionThreshold="1"
+
+                android:fallbackLineSpacing="false"
 
                 android:textColorHint="@color/cardview_dark_background"
-                android:textAlignment="center"
+
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+
                 android:layout_marginStart="@dimen/_10sdp"
                 android:layout_marginEnd="@dimen/_10sdp">
             </AutoCompleteTextView>
@@ -117,7 +126,7 @@
         android:id="@+id/textoServiciosList"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Servicios"
+        android:text="Dispositivos"
         android:textColor="@color/primary_text_and_stroke"
         android:textSize="@dimen/_18sdp"
         android:textStyle="bold"

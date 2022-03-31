@@ -1,3 +1,4 @@
 package com.example.appsimetria.dispositives
 
-class ItemAdapter(val dispositivo: String, val ciudad: String)
+data class ItemAdapter(var dispositivo: String, var localidad: String)
+//, val ciudad: String

@@ -6,37 +6,25 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.appsimetria.R
 import kotlin.collections.ArrayList
 
-class DispositiveAdapter(var items: ArrayList<ItemAdapter>) : RecyclerView.Adapter<DispositiveAdapter.TarjViewHolder>() {
-    lateinit var onClick : (View) -> Unit
+class DispositiveAdapter(private val listaDispositivos: ArrayList<ItemAdapter>): RecyclerView.Adapter<DispositiveAdapter.MyViewHolder>() {
 
-    class TarjViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-
-        var dispositivo: TextView = itemView.findViewById(R.id.itemDispositivo)
-        var ciudad: TextView = itemView.findViewById(R.id.ciudadItemDispositivo)
-
-        fun bindTarjeta(t: ItemAdapter, onClick: (View) -> Unit) = with(itemView) {
-            dispositivo.text = t.dispositivo
-            ciudad.text = t.ciudad
-
-            setOnClickListener { onClick(itemView) }
-        }
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
+        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.item_dispositivo, parent, false)
+        return MyViewHolder(itemView)
     }
 
-    override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): TarjViewHolder {
-        val itemView = LayoutInflater.from(viewGroup.context).inflate(R.layout.item_dispositivo, viewGroup, false)
-        return TarjViewHolder(itemView)
-    }
-
-    override fun onBindViewHolder(viewHolder: TarjViewHolder, pos: Int) {
-        val itemCard = items[pos]
-        viewHolder.bindTarjeta(itemCard, onClick)
+    override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
+        val currentItem = listaDispositivos[position]
+        holder.dispositivo.text = currentItem.dispositivo
+        holder.localidad.text = currentItem.localidad
     }
 
     override fun getItemCount(): Int {
-        return items.size
+        return listaDispositivos.size
     }
 
-    override fun getItemViewType(position: Int): Int {
-        return position
+    class MyViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
+        val dispositivo: TextView = itemView.findViewById(R.id.itemDispositivo)
+        val localidad: TextView = itemView.findViewById(R.id.ciudadItemDispositivo)
     }
 }

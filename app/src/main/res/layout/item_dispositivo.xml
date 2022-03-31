@@ -7,10 +7,10 @@
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="@dimen/_50sdp"
-        app:cardCornerRadius="@dimen/_30sdp"
+        app:cardCornerRadius="0dp"
 
         app:strokeWidth="@dimen/_1sdp"
-        app:strokeColor="@color/primary_text_and_stroke"
+        app:strokeColor="@color/primary"
 
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -23,28 +23,55 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/primary">
+            android:background="@color/white">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardIzquierdaItem"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="match_parent"
+                app:cardCornerRadius="0dp"
+
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/primary">
+
+                    <ImageView
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+
+                        android:src="@drawable/barcode"
+
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
 
             <TextView
                 android:id="@+id/itemDispositivo"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/_20sdp"
-                android:layout_marginBottom="@dimen/_20sdp"
+
                 android:fontFamily="@font/montserrat_medium"
                 android:text="EJEMPLO"
 
-                android:textColor="@color/white"
-
+                android:textColor="@color/color_simetria_7"
                 android:textSize="@dimen/_15sdp"
                 android:textStyle="bold"
 
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/imagenItemDispositivo"
+                app:layout_constraintStart_toEndOf="@+id/cardIzquierdaItem"
 
-                android:layout_marginEnd="@dimen/_150sdp"/>
+                android:layout_marginStart="@dimen/_20sdp"/>
 
             <ImageView
                 android:id="@+id/imagenItemDispositivo"
@@ -53,11 +80,9 @@
 
                 android:src="@drawable/marker"
 
-                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/itemDispositivo"
                 app:layout_constraintTop_toBottomOf="@+id/itemDispositivo"
-
-                android:layout_marginBottom="@dimen/_10sdp"/>
+                app:layout_constraintBottom_toBottomOf="parent"/>
 
             <TextView
                 android:id="@+id/ciudadItemDispositivo"
@@ -66,15 +91,13 @@
                 android:layout_marginStart="@dimen/_5sdp"
 
                 android:text="Ciudad"
-                android:textColor="@color/white"
+                android:textColor="@color/color_simetria_7"
                 android:textSize="@dimen/_8sdp"
 
-                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/imagenItemDispositivo"
                 app:layout_constraintStart_toEndOf="@+id/imagenItemDispositivo"
-                app:layout_constraintTop_toBottomOf="@+id/itemDispositivo"
 
                 android:layout_marginBottom="@dimen/_10sdp"/>
-
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

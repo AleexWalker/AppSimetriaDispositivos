@@ -1,70 +1,59 @@
 package com.example.appsimetria.dispositives
 
-import android.content.ContentValues
+import android.annotation.SuppressLint
+import android.content.ContentValues.TAG
+import android.graphics.PorterDuff
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.Gravity
 import android.view.View
 import android.widget.ArrayAdapter
-import android.widget.Toast
-import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.example.appsimetria.R
-import com.google.android.gms.maps.model.LatLng
 import com.google.firebase.firestore.FirebaseFirestore
-import com.google.firebase.firestore.ktx.firestore
-import com.google.firebase.ktx.Firebase
+import com.google.firebase.firestore.FirebaseFirestoreSettings
 import kotlinx.android.synthetic.main.activity_dispositive_menu.*
-import java.lang.Exception
+import kotlinx.coroutines.*
 
 class DispositiveMenu : AppCompatActivity() {
 
     private lateinit var baseDatos: FirebaseFirestore
-    private var dispositivo: ArrayList<String> = arrayListOf()
-    private var ciudadesDispositivos: ArrayList<String> = arrayListOf()
+    private var listaDispositivos: ArrayList<String> = arrayListOf()
 
+    @SuppressLint("RtlHardcoded")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dispositive_menu)
+        baseDatos = FirebaseFirestore.getInstance()
+        baseDatos.firestoreSettings = FirebaseFirestoreSettings.Builder().build()
+        autoCompleteDispositivo.gravity = Gravity.START
 
-        baseDatos = Firebase.firestore
+        loadData()
+
+        cardEscaneoList.setOnClickListener{
+            autoCompleteDispositivo.gravity = Gravity.START
+        }
+    }
+
+    private fun loadData() {
+        val itemDispositivo = ArrayList<ItemAdapter>()
+
         baseDatos
             .collection("Dispositivos")
             .get()
-            .addOnSuccessListener { documents ->
-                try {
-                    if (documents != null) {
-                        for (document in documents)
-                            document.getString("ID")?.let {
-                                dispositivo.add(document.id)
-                                ciudadesDispositivos.add(document.getString("Calle")!! + ", " + document.getString("Numero") + "\t" + document.getString("Localidad"))
-                            }
-                    } else {
-                        Toast.makeText(this, "No document found", Toast.LENGTH_SHORT).show()
-                    }
-                } catch (e: Exception) {
-                    e.message?.let { Log.e(ContentValues.TAG, it) }
+            .addOnCompleteListener { task ->
+                for (document in task.result) {
+                    itemDispositivo.add(ItemAdapter(document.id, "${document.getString("Calle")}, ${document.getString("Numero")}, ${document.getString("Localidad")}"))
+                    listaDispositivos.add(document.id)
+                    Log.e(TAG, "${document.id} ${document.getString("Localidad")}, ${document.getString("Numero")}, ${document.getString("Ciudad")}")
                 }
+                val adaptador = DispositiveAdapter(itemDispositivo)
+                recyclerList.adapter = adaptador
+                recyclerList.layoutManager = LinearLayoutManager(applicationContext, LinearLayoutManager.VERTICAL, false)
             }
-            .addOnFailureListener {
-                    e -> Log.e(ContentValues.TAG, "Error writing the document", e)
-            }
-
-        val adaptadorAutoComplete = ArrayAdapter<String>(this, android.R.layout.simple_dropdown_item_1line, dispositivo)
+        val adaptadorAutoComplete = ArrayAdapter<String>(this, android.R.layout.simple_dropdown_item_1line, listaDispositivos)
         autoCompleteDispositivo.setAdapter(adaptadorAutoComplete)
         autoCompleteDispositivo.threshold = 1
-
-        val itemDispositivo = ArrayList<ItemAdapter>()
-
-        for (i in 0 until dispositivo.size)
-            itemDispositivo.add(ItemAdapter(i.toString(), ciudadesDispositivos[i].toString()))
-
-        val adaptador = DispositiveAdapter(itemDispositivo)
-
-        recyclerList.adapter = adaptador
-        recyclerList.layoutManager = LinearLayoutManager(applicationContext, LinearLayoutManager.VERTICAL, false)
-
-
     }
 }
