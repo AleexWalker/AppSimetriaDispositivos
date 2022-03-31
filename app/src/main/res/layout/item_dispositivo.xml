@@ -6,8 +6,8 @@
 
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_50sdp"
-        app:cardCornerRadius="0dp"
+        android:layout_height="@dimen/_40sdp"
+        app:cardCornerRadius="@dimen/_10sdp"
 
         app:strokeWidth="@dimen/_1sdp"
         app:strokeColor="@color/primary"
@@ -29,7 +29,7 @@
                 android:id="@+id/cardIzquierdaItem"
                 android:layout_width="@dimen/_40sdp"
                 android:layout_height="match_parent"
-                app:cardCornerRadius="0dp"
+                app:cardCornerRadius="@dimen/_10sdp"
 
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -88,7 +88,6 @@
                 android:id="@+id/ciudadItemDispositivo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/_5sdp"
 
                 android:text="Ciudad"
                 android:textColor="@color/color_simetria_7"
@@ -97,7 +96,8 @@
                 app:layout_constraintTop_toTopOf="@+id/imagenItemDispositivo"
                 app:layout_constraintStart_toEndOf="@+id/imagenItemDispositivo"
 
-                android:layout_marginBottom="@dimen/_10sdp"/>
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_1sdp"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

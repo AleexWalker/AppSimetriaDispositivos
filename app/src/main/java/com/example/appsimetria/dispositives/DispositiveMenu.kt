@@ -5,12 +5,16 @@ import android.content.ContentValues.TAG
 import android.graphics.PorterDuff
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.renderscript.ScriptGroup
+import android.text.InputType
 import android.util.Log
 import android.view.Gravity
 import android.view.View
 import android.widget.ArrayAdapter
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.appsimetria.R
+import com.example.appsimetria.databinding.ActivityDispositiveMenuBinding
+import com.google.android.material.datepicker.MaterialDatePicker
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.FirebaseFirestoreSettings
 import kotlinx.android.synthetic.main.activity_dispositive_menu.*
@@ -19,21 +23,21 @@ import kotlinx.coroutines.*
 class DispositiveMenu : AppCompatActivity() {
 
     private lateinit var baseDatos: FirebaseFirestore
+    private lateinit var binding: ActivityDispositiveMenuBinding
     private var listaDispositivos: ArrayList<String> = arrayListOf()
 
     @SuppressLint("RtlHardcoded")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_dispositive_menu)
+        binding = ActivityDispositiveMenuBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        autoCompleteDispositivo.translationZ = 10F
+
         baseDatos = FirebaseFirestore.getInstance()
         baseDatos.firestoreSettings = FirebaseFirestoreSettings.Builder().build()
-        autoCompleteDispositivo.gravity = Gravity.START
 
         loadData()
-
-        cardEscaneoList.setOnClickListener{
-            autoCompleteDispositivo.gravity = Gravity.START
-        }
     }
 
     private fun loadData() {

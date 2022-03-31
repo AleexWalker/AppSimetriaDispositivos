@@ -792,22 +792,6 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <TextView
-        android:id="@+id/prueba"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textColor="@color/primary_text_and_stroke"
-        android:textSize="@dimen/_12sdp"
-        android:textStyle="bold"
-
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-
-        android:layout_marginStart="@dimen/_20sdp"
-        android:layout_marginBottom="@dimen/_20sdp"
-        android:layout_marginEnd="@dimen/_20sdp"
-        android:fontFamily="@font/montserrat_medium"/>
-
     <ImageView
         android:layout_width="@dimen/_30sdp"
         android:layout_height="@dimen/_10sdp"

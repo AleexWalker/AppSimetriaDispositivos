@@ -195,8 +195,6 @@ class ServicesMenu : AppCompatActivity() {
 
         latitud = sharedPreferences.getFloat("latitud", 0f).toDouble()
         longitud = sharedPreferences.getFloat("longitud", 0f).toDouble()
-        prueba.append(latitud.toString() + "\n")
-        prueba.append(longitud.toString())
     }
 
     private fun toastPersonalizadoOpciones1() {

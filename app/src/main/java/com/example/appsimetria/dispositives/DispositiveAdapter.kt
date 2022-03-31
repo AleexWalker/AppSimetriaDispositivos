@@ -8,6 +8,8 @@ import kotlin.collections.ArrayList
 
 class DispositiveAdapter(private val listaDispositivos: ArrayList<ItemAdapter>): RecyclerView.Adapter<DispositiveAdapter.MyViewHolder>() {
 
+    private lateinit var onClick: (View) -> Unit
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val itemView = LayoutInflater.from(parent.context).inflate(R.layout.item_dispositivo, parent, false)
         return MyViewHolder(itemView)
@@ -26,5 +28,9 @@ class DispositiveAdapter(private val listaDispositivos: ArrayList<ItemAdapter>):
     class MyViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
         val dispositivo: TextView = itemView.findViewById(R.id.itemDispositivo)
         val localidad: TextView = itemView.findViewById(R.id.ciudadItemDispositivo)
+
+        fun bindTarjeta(t: ItemAdapter, onClick: (View) -> Unit) = with(itemView) {
+            setOnClickListener { onClick(itemView) }
+        }
     }
 }
