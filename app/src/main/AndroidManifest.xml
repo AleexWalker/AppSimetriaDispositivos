@@ -18,11 +18,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppSimetria">
         <activity
-            android:name=".dispositives.DispositiveMenu"
+            android:name=".dispositives.MenuDispositive"
             android:exported="false"
             android:windowSoftInputMode="adjustPan"/>
         <activity
-            android:name=".dispositives.ModifyMenu"
+            android:name=".dispositives.VisualizeDispositive"
             android:exported="false" />
 
         <meta-data

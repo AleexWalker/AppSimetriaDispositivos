@@ -47,7 +47,7 @@
         android:id="@+id/simetriaSinLogoLogIn"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_30sdp"
-        android:src="@drawable/simetria_sin_logo_blanco"
+        android:src="@drawable/simetria_sin_logo_azul_oscuro"
         android:layout_marginStart="@dimen/_30sdp"
         android:layout_marginEnd="@dimen/_30sdp"
 

@@ -14,9 +14,9 @@ import com.example.appsimetria.R
 import com.example.appsimetria.ServicesMenu
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.FirebaseFirestoreSettings
-import kotlinx.android.synthetic.main.activity_modify_menu.*
+import kotlinx.android.synthetic.main.activity_visualize_dispositive.*
 
-class ModifyMenu : AppCompatActivity() {
+class VisualizeDispositive : AppCompatActivity() {
 
     private lateinit var baseDatos: FirebaseFirestore
 
@@ -25,7 +25,7 @@ class ModifyMenu : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_modify_menu)
+        setContentView(R.layout.activity_visualize_dispositive)
         baseDatos = FirebaseFirestore.getInstance()
         baseDatos.firestoreSettings = FirebaseFirestoreSettings.Builder().build()
         spinner_dispositivos.background.setColorFilter(resources.getColor(R.color.primary), PorterDuff.Mode.SRC_ATOP);

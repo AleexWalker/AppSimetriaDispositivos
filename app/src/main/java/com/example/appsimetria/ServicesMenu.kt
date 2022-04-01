@@ -12,8 +12,8 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import com.example.appsimetria.auth.Login
-import com.example.appsimetria.dispositives.DispositiveMenu
-import com.example.appsimetria.dispositives.ModifyMenu
+import com.example.appsimetria.dispositives.MenuDispositive
+import com.example.appsimetria.dispositives.VisualizeDispositive
 import com.example.appsimetria.maps.DeleteDispositiveMaps
 import com.example.appsimetria.maps.NewDispositiveMaps
 import com.google.zxing.integration.android.IntentIntegrator
@@ -85,14 +85,14 @@ class ServicesMenu : AppCompatActivity() {
             saveDataModify(resultScanner, getCurrentDate())
             loadAllData()
 
-            startActivity(Intent(this, ModifyMenu::class.java))
+            startActivity(Intent(this, VisualizeDispositive::class.java))
             overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
         }
 
         cardAmpliacionMaps.setOnClickListener {
 
 
-            startActivity(Intent(this, DispositiveMenu::class.java))
+            startActivity(Intent(this, MenuDispositive::class.java))
             overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
         }
     }

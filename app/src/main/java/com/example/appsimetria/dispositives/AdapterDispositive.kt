@@ -1,16 +1,13 @@
 package com.example.appsimetria.dispositives
 
 import android.view.*
-import android.widget.AdapterView
 import android.widget.TextView
-import android.widget.Toast
-import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.example.appsimetria.R
 import kotlin.collections.ArrayList
 
-class DispositiveAdapter(private val listaDispositivos: ArrayList<ItemAdapter>,
-                         private val clickListener: (ItemAdapter) -> Unit): RecyclerView.Adapter<DispositiveAdapter.MyViewHolder>() {
+class AdapterDispositive(private val listaDispositivos: ArrayList<ItemAdapterDispositive>,
+                         private val clickListener: (ItemAdapterDispositive) -> Unit): RecyclerView.Adapter<AdapterDispositive.MyViewHolder>() {
 
     class MyViewHolder(itemView: View, clickAtPosition: (String) -> Unit): RecyclerView.ViewHolder(itemView) {
         val dispositivo: TextView = itemView.findViewById(R.id.itemDispositivo)
@@ -24,7 +21,7 @@ class DispositiveAdapter(private val listaDispositivos: ArrayList<ItemAdapter>,
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
-        return MyViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.item_dispositivo, parent, false)) {
+        return MyViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.item_adapter_dispositive, parent, false)) {
             clickListener(listaDispositivos[it.toInt()])
         }
     }

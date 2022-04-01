@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/card_bvackground"
-    tools:context=".dispositives.DispositiveMenu">
+    tools:context=".dispositives.MenuDispositive">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintArribaOpciones"
@@ -74,57 +74,40 @@
         android:id="@+id/cardEscaneoList"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_32sdp"
+        android:translationZ="@dimen/_100sdp"
 
-        android:layout_marginStart="@dimen/_20sdp"
-        android:layout_marginTop="@dimen/_110sdp"
-        android:layout_marginEnd="@dimen/_20sdp"
-        android:clickable="true"
-
-        android:focusable="true"
+        app:strokeWidth="@dimen/_1sdp"
+        app:strokeColor="@color/color_simetria_7"
         app:cardCornerRadius="@dimen/_50sdp"
         app:cardElevation="@dimen/_5sdp"
 
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:strokeColor="@color/color_simetria_7"
-        app:strokeWidth="@dimen/_1sdp"
-        tools:ignore="TouchTargetSizeCheck">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        android:layout_marginTop="@dimen/_110sdp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/constraintCardEscaneoList"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@color/white">
-
-            <View
-                android:id="@+id/viewCardEscaneoList"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
 
             <AutoCompleteTextView
                 android:id="@+id/autoCompleteDispositivo"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-
-                android:layout_marginStart="@dimen/_10sdp"
-                android:layout_marginEnd="@dimen/_10sdp"
-
-                android:background="@android:color/transparent"
-                android:completionThreshold="1"
-                android:fontFamily="@font/montserrat_medium"
-                android:gravity="start|center_vertical"
                 android:hint="IDENTIFICADOR"
-
+                android:textSize="@dimen/_10sdp"
                 android:textColor="@color/cardview_dark_background"
+                android:fontFamily="@font/montserrat_medium"
+                android:outlineAmbientShadowColor="@color/cardview_dark_background"
+
                 android:textColorHint="@color/cardview_dark_background"
-                android:textSize="@dimen/_14sdp"
-
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
-
+                android:textAlignment="center"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp">
             </AutoCompleteTextView>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -135,7 +118,7 @@
         android:id="@+id/textoServiciosList"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Dispositivos"
+        android:text="Servicios"
         android:textColor="@color/primary_text_and_stroke"
         android:textSize="@dimen/_18sdp"
         android:textStyle="bold"
@@ -162,22 +145,10 @@
         app:layout_constraintEnd_toEndOf="parent"
 
         android:layout_marginTop="@dimen/_5sdp"
-        android:layout_marginStart="@dimen/_30sdp"
-        android:layout_marginEnd="@dimen/_30sdp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
         android:layout_marginBottom="@dimen/_20sdp"
 
-        tools:listitem="@layout/item_dispositivo"/>
-
-    <ImageView
-        android:layout_width="@dimen/_30sdp"
-        android:layout_height="@dimen/_10sdp"
-        android:src="@drawable/simetria_sin_logo_blanco"
-
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginBottom="@dimen/_5sdp"
-
-        android:contentDescription="@string/desc" />
+        tools:listitem="@layout/item_adapter_dispositive"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
