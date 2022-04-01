@@ -37,6 +37,8 @@ class MenuDispositive : AppCompatActivity() {
             intentDispositivo.putExtra("Seleccionado", adapterView.getItemAtPosition(i).toString())
             startActivity(intentDispositivo)
             autoCompleteDispositivo.setText("")
+
+            overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
         }
     }
 
@@ -55,6 +57,8 @@ class MenuDispositive : AppCompatActivity() {
                     val intentDispositivo = Intent(this, VisualizeDispositive::class.java)
                     intentDispositivo.putExtra("Seleccionado", it.dispositivo)
                     startActivity(intentDispositivo)
+
+                    overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
                 }
                 recyclerList.adapter = adaptador
                 recyclerList.layoutManager = LinearLayoutManager(applicationContext, LinearLayoutManager.VERTICAL, false)

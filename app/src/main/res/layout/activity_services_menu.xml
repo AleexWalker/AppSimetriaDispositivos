@@ -47,7 +47,7 @@
         android:id="@+id/simetriaSinLogoLogIn"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_30sdp"
-        android:src="@drawable/simetria_sin_logo_azul_oscuro"
+        android:src="@drawable/simetria_sin_logo_night_mode"
         android:layout_marginStart="@dimen/_30sdp"
         android:layout_marginEnd="@dimen/_30sdp"
 
@@ -796,7 +796,7 @@
     <ImageView
         android:layout_width="@dimen/_30sdp"
         android:layout_height="@dimen/_10sdp"
-        android:src="@drawable/simetria_sin_logo_blanco"
+        android:src="@drawable/simetria_sin_logo_night_mode_inverse"
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
