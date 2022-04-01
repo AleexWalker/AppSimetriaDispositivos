@@ -47,7 +47,7 @@
         android:id="@+id/simetriaSinLogoLogIn"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_30sdp"
-        android:src="@drawable/simetria_sin_logo"
+        android:src="@drawable/simetria_sin_logo_blanco"
         android:layout_marginStart="@dimen/_30sdp"
         android:layout_marginEnd="@dimen/_30sdp"
 
@@ -227,7 +227,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/textoServiciosAdd"
-            android:layout_marginTop="@dimen/_2sdp"
+            android:layout_marginTop="@dimen/_4sdp"
             android:layout_marginBottom="@dimen/_10sdp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -379,7 +379,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textoServiciosDelete"
             android:layout_marginBottom="@dimen/_10sdp"
-            android:layout_marginTop="@dimen/_2sdp">
+            android:layout_marginTop="@dimen/_4sdp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -502,7 +502,7 @@
             android:id="@+id/textoServiciosAmpliacion1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Menu 1"
+            android:text="Visualizar todos los dispositivos"
             android:textColor="@color/primary_text_and_stroke"
             android:textSize="@dimen/_7sdp"
             android:textStyle="bold"
@@ -529,7 +529,8 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textoServiciosAmpliacion1"
-            android:layout_marginBottom="@dimen/_10sdp">
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_4sdp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -653,7 +654,7 @@
             android:id="@+id/textoServiciosModify"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Modificación de dispositivos"
+            android:text="Visualizar datos completos de cada dispositivo"
             android:textColor="@color/primary_text_and_stroke"
             android:textSize="@dimen/_7sdp"
             android:textStyle="bold"
@@ -680,7 +681,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textoServiciosModify"
-            android:layout_marginTop="@dimen/_2sdp"
+            android:layout_marginTop="@dimen/_4sdp"
             android:layout_marginBottom="@dimen/_10sdp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -795,7 +796,7 @@
     <ImageView
         android:layout_width="@dimen/_30sdp"
         android:layout_height="@dimen/_10sdp"
-        android:src="@drawable/logo_rombos"
+        android:src="@drawable/simetria_sin_logo_blanco"
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"

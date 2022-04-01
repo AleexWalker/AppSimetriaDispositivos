@@ -48,7 +48,7 @@
             android:id="@+id/simetriaSinLogoLogIn"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_30sdp"
-            android:src="@drawable/simetria_sin_logo"
+            android:src="@drawable/simetria_sin_logo_blanco"
             android:layout_marginStart="@dimen/_30sdp"
             android:layout_marginEnd="@dimen/_30sdp"
 
@@ -551,6 +551,18 @@
         </com.google.android.material.card.MaterialCardView>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_10sdp"
+        android:src="@drawable/simetria_sin_logo_blanco"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="@dimen/_5sdp"
+
+        android:contentDescription="@string/desc" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

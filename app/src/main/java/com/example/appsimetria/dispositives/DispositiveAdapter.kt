@@ -10,16 +10,23 @@ import com.example.appsimetria.R
 import kotlin.collections.ArrayList
 
 class DispositiveAdapter(private val listaDispositivos: ArrayList<ItemAdapter>,
-                         private val clickListener: (String) -> Unit): RecyclerView.Adapter<DispositiveAdapter.MyViewHolder>() {
+                         private val clickListener: (ItemAdapter) -> Unit): RecyclerView.Adapter<DispositiveAdapter.MyViewHolder>() {
 
-    class MyViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
+    class MyViewHolder(itemView: View, clickAtPosition: (String) -> Unit): RecyclerView.ViewHolder(itemView) {
         val dispositivo: TextView = itemView.findViewById(R.id.itemDispositivo)
         val localidad: TextView = itemView.findViewById(R.id.ciudadItemDispositivo)
+
+        init {
+            itemView.setOnClickListener {
+                clickAtPosition(adapterPosition.toString())
+            }
+        }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
-        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.item_dispositivo, parent, false)
-        return MyViewHolder(itemView)
+        return MyViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.item_dispositivo, parent, false)) {
+            clickListener(listaDispositivos[it.toInt()])
+        }
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
@@ -28,7 +35,7 @@ class DispositiveAdapter(private val listaDispositivos: ArrayList<ItemAdapter>,
         holder.localidad.text = currentItem.localidad
 
         holder.itemView.setOnClickListener {
-            clickListener(listaDispositivos[position].toString())
+            clickListener(listaDispositivos[position])
         }
     }
 

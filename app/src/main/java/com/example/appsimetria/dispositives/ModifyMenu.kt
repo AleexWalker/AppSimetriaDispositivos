@@ -6,6 +6,7 @@ import android.graphics.PorterDuff
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Html
+import android.util.Log
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
@@ -18,30 +19,18 @@ import kotlinx.android.synthetic.main.activity_modify_menu.*
 class ModifyMenu : AppCompatActivity() {
 
     private lateinit var baseDatos: FirebaseFirestore
+
     private var dispositivo: ArrayList<String> = arrayListOf()
+    private var seleccionado: String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_modify_menu)
-
         baseDatos = FirebaseFirestore.getInstance()
         baseDatos.firestoreSettings = FirebaseFirestoreSettings.Builder().build()
-
         spinner_dispositivos.background.setColorFilter(resources.getColor(R.color.primary), PorterDuff.Mode.SRC_ATOP);
 
-        baseDatos
-            .collection("Dispositivos")
-            .get()
-            .addOnCompleteListener { task ->
-                if (task.isSuccessful) {
-                    for (document in task.result!!) {
-                        dispositivo.add(document.id)
-                    }
-                    val adaptador = ArrayAdapter(this, R.layout.item_spinner, dispositivo)
-                    adaptador.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-                    spinner_dispositivos.adapter = adaptador
-                }
-            }
+        loadAdapter()
 
         imagenAtrasModify.setOnClickListener {
             startActivity(Intent(this, ServicesMenu::class.java))
@@ -88,6 +77,32 @@ class ModifyMenu : AppCompatActivity() {
             override fun onNothingSelected(p0: AdapterView<*>?) {
                 TODO("Not yet implemented")
             }
+        }
+    }
+
+    private fun loadAdapter() {
+        baseDatos
+            .collection("Dispositivos")
+            .get()
+            .addOnCompleteListener { task ->
+                if (task.isSuccessful) {
+                    for (document in task.result!!) {
+                        dispositivo.add(document.id)
+                    }
+                    val adaptador = ArrayAdapter(this, R.layout.item_spinner, dispositivo)
+                    adaptador.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+                    spinner_dispositivos.adapter = adaptador
+                    spinner_dispositivos.setSelection(comprobacionSpinner())
+                }
+            }
+    }
+
+    private fun comprobacionSpinner(): Int{
+        seleccionado = intent.getStringExtra("Seleccionado")
+        return if (seleccionado == null) {
+            0
+        } else {
+            dispositivo.indexOf(seleccionado)
         }
     }
 }

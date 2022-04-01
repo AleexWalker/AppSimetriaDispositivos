@@ -2,6 +2,8 @@ package com.example.appsimetria.dispositives
 
 import android.annotation.SuppressLint
 import android.content.ContentValues.TAG
+import android.content.Context
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -48,10 +50,11 @@ class DispositiveMenu : AppCompatActivity() {
                 for (document in task.result) {
                     itemDispositivo.add(ItemAdapter(document.id, "${document.getString("Calle")}, ${document.getString("Numero")}, ${document.getString("Localidad")}"))
                     listaDispositivos.add(document.id)
-                    Log.e(TAG, "${document.id} ${document.getString("Localidad")}, ${document.getString("Numero")}, ${document.getString("Ciudad")}")
                 }
-                val adaptador = DispositiveAdapter(itemDispositivo) {
-                    Toast.makeText(this, it, Toast.LENGTH_LONG).show()
+                val adaptador = DispositiveAdapter(itemDispositivo){
+                    val intentDispositivo = Intent(this, ModifyMenu::class.java)
+                    intentDispositivo.putExtra("Seleccionado", it.dispositivo)
+                    startActivity(intentDispositivo)
                 }
                 recyclerList.adapter = adaptador
                 recyclerList.layoutManager = LinearLayoutManager(applicationContext, LinearLayoutManager.VERTICAL, false)
