@@ -5,6 +5,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.Gravity
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
@@ -29,9 +30,12 @@ class MenuDispositive : AppCompatActivity() {
         baseDatos = FirebaseFirestore.getInstance()
         baseDatos.firestoreSettings = FirebaseFirestoreSettings.Builder().build()
 
-        autoCompleteDispositivo.translationZ = 10F
-
         loadData()
+
+        binding.autoCompleteDispositivo.setOnClickListener {
+            binding.autoCompleteDispositivo.gravity = Gravity.START
+            binding.autoCompleteDispositivo.gravity = Gravity.CENTER_VERTICAL
+        }
 
         binding.autoCompleteDispositivo.onItemClickListener = AdapterView.OnItemClickListener { adapterView, view, i, l ->
             val intentDispositivo = Intent(this, VisualizeDispositive::class.java)

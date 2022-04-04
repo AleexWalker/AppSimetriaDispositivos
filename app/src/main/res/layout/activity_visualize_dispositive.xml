@@ -98,6 +98,7 @@
                 android:id="@+id/spinner_dispositivos"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:paddingStart="@dimen/_10sdp"
 
                 tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck"
                 tools:layout_editor_absoluteX="26dp" />
@@ -198,18 +199,20 @@
                         android:id="@+id/textoCalle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_20sdp"
+
+                        android:fontFamily="@font/montserrat_medium"
+                        android:inputType="textMultiLine"
+                        android:text="Calle"
+
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_7sdp"
                         android:textStyle="bold"
 
-                        android:text="Calle"
-                        android:textSize="@dimen/_7sdp"
-                        android:fontFamily="@font/montserrat_medium"
-                        android:textColor="@color/white"
-
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintStart_toEndOf="@+id/imagenUsuarioCardModify"
                         app:layout_constraintBottom_toTopOf="@+id/textoLocalidad"
-
-                        android:layout_marginStart="@dimen/_20sdp"/>
+                        app:layout_constraintStart_toEndOf="@+id/imagenUsuarioCardModify"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="TouchTargetSizeCheck" />
 
                     <TextView
                         android:id="@+id/textoCodigoPostal"

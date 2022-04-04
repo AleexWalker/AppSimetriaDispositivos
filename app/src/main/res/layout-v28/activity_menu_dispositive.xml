@@ -47,7 +47,7 @@
             android:id="@+id/simetriaSinLogoLogIn"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_30sdp"
-            android:src="@drawable/simetria_sin_logo_blanco"
+            android:src="@drawable/simetria_sin_logo_night_mode"
             android:layout_marginStart="@dimen/_30sdp"
             android:layout_marginEnd="@dimen/_30sdp"
 
@@ -97,28 +97,24 @@
             android:layout_height="match_parent"
             android:background="@color/white">
 
-            <View
-                android:id="@+id/viewCardEscaneoList"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
-
             <AutoCompleteTextView
                 android:id="@+id/autoCompleteDispositivo"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
 
+
                 android:layout_marginStart="@dimen/_10sdp"
                 android:layout_marginEnd="@dimen/_10sdp"
+                android:gravity="center"
 
                 android:background="@android:color/transparent"
                 android:completionThreshold="1"
                 android:fontFamily="@font/montserrat_medium"
-                android:gravity="start|center_vertical"
                 android:hint="IDENTIFICADOR"
 
                 android:textColor="@color/cardview_dark_background"
                 android:textColorHint="@color/cardview_dark_background"
-                android:textSize="@dimen/_12sdp"
+                android:textSize="@dimen/_10sdp"
 
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -146,8 +142,8 @@
         app:layout_constraintEnd_toEndOf="parent"
 
         android:layout_marginTop="@dimen/_5sdp"
-        android:layout_marginStart="@dimen/_20sdp"
-        android:layout_marginEnd="@dimen/_20sdp"
+        android:layout_marginStart="@dimen/_30sdp"
+        android:layout_marginEnd="@dimen/_30sdp"
         android:layout_marginBottom="@dimen/_10sdp"
         android:fontFamily="@font/montserrat_medium"/>
 

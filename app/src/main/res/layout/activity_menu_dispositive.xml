@@ -129,8 +129,8 @@
         app:layout_constraintEnd_toEndOf="parent"
 
         android:layout_marginTop="@dimen/_5sdp"
-        android:layout_marginStart="@dimen/_20sdp"
-        android:layout_marginEnd="@dimen/_20sdp"
+        android:layout_marginStart="@dimen/_30sdp"
+        android:layout_marginEnd="@dimen/_30sdp"
         android:layout_marginBottom="@dimen/_10sdp"
         android:fontFamily="@font/montserrat_medium"/>
 
@@ -145,8 +145,8 @@
         app:layout_constraintEnd_toEndOf="parent"
 
         android:layout_marginTop="@dimen/_5sdp"
-        android:layout_marginStart="@dimen/_20sdp"
-        android:layout_marginEnd="@dimen/_20sdp"
+        android:layout_marginStart="@dimen/_30sdp"
+        android:layout_marginEnd="@dimen/_30sdp"
         android:layout_marginBottom="@dimen/_20sdp"
 
         tools:listitem="@layout/item_adapter_dispositive"/>
