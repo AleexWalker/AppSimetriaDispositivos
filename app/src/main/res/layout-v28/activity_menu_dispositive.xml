@@ -18,7 +18,7 @@
         android:background="@color/primary">
 
         <ImageView
-            android:id="@+id/imagenAtrasModify"
+            android:id="@+id/imagenAtrasMenuDispositive"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_marginStart="@dimen/_20sdp"
@@ -118,7 +118,7 @@
 
                 android:textColor="@color/cardview_dark_background"
                 android:textColorHint="@color/cardview_dark_background"
-                android:textSize="@dimen/_14sdp"
+                android:textSize="@dimen/_12sdp"
 
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"

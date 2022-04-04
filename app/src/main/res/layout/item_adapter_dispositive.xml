@@ -91,7 +91,7 @@
 
                 android:text="Ciudad"
                 android:textColor="@color/color_simetria_7"
-                android:textSize="@dimen/_8sdp"
+                android:textSize="@dimen/_7sdp"
 
                 app:layout_constraintTop_toTopOf="@+id/imagenItemDispositivo"
                 app:layout_constraintStart_toEndOf="@+id/imagenItemDispositivo"

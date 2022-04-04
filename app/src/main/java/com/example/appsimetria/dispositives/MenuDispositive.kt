@@ -9,6 +9,7 @@ import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.appsimetria.ServicesMenu
 import com.example.appsimetria.databinding.ActivityMenuDispositiveBinding
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.FirebaseFirestoreSettings
@@ -32,11 +33,17 @@ class MenuDispositive : AppCompatActivity() {
 
         loadData()
 
-        autoCompleteDispositivo.onItemClickListener = AdapterView.OnItemClickListener { adapterView, view, i, l ->
+        binding.autoCompleteDispositivo.onItemClickListener = AdapterView.OnItemClickListener { adapterView, view, i, l ->
             val intentDispositivo = Intent(this, VisualizeDispositive::class.java)
             intentDispositivo.putExtra("Seleccionado", adapterView.getItemAtPosition(i).toString())
             startActivity(intentDispositivo)
             autoCompleteDispositivo.setText("")
+
+            overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
+        }
+
+        binding.imagenAtrasMenuDispositive?.setOnClickListener {
+            startActivity(Intent(this, ServicesMenu::class.java))
 
             overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
         }
