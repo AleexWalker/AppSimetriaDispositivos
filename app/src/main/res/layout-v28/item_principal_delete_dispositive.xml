@@ -10,7 +10,7 @@
         android:layout_height="@dimen/_55sdp"
         app:cardElevation="@dimen/_5sdp"
 
-        app:strokeColor="@color/color_simetria_8"
+        app:strokeColor="@color/stroke_item_services_menu"
         app:strokeWidth="@dimen/_1sdp"
 
         app:cardCornerRadius="@dimen/_5sdp"
@@ -168,16 +168,18 @@
                 android:layout_marginStart="@dimen/_5sdp"
                 android:fontFamily="@font/montserrat_medium"
 
-                android:text="CC:00:00:B4:04"
+                android:text="FECHA"
                 android:textColor="@color/color_simetria_7"
 
                 android:textSize="@dimen/_8sdp"
                 app:layout_constraintBottom_toBottomOf="@+id/textDispositive"
-                app:layout_constraintEnd_toEndOf="@+id/textMenuDispositives"
-                app:layout_constraintHorizontal_bias="1.0"
-
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/textDispositive"
-                app:layout_constraintTop_toTopOf="@+id/textDispositive" />
+                app:layout_constraintTop_toTopOf="@+id/textDispositive"
+
+                app:layout_constraintHorizontal_bias="1.0"
+                android:layout_marginEnd="@dimen/_15sdp"
+                />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

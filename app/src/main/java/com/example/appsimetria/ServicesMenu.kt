@@ -1,10 +1,12 @@
 package com.example.appsimetria
 
 import android.annotation.SuppressLint
+import android.content.ContentValues.TAG
 import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
 import android.graphics.drawable.AnimatedVectorDrawable
+import android.os.Build
 import android.os.Bundle
 import android.util.Log
 import android.view.*
@@ -18,26 +20,38 @@ import com.example.appsimetria.dispositives.MenuDispositive
 import com.example.appsimetria.dispositives.VisualizeDispositive
 import com.example.appsimetria.maps.DeleteDispositiveMaps
 import com.example.appsimetria.maps.NewDispositiveMaps
+import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.FirebaseFirestoreSettings
 import com.google.zxing.integration.android.IntentIntegrator
 import kotlinx.android.synthetic.main.activity_services_menu.*
 import kotlinx.android.synthetic.main.custom_toast_opciones_1.*
 import kotlinx.android.synthetic.main.custom_toast_opciones_2.*
+import kotlinx.android.synthetic.main.item_principal_add_dispositive.view.*
+import kotlinx.android.synthetic.main.item_principal_add_dispositive.view.hourCard
+import kotlinx.android.synthetic.main.item_principal_add_dispositive.view.textDispositive
+import kotlinx.android.synthetic.main.item_principal_delete_dispositive.view.*
+import kotlinx.android.synthetic.main.item_principal_menu_dispositive.*
+import kotlinx.android.synthetic.main.item_principal_menu_dispositive.view.*
 import java.text.SimpleDateFormat
 import java.util.*
+import kotlin.collections.HashMap
 
 class ServicesMenu : AppCompatActivity() {
-
     private lateinit var resultScanner: String
+    private lateinit var baseDatos: FirebaseFirestore
     private lateinit var binding: ActivityServicesMenuBinding
 
     private var latitud: Double = 0.0
     private var longitud: Double = 0.0
+    private var listaDispositivos: HashMap<String, Any> = hashMapOf()
 
     @SuppressLint("UseCompatLoadingForDrawables")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityServicesMenuBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        baseDatos = FirebaseFirestore.getInstance()
+        baseDatos.firestoreSettings = FirebaseFirestoreSettings.Builder().build()
 
         startFunctions()
 
@@ -69,6 +83,11 @@ class ServicesMenu : AppCompatActivity() {
             initScanner()
         }
 
+        binding.includeAddDispositives
+        includeAddDispositives.setOnClickListener {
+
+        }
+
         binding.includeAddDispositives.cardAddClickable.setOnClickListener {
             saveDataAdd(resultScanner, getCurrentDate())
             loadAllData()
@@ -76,7 +95,6 @@ class ServicesMenu : AppCompatActivity() {
             startActivity(Intent(this, NewDispositiveMaps::class.java))
             overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
         }
-
 
         binding.includeDeleteDispositives.cardDeleteClickable.setOnClickListener {
             saveDataDelete(resultScanner, getCurrentDate())
@@ -88,18 +106,20 @@ class ServicesMenu : AppCompatActivity() {
 
         binding.includeMenuDispositives.cardMenuClickable.setOnClickListener {
             saveDataModify(resultScanner, getCurrentDate())
-            loadAllData()
+            //loadAllData()
 
-            startActivity(Intent(this, VisualizeDispositive::class.java))
+            startActivity(Intent(this, MenuDispositive::class.java))
             overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
         }
 
         binding.includeVisualizeDispositives.cardVisualizeClickable.setOnClickListener {
 
 
-            startActivity(Intent(this, MenuDispositive::class.java))
+            startActivity(Intent(this, VisualizeDispositive::class.java))
             overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
         }
+
+        Log.e("Prueba", Build.FINGERPRINT, )
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
@@ -151,6 +171,21 @@ class ServicesMenu : AppCompatActivity() {
 
         resultScanner = sharedPreferences.getString("datos", null).toString()
         textoEscaneoActivo.text = ("DISPOSITIVO EN MEMORIA: $resultScanner")
+
+        baseDatos
+            .collection("Dispositivos")
+            .get()
+            .addOnSuccessListener { documents ->
+                if(documents != null){
+                    for(document in documents) {
+                        listaDispositivos[document.id] = document.id
+                    }
+                    binding.includeMenuDispositives.textDispositives.text = "Numero de dispositivos: ${listaDispositivos.size}"
+                }
+            }
+            .addOnFailureListener {
+                Log.e(TAG, "Document not found")
+            }
     }
 
     private fun saveDataAdd(datos: String, date: String){
@@ -180,6 +215,7 @@ class ServicesMenu : AppCompatActivity() {
         editor.apply()
     }
 
+    @SuppressLint("SetTextI18n")
     private fun loadAllData() {
         val sharedPreferencesAdd = getSharedPreferences("Add", Context.MODE_PRIVATE)
         val sharedPreferencesDelete = getSharedPreferences("Delete", Context.MODE_PRIVATE)
@@ -237,7 +273,6 @@ class ServicesMenu : AppCompatActivity() {
     private fun getCurrentTime24HFormat(): String {
         val output = SimpleDateFormat("HH:mm", Locale.getDefault()).format(Date())
         val date = Date()
-        Log.e("Hora", output.format(date))
         return output.format(date)
     }
 }

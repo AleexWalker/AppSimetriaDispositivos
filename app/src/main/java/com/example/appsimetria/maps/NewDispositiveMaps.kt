@@ -10,6 +10,7 @@ import android.content.res.Resources
 import android.location.Address
 import android.location.Geocoder
 import android.location.Location
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -55,7 +56,6 @@ class NewDispositiveMaps : AppCompatActivity(), OnMapReadyCallback, GoogleMap.On
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         binding = ActivityNewDispositiveMapsBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
@@ -222,6 +222,9 @@ class NewDispositiveMaps : AppCompatActivity(), OnMapReadyCallback, GoogleMap.On
         data["Pais"] = listGeocoder[0].countryName
         data["Calle"] = listGeocoder[0].thoroughfare
         data["Codigo Postal"] = listGeocoder[0].postalCode
+
+        data["Marca"] = Build.MANUFACTURER.replaceFirstChar { it.toUpperCase() }
+        data["Modelo"] = Build.MODEL
 
 
         baseDatos
