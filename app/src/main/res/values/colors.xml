@@ -10,6 +10,7 @@
     <color name="white">#ffffff</color>
     <color name="letra_boton">#27325F</color>
     <color name="textModify">#FFFFFF</color>
+    <color name="primary_text_and_stroke_50">#80002753</color>
 
     <!--Item Colors -->
     <color name="dashboard_item_1">#ec407a</color>
@@ -36,6 +37,7 @@
     <color name="color_simetria_5">#0082c1</color>
     <color name="color_simetria_6">#0056ab</color>
     <color name="color_simetria_7">#002753</color>
+    <color name="color_simetria_8">#002249</color>
 
     <!--Colores MaterialColor-->
     <color name="material_color_rojo_2">#ba000d</color>

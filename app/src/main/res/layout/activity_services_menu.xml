@@ -177,7 +177,7 @@
 
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardEscaneo"
-        app:layout_constraintBottom_toTopOf="@+id/constraintMenuAdd"
+        app:layout_constraintBottom_toTopOf="@+id/includeAddDispositives"
         app:layout_constraintEnd_toEndOf="parent"
 
         android:layout_marginStart="@dimen/_20sdp"
@@ -185,7 +185,68 @@
         android:layout_marginEnd="@dimen/_20sdp"
         android:fontFamily="@font/montserrat_medium"/>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <include
+        android:id="@+id/includeAddDispositives"
+        layout="@layout/item_principal_add_dispositive"
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="@dimen/_5sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textoServicios" />
+
+    <include
+        android:id="@+id/includeDeleteDispositives"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        layout="@layout/item_principal_delete_dispositive"
+
+        app:layout_constraintTop_toBottomOf="@id/includeAddDispositives"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        android:layout_marginTop="@dimen/_5sdp"/>
+
+    <include
+        android:id="@+id/includeMenuDispositives"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        layout="@layout/item_principal_menu_dispositive"
+
+        app:layout_constraintTop_toBottomOf="@id/includeDeleteDispositives"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        android:layout_marginTop="@dimen/_5sdp"/>
+
+    <include
+        android:id="@+id/includeVisualizeDispositives"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        layout="@layout/item_principal_visualize_dispositive"
+
+        app:layout_constraintTop_toBottomOf="@id/includeMenuDispositives"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        android:layout_marginTop="@dimen/_5sdp"/>
+
+    <ImageView
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_10sdp"
+        android:src="@drawable/simetria_sin_logo_night_mode_inverse"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="@dimen/_5sdp"
+
+        android:contentDescription="@string/desc" />
+
+    <!--<androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintMenuAdd"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -337,9 +398,9 @@
 
         </com.google.android.material.card.MaterialCardView>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>-->
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <!--<androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintMenuDelete"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -488,161 +549,9 @@
 
         </com.google.android.material.card.MaterialCardView>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>-->
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintMenuAdicional"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-
-        app:layout_constraintTop_toBottomOf="@+id/constraintMenuModify"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <TextView
-            android:id="@+id/textoServiciosAmpliacion1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Visualizar todos los dispositivos"
-            android:textColor="@color/primary_text_and_stroke"
-            android:textSize="@dimen/_7sdp"
-            android:textStyle="bold"
-
-            app:layout_constraintStart_toStartOf="@id/cardAmpliacionMaps"
-            app:layout_constraintTop_toTopOf="parent"
-
-            android:layout_marginStart="@dimen/_20sdp"
-            android:layout_marginEnd="@dimen/_20sdp"
-            android:fontFamily="@font/montserrat_medium"/>
-
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/cardAmpliacionMaps"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/_55sdp"
-            android:layout_marginStart="@dimen/_35sdp"
-            android:layout_marginEnd="@dimen/_20sdp"
-
-            app:strokeColor="@color/primary_text_and_stroke"
-            app:strokeWidth="@dimen/_1sdp"
-
-            app:cardCornerRadius="@dimen/_30sdp"
-            app:cardElevation="@dimen/_7sdp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textoServiciosAmpliacion1"
-            android:layout_marginBottom="@dimen/_10sdp"
-            android:layout_marginTop="@dimen/_4sdp">
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@color/primary"
-                android:translationZ="20dp">
-
-                <ImageView
-                    android:id="@+id/imagenDispositiveAmpliacion1"
-                    android:layout_width="@dimen/_15sdp"
-                    android:layout_height="@dimen/_15sdp"
-                    android:src="@drawable/barcode"
-
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintBottom_toTopOf="@+id/imagenCalendarAmpliacion1"
-                    app:layout_constraintEnd_toEndOf="parent"
-
-                    android:layout_marginEnd="@dimen/_180sdp"
-                    android:contentDescription="@string/desc" />
-
-                <ImageView
-                    android:id="@+id/imagenCalendarAmpliacion1"
-                    android:layout_width="@dimen/_14sdp"
-                    android:layout_height="@dimen/_14sdp"
-                    android:src="@drawable/calendar"
-
-                    app:layout_constraintTop_toBottomOf="@+id/imagenDispositiveAmpliacion1"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-
-                    android:layout_marginEnd="@dimen/_180sdp"
-                    android:contentDescription="@string/desc" />
-
-                <TextView
-                    android:id="@+id/textoUltimoEscaneoAmpliacion1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="@dimen/_7sdp"
-                    android:textStyle="bold"
-                    android:textColor="@color/primary_text_and_stroke"
-                    android:fontFamily="@font/montserrat_medium"
-
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintBottom_toTopOf="@+id/textoDiaAmpliacion1"
-                    app:layout_constraintStart_toEndOf="@+id/imagenDispositiveAmpliacion1"
-                    android:layout_marginStart="@dimen/_7sdp"/>
-
-                <TextView
-                    android:id="@+id/textoDiaAmpliacion1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="@dimen/_7sdp"
-                    android:textStyle="bold"
-                    android:textColor="@color/primary_text_and_stroke"
-                    android:fontFamily="@font/montserrat_medium"
-
-                    app:layout_constraintTop_toBottomOf="@+id/textoUltimoEscaneoAmpliacion1"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/imagenCalendarAmpliacion1"
-
-                    android:layout_marginStart="@dimen/_7sdp"
-                    android:layout_marginTop="@dimen/_2sdp" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-        </com.google.android.material.card.MaterialCardView>
-
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/cardImagenAmpliacion2"
-            android:layout_width="@dimen/_40sdp"
-            android:layout_height="@dimen/_40sdp"
-            android:layout_marginStart="@dimen/_20sdp"
-            android:translationZ="@dimen/_100sdp"
-
-            app:strokeWidth="@dimen/_1sdp"
-            app:strokeColor="@color/white"
-
-            app:cardCornerRadius="@dimen/_100sdp"
-            app:cardElevation="@dimen/_7sdp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-
-            android:layout_marginTop="@dimen/_2sdp">
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@color/color_simetria_7"
-                android:translationZ="20dp">
-
-                <ImageView
-                    android:layout_width="@dimen/_25sdp"
-                    android:layout_height="@dimen/_25sdp"
-                    android:src="@drawable/add2"
-                    android:translationZ="20dp"
-
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    android:contentDescription="@string/desc" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-        </com.google.android.material.card.MaterialCardView>
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <!--<androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintMenuModify"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -778,7 +687,160 @@
                 <ImageView
                     android:layout_width="@dimen/_25sdp"
                     android:layout_height="@dimen/_25sdp"
-                    android:src="@drawable/modificar"
+                    android:src="@drawable/visualizedata"
+                    android:translationZ="20dp"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:contentDescription="@string/desc"
+                    android:layout_marginStart="@dimen/_5sdp"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+    <!--<androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintMenuAdicional"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintTop_toBottomOf="@+id/constraintMenuModify"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/textoServiciosAmpliacion1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Visualizar todos los dispositivos"
+            android:textColor="@color/primary_text_and_stroke"
+            android:textSize="@dimen/_7sdp"
+            android:textStyle="bold"
+
+            app:layout_constraintStart_toStartOf="@id/cardAmpliacionMaps"
+            app:layout_constraintTop_toTopOf="parent"
+
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:fontFamily="@font/montserrat_medium"/>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardAmpliacionMaps"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_55sdp"
+            android:layout_marginStart="@dimen/_35sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+
+            app:strokeColor="@color/primary_text_and_stroke"
+            app:strokeWidth="@dimen/_1sdp"
+
+            app:cardCornerRadius="@dimen/_30sdp"
+            app:cardElevation="@dimen/_7sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textoServiciosAmpliacion1"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_4sdp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/primary"
+                android:translationZ="20dp">
+
+                <ImageView
+                    android:id="@+id/imagenDispositiveAmpliacion1"
+                    android:layout_width="@dimen/_15sdp"
+                    android:layout_height="@dimen/_15sdp"
+                    android:src="@drawable/barcode"
+
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toTopOf="@+id/imagenCalendarAmpliacion1"
+                    app:layout_constraintEnd_toEndOf="parent"
+
+                    android:layout_marginEnd="@dimen/_180sdp"
+                    android:contentDescription="@string/desc" />
+
+                <ImageView
+                    android:id="@+id/imagenCalendarAmpliacion1"
+                    android:layout_width="@dimen/_14sdp"
+                    android:layout_height="@dimen/_14sdp"
+                    android:src="@drawable/calendar"
+
+                    app:layout_constraintTop_toBottomOf="@+id/imagenDispositiveAmpliacion1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+
+                    android:layout_marginEnd="@dimen/_180sdp"
+                    android:contentDescription="@string/desc" />
+
+                <TextView
+                    android:id="@+id/textoUltimoEscaneoAmpliacion1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_7sdp"
+                    android:textStyle="bold"
+                    android:textColor="@color/primary_text_and_stroke"
+                    android:fontFamily="@font/montserrat_medium"
+
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toTopOf="@+id/textoDiaAmpliacion1"
+                    app:layout_constraintStart_toEndOf="@+id/imagenDispositiveAmpliacion1"
+                    android:layout_marginStart="@dimen/_7sdp"/>
+
+                <TextView
+                    android:id="@+id/textoDiaAmpliacion1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_7sdp"
+                    android:textStyle="bold"
+                    android:textColor="@color/primary_text_and_stroke"
+                    android:fontFamily="@font/montserrat_medium"
+
+                    app:layout_constraintTop_toBottomOf="@+id/textoUltimoEscaneoAmpliacion1"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/imagenCalendarAmpliacion1"
+
+                    android:layout_marginStart="@dimen/_7sdp"
+                    android:layout_marginTop="@dimen/_2sdp" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardImagenAmpliacion2"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:translationZ="@dimen/_100sdp"
+
+            app:strokeWidth="@dimen/_1sdp"
+            app:strokeColor="@color/white"
+
+            app:cardCornerRadius="@dimen/_100sdp"
+            app:cardElevation="@dimen/_7sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+            android:layout_marginTop="@dimen/_2sdp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/color_simetria_7"
+                android:translationZ="20dp">
+
+                <ImageView
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:src="@drawable/server"
                     android:translationZ="20dp"
 
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -791,19 +853,7 @@
 
         </com.google.android.material.card.MaterialCardView>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <ImageView
-        android:layout_width="@dimen/_30sdp"
-        android:layout_height="@dimen/_10sdp"
-        android:src="@drawable/simetria_sin_logo_night_mode_inverse"
-
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginBottom="@dimen/_5sdp"
-
-        android:contentDescription="@string/desc" />
+    </androidx.constraintlayout.widget.ConstraintLayout>-->
 
 
     <!--

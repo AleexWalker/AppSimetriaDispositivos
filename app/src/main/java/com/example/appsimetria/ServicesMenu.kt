@@ -6,12 +6,14 @@ import android.content.Intent
 import android.content.SharedPreferences
 import android.graphics.drawable.AnimatedVectorDrawable
 import android.os.Bundle
+import android.util.Log
 import android.view.*
 import android.widget.PopupMenu
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import com.example.appsimetria.auth.Login
+import com.example.appsimetria.databinding.ActivityServicesMenuBinding
 import com.example.appsimetria.dispositives.MenuDispositive
 import com.example.appsimetria.dispositives.VisualizeDispositive
 import com.example.appsimetria.maps.DeleteDispositiveMaps
@@ -26,6 +28,7 @@ import java.util.*
 class ServicesMenu : AppCompatActivity() {
 
     private lateinit var resultScanner: String
+    private lateinit var binding: ActivityServicesMenuBinding
 
     private var latitud: Double = 0.0
     private var longitud: Double = 0.0
@@ -33,11 +36,12 @@ class ServicesMenu : AppCompatActivity() {
     @SuppressLint("UseCompatLoadingForDrawables")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_services_menu)
+        binding = ActivityServicesMenuBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         startFunctions()
 
-        imagenAtras.setOnClickListener {
+        binding.imagenAtras.setOnClickListener {
             val rotar = getDrawable(R.drawable.ad_rotation) as AnimatedVectorDrawable
             imagenAtras.setImageDrawable(rotar)
             rotar.start()
@@ -46,7 +50,7 @@ class ServicesMenu : AppCompatActivity() {
             overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
         }
 
-        imagenMenu.setOnClickListener {
+        binding.imagenMenu.setOnClickListener {
             val showPopUp = PopupMenu(this, imagenMenu)
             showPopUp.menuInflater.inflate(R.menu.menu, showPopUp.menu)
 
@@ -61,11 +65,11 @@ class ServicesMenu : AppCompatActivity() {
             showPopUp.show()
         }
 
-        cardEscaneoImagen.setOnClickListener {
+        binding.cardEscaneoImagen.setOnClickListener {
             initScanner()
         }
 
-        cardAltaMaps.setOnClickListener {
+        binding.includeAddDispositives.cardAddClickable.setOnClickListener {
             saveDataAdd(resultScanner, getCurrentDate())
             loadAllData()
 
@@ -73,7 +77,8 @@ class ServicesMenu : AppCompatActivity() {
             overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
         }
 
-        cardEliminarMaps.setOnClickListener {
+
+        binding.includeDeleteDispositives.cardDeleteClickable.setOnClickListener {
             saveDataDelete(resultScanner, getCurrentDate())
             loadAllData()
 
@@ -81,7 +86,7 @@ class ServicesMenu : AppCompatActivity() {
             overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
         }
 
-        cardModificarMaps.setOnClickListener {
+        binding.includeMenuDispositives.cardMenuClickable.setOnClickListener {
             saveDataModify(resultScanner, getCurrentDate())
             loadAllData()
 
@@ -89,7 +94,7 @@ class ServicesMenu : AppCompatActivity() {
             overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
         }
 
-        cardAmpliacionMaps.setOnClickListener {
+        binding.includeVisualizeDispositives.cardVisualizeClickable.setOnClickListener {
 
 
             startActivity(Intent(this, MenuDispositive::class.java))
@@ -180,14 +185,19 @@ class ServicesMenu : AppCompatActivity() {
         val sharedPreferencesDelete = getSharedPreferences("Delete", Context.MODE_PRIVATE)
         val sharedPreferencesModify = getSharedPreferences("Modify", Context.MODE_PRIVATE)
 
-        textoUltimoEscaneoAdd.text = sharedPreferencesAdd.getString("add", null).toString()
-        textoDiaAdd.text = sharedPreferencesAdd.getString("date", null)
+        binding.includeAddDispositives.textDispositive.text = sharedPreferencesAdd.getString("add", null).toString()
+        binding.includeAddDispositives.textLastModificationAdd.text = sharedPreferencesAdd.getString("date", null)
+        binding.includeAddDispositives.hourCard.text = getCurrentTime24HFormat()
 
-        textoUltimoEscaneoDelete.text = sharedPreferencesDelete.getString("delete", null).toString()
-        textoDiaDelete.text = sharedPreferencesDelete.getString("date", null)
+        binding.includeDeleteDispositives.textDispositive.text = sharedPreferencesDelete.getString("delete", null).toString()
+        binding.includeDeleteDispositives.textLastModificationDelete.text = sharedPreferencesDelete.getString("date", null)
+        binding.includeDeleteDispositives.hourCard.text = getCurrentTime24HFormat()
 
-        textoUltimoEscaneoModify.text = sharedPreferencesModify.getString("modify", null).toString()
-        textoDiaModify.text = sharedPreferencesModify.getString("date", null)
+        binding.includeMenuDispositives.hourCard.text = getCurrentTime24HFormat()
+
+        binding.includeVisualizeDispositives.hourCard.text = getCurrentTime24HFormat()
+        //textoUltimoEscaneoModify.text = sharedPreferencesModify.getString("modify", null).toString()
+        //textoDiaModify.text = sharedPreferencesModify.getString("date", null)
     }
 
     private fun loadLatLngData() {
@@ -222,5 +232,12 @@ class ServicesMenu : AppCompatActivity() {
 
     private fun getCurrentTime(): String {
         return SimpleDateFormat("EEEE, HH:mm", Locale.getDefault()).format(Date())
+    }
+
+    private fun getCurrentTime24HFormat(): String {
+        val output = SimpleDateFormat("HH:mm", Locale.getDefault()).format(Date())
+        val date = Date()
+        Log.e("Hora", output.format(date))
+        return output.format(date)
     }
 }

@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardDeleteClickable"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_55sdp"
+        app:cardElevation="@dimen/_5sdp"
+
+        app:strokeColor="@color/color_simetria_8"
+        app:strokeWidth="@dimen/_1sdp"
+
+        app:cardCornerRadius="@dimen/_5sdp"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+
+        android:clickable="true"
+        android:focusable="true"
+        android:background="?android:attr/selectableItemBackground">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="match_parent"
+                app:cardCornerRadius="0dp"
+
+                app:strokeWidth="@dimen/_1sdp"
+                app:strokeColor="@color/color_simetria_8"
+
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:background="@color/color_simetria_8">
+
+                    <TextView
+                        android:id="@+id/numberCard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+
+                        android:fontFamily="@font/montserrat_medium"
+                        android:text="2"
+                        android:textSize="@dimen/_24sdp"
+
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginTop="@dimen/_5sdp"/>
+
+                    <TextView
+                        android:id="@+id/todayCard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_5sdp"
+
+                        android:fontFamily="@font/montserrat_medium"
+                        android:text="TODAY"
+
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toTopOf="@+id/hourCard"
+                        app:layout_constraintTop_toBottomOf="@+id/numberCard"
+
+                        android:layout_marginTop="@dimen/_10sdp"/>
+
+                    <TextView
+                        android:id="@+id/hourCard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_5sdp"
+
+                        android:fontFamily="@font/montserrat_medium"
+                        android:text="16:40"
+
+                        app:layout_constraintTop_toBottomOf="@+id/todayCard"
+                        app:layout_constraintStart_toStartOf="@+id/todayCard"
+                        app:layout_constraintBottom_toBottomOf="parent"
+
+                        android:layout_marginBottom="@dimen/_10sdp"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:id="@+id/textMenuDispositives"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_simetria_7"
+                android:textSize="@dimen/_8sdp"
+                android:textStyle="bold"
+
+                android:text="ELIMINAR DISPOSITIVO EN MEMORIA/EXISTENTE"
+                android:fontFamily="@font/montserrat_medium"
+
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginStart="@dimen/_65sdp"/>
+
+            <View
+                android:id="@+id/viewDispositive"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:background="#80002753"
+
+                app:layout_constraintTop_toBottomOf="@+id/textMenuDispositives"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+
+                android:layout_marginStart="@dimen/_90sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_40sdp"/>
+
+            <ImageView
+                android:id="@+id/imageLeftDispositives"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+
+                app:layout_constraintTop_toBottomOf="@+id/viewDispositive"
+                app:layout_constraintStart_toStartOf="@+id/textMenuDispositives"
+
+                android:src="@drawable/barcode"
+                android:layout_marginTop="@dimen/_5sdp" />
+
+            <TextView
+                android:id="@+id/textDispositive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_simetria_7"
+                android:textSize="@dimen/_8sdp"
+
+                android:fontFamily="@font/montserrat_medium"
+                android:text="CC:00:00:B4:04"
+
+                app:layout_constraintTop_toTopOf="@+id/imageLeftDispositives"
+                app:layout_constraintStart_toEndOf="@+id/imageLeftDispositives"
+                app:layout_constraintBottom_toBottomOf="@+id/imageLeftDispositives"
+
+                android:layout_marginStart="@dimen/_5sdp" />
+
+            <TextView
+                android:id="@+id/textLastModificationDelete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:fontFamily="@font/montserrat_medium"
+
+                android:text="CC:00:00:B4:04"
+                android:textColor="@color/color_simetria_7"
+
+                android:textSize="@dimen/_8sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/textDispositive"
+                app:layout_constraintEnd_toEndOf="@+id/textMenuDispositives"
+                app:layout_constraintHorizontal_bias="1.0"
+
+                app:layout_constraintStart_toEndOf="@+id/textDispositive"
+                app:layout_constraintTop_toTopOf="@+id/textDispositive" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

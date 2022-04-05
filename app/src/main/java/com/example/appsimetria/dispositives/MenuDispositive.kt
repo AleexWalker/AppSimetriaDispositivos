@@ -32,11 +32,6 @@ class MenuDispositive : AppCompatActivity() {
 
         loadData()
 
-        binding.autoCompleteDispositivo.setOnClickListener {
-            binding.autoCompleteDispositivo.gravity = Gravity.START
-            binding.autoCompleteDispositivo.gravity = Gravity.CENTER_VERTICAL
-        }
-
         binding.autoCompleteDispositivo.onItemClickListener = AdapterView.OnItemClickListener { adapterView, view, i, l ->
             val intentDispositivo = Intent(this, VisualizeDispositive::class.java)
             intentDispositivo.putExtra("Seleccionado", adapterView.getItemAtPosition(i).toString())

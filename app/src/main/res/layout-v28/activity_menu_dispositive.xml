@@ -101,11 +101,11 @@
                 android:id="@+id/autoCompleteDispositivo"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-
+                android:translationZ="@dimen/_20sdp"
 
                 android:layout_marginStart="@dimen/_10sdp"
                 android:layout_marginEnd="@dimen/_10sdp"
-                android:gravity="center"
+                android:gravity="center_vertical|start"
 
                 android:background="@android:color/transparent"
                 android:completionThreshold="1"
