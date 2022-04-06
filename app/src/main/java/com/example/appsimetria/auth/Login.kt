@@ -35,7 +35,7 @@ class Login : AppCompatActivity() {
                 if (user.text.toString() == password.text.toString()){
                     val intentMenu = Intent(this, ServicesMenu::class.java)
                     startActivity(intentMenu)
-                    overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
+                    overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.fade_out)
                 } else {
                     toastPersonalizadoLogin1()
                 }

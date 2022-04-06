@@ -162,6 +162,8 @@
         android:layout_marginEnd="@dimen/_30sdp"
         android:layout_marginBottom="@dimen/_20sdp"
 
+        android:clickable="true"
+        android:focusable="true"
         android:background="?android:attr/selectableItemBackground"
 
         tools:listitem="@layout/item_adapter_dispositive" />

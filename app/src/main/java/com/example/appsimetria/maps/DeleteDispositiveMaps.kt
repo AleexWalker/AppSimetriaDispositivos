@@ -29,7 +29,7 @@ import com.google.android.gms.maps.model.*
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.FirebaseFirestoreSettings
 import kotlinx.android.synthetic.main.activity_delete_dispositive_maps.*
-import kotlinx.android.synthetic.main.custom_close_dialog.view.*
+import kotlinx.android.synthetic.main.custom_dialog_close.view.*
 import kotlinx.android.synthetic.main.custom_toast_maps_add_1.*
 import java.lang.Exception
 
@@ -146,7 +146,7 @@ class DeleteDispositiveMaps : AppCompatActivity(), OnMapReadyCallback, GoogleMap
 
     @SuppressLint("InflateParams")
     override fun onMarkerDragStart(p0: Marker) {
-        val dialogView = LayoutInflater.from(this).inflate(R.layout.custom_close_dialog, null)
+        val dialogView = LayoutInflater.from(this).inflate(R.layout.custom_dialog_close, null)
         val builderDialogView = android.app.AlertDialog.Builder(this)
             .setView(dialogView)
         val alertDialog = builderDialogView.show()

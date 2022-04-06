@@ -38,13 +38,13 @@ class MenuDispositive : AppCompatActivity() {
             startActivity(intentDispositivo)
             autoCompleteDispositivo.setText("")
 
-            overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
+            overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.fade_out)
         }
 
         binding.imagenAtrasMenuDispositive?.setOnClickListener {
             startActivity(Intent(this, ServicesMenu::class.java))
 
-            overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
+            overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.fade_out)
         }
     }
 
@@ -64,7 +64,7 @@ class MenuDispositive : AppCompatActivity() {
                     intentDispositivo.putExtra("Seleccionado", it.dispositivo)
                     startActivity(intentDispositivo)
 
-                    overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
+                    overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.fade_out)
                 }
                 recyclerList.adapter = adaptador
                 recyclerList.layoutManager = LinearLayoutManager(applicationContext, LinearLayoutManager.VERTICAL, false)
@@ -72,5 +72,11 @@ class MenuDispositive : AppCompatActivity() {
         val adaptadorAutoComplete = ArrayAdapter<String>(this, android.R.layout.simple_dropdown_item_1line, listaDispositivos)
         autoCompleteDispositivo.setAdapter(adaptadorAutoComplete)
         autoCompleteDispositivo.threshold = 1
+    }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+        startActivity(Intent(this, ServicesMenu::class.java))
+        overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.fade_out)
     }
 }

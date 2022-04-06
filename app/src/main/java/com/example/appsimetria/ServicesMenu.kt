@@ -61,7 +61,7 @@ class ServicesMenu : AppCompatActivity() {
             rotar.start()
 
             startActivity(Intent(this, Login::class.java))
-            overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
+            overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.fade_out)
         }
 
         binding.imagenMenu.setOnClickListener {
@@ -83,17 +83,12 @@ class ServicesMenu : AppCompatActivity() {
             initScanner()
         }
 
-        binding.includeAddDispositives
-        includeAddDispositives.setOnClickListener {
-
-        }
-
         binding.includeAddDispositives.cardAddClickable.setOnClickListener {
             saveDataAdd(resultScanner, getCurrentDate())
             loadAllData()
 
             startActivity(Intent(this, NewDispositiveMaps::class.java))
-            overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
+            overridePendingTransition(android.R.anim.fade_in, android.R.anim.slide_out_right)
         }
 
         binding.includeDeleteDispositives.cardDeleteClickable.setOnClickListener {
@@ -101,7 +96,7 @@ class ServicesMenu : AppCompatActivity() {
             loadAllData()
 
             startActivity(Intent(this, DeleteDispositiveMaps::class.java))
-            overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
+            overridePendingTransition(android.R.anim.fade_in, android.R.anim.slide_out_right)
         }
 
         binding.includeMenuDispositives.cardMenuClickable.setOnClickListener {
@@ -109,14 +104,12 @@ class ServicesMenu : AppCompatActivity() {
             //loadAllData()
 
             startActivity(Intent(this, MenuDispositive::class.java))
-            overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
+            overridePendingTransition(android.R.anim.fade_in, android.R.anim.slide_out_right)
         }
 
         binding.includeVisualizeDispositives.cardVisualizeClickable.setOnClickListener {
-
-
             startActivity(Intent(this, VisualizeDispositive::class.java))
-            overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
+            overridePendingTransition(android.R.anim.fade_in, android.R.anim.slide_out_right)
         }
     }
 
