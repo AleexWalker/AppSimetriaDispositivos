@@ -71,6 +71,9 @@ class VisualizeDispositive : AppCompatActivity() {
 
                         val fechaModifyHtml: String = "<b>" + "Fecha: " + "</b>" + value.getString("Fecha"); fechaModify.text = Html.fromHtml(fechaModifyHtml)
                         val horaModifyHtml: String = "<b>" + "Hora: " + "</b>" + value.getString("Hora"); horaModify.text = Html.fromHtml(horaModifyHtml)
+
+                        val marcaTelefonoHtml: String = "<b>" + "Marca: " + "</b>" + value.getString("Marca"); phoneManufacturer.text = Html.fromHtml(marcaTelefonoHtml)
+                        val modeloTelefonoHtml: String = "<b>" + "Modelo: " + "</b>" + value.getString("Modelo"); phoneModel.text = Html.fromHtml(modeloTelefonoHtml)
                     }
             }
 

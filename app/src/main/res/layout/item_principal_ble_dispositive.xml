@@ -10,7 +10,7 @@
         android:layout_height="@dimen/_55sdp"
         app:cardElevation="@dimen/_5sdp"
 
-        app:strokeColor="@color/stroke_item_services_menu"
+        app:strokeColor="@color/lightSimetri8_to_nightWhite"
         app:strokeWidth="@dimen/_1sdp"
 
         app:cardCornerRadius="@dimen/_5sdp"
@@ -59,7 +59,7 @@
                         android:textColor="@color/white"
 
                         android:fontFamily="@font/montserrat_medium"
-                        android:text="1"
+                        android:text="5"
                         android:textSize="@dimen/_24sdp"
 
                         app:layout_constraintStart_toStartOf="parent"
@@ -112,7 +112,7 @@
                 android:textSize="@dimen/_8sdp"
                 android:textStyle="bold"
 
-                android:text="AÑADIR/REUBICAR DISPOSITIVO EN MEMORIA"
+                android:text="CONEXIÓN MEDIANTE BLE"
                 android:fontFamily="@font/montserrat_medium"
 
                 app:layout_constraintTop_toTopOf="parent"

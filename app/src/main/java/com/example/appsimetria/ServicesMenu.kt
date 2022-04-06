@@ -118,8 +118,6 @@ class ServicesMenu : AppCompatActivity() {
             startActivity(Intent(this, VisualizeDispositive::class.java))
             overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
         }
-
-        Log.e("Prueba", Build.FINGERPRINT, )
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {

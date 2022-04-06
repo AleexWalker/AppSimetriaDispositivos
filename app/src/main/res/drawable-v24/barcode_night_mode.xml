@@ -1,0 +1,1850 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt"
+    android:viewportWidth="512"
+    android:viewportHeight="512"
+    android:width="512dp"
+    android:height="512dp">
+    <path
+        android:pathData="M44.5 32L46 32.5L44.5 33L44.5 32Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M114.5 32L116 32.5L114.5 33L114.5 32Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M396.5 32L398 32.5L396.5 33L396.5 32Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M466.5 32L468 32.5L466.5 33L466.5 32Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M41.5 33L41.5 34L41.5 33Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M118.5 33L118.5 34L118.5 33Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M393.5 33L393.5 34L393.5 33Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M470.5 33L470.5 34L470.5 33Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M39.5 34Q41 35 38.5 36Q37 35 39.5 34Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M120.5 34L126 39.5L125.5 40L120 34.5L120.5 34Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M391.5 34Q393 35 390.5 36Q389 35 391.5 34Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M472.5 34Q475 35 473.5 36Q471 35 472.5 34Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M35.5 38Q37 39 34.5 40Q33 39 35.5 38Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M387.5 38Q389 39 386.5 40Q385 39 387.5 38Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M476.5 38Q479 39 477.5 40Q475 39 476.5 38Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M33.5 41L33.5 42L33.5 41Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M126.5 41L126.5 42L126.5 41Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M385.5 41L385.5 42L385.5 41Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M478.5 41L478.5 42L478.5 41Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M32.5 44L33 45.5L32 45.5L32.5 44Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M127.5 44L128 45.5L127 45.5L127.5 44Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M384.5 44L385 45.5L384 45.5L384.5 44Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M479.5 44L480 45.5L479 45.5L479.5 44Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M127.5 50L128 51.5L127 51.5L127.5 50Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M384.5 50L385 51.5L384 51.5L384.5 50Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M126.5 54L126.5 55L126.5 54Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M385.5 54L385.5 55L385.5 54Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M125.5 56L126 56.5L120.5 62L120 61.5L125.5 56Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M386.5 56L392 61.5L391.5 62L386 56.5L386.5 56Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M118.5 62L118.5 63L118.5 62Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M393.5 62L393.5 63L393.5 62Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M114.5 63L116 63.5L114.5 64L114.5 63Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M396.5 63L398 63.5L396.5 64L396.5 63Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M108.5 96L110 96.5L108.5 97L108.5 96Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M162.5 96L164 96.5L162.5 97L162.5 96Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M220.5 96L222 96.5L220.5 97L220.5 96Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M226.5 96L228 96.5L226.5 97L226.5 96Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M284.5 96L286 96.5L284.5 97L284.5 96Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M338.5 96L340 96.5L338.5 97L338.5 96Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M396.5 96L398 96.5L396.5 97L396.5 96Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M402.5 96L404 96.5L402.5 97L402.5 96Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M105.5 97L105.5 98L105.5 97Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M166.5 97L166.5 98L166.5 97Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M217.5 97L217.5 98L217.5 97Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M230.5 97L230.5 98L230.5 97Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M281.5 97L281.5 98L281.5 97Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M342.5 97L342.5 98L342.5 97Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M393.5 97L393.5 98L393.5 97Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M406.5 97L406.5 98L406.5 97Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M103.5 98Q105 99 102.5 100Q101 99 103.5 98Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M168.5 98L174 103.5L173.5 104L168 98.5L168.5 98Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M215.5 98Q217 99 214.5 100Q213 99 215.5 98Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M232.5 98Q235 99 233.5 100Q231 99 232.5 98Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M279.5 98Q281 99 278.5 100Q277 99 279.5 98Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M344.5 98L350 103.5L349.5 104L344 98.5L344.5 98Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M391.5 98Q393 99 390.5 100Q389 99 391.5 98Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M408.5 98L414 103.5L413.5 104L408 98.5L408.5 98Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M99.5 102Q101 103 98.5 104Q97 103 99.5 102Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M211.5 102Q213 103 210.5 104Q209 103 211.5 102Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M236.5 102Q239 103 237.5 104Q235 103 236.5 102Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M275.5 102Q277 103 274.5 104Q273 103 275.5 102Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M387.5 102Q389 103 386.5 104Q385 103 387.5 102Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M97.5 105L97.5 106L97.5 105Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M174.5 105L174.5 106L174.5 105Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M209.5 105L209.5 106L209.5 105Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M238.5 105L238.5 106L238.5 105Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M273.5 105L273.5 106L273.5 105Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M350.5 105L350.5 106L350.5 105Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M385.5 105L385.5 106L385.5 105Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M414.5 105L414.5 106L414.5 105Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M96.5 108L97 109.5L96 109.5L96.5 108Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M175.5 108L176 109.5L175 109.5L175.5 108Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M208.5 108L209 109.5L208 109.5L208.5 108Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M239.5 108L240 109.5L239 109.5L239.5 108Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M272.5 108L273 109.5L272 109.5L272.5 108Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M351.5 108L352 109.5L351 109.5L351.5 108Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M384.5 108L385 109.5L384 109.5L384.5 108Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M415.5 108L416 109.5L415 109.5L415.5 108Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M32.5 114L33 115.5L32 115.5L32.5 114Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M63.5 114L64 115.5L63 115.5L63.5 114Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M448.5 114L449 115.5L448 115.5L448.5 114Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M479.5 114L480 115.5L479 115.5L479.5 114Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M33.5 118L33.5 119L33.5 118Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M62.5 118L62.5 119L62.5 118Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M449.5 118L449.5 119L449.5 118Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M478.5 118L478.5 119L478.5 118Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M34.5 120L40 125.5L39.5 126L34 120.5L34.5 120Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M61.5 120L62 120.5L56.5 126L56 125.5L61.5 120Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M450.5 120L456 125.5L455.5 126L450 120.5L450.5 120Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M477.5 120Q479 121 476.5 122Q475 121 477.5 120Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M473.5 124Q475 125 472.5 126Q471 125 473.5 124Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M41.5 126L41.5 127L41.5 126Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M54.5 126L54.5 127L54.5 126Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M457.5 126L457.5 127L457.5 126Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M470.5 126L470.5 127L470.5 126Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M44.5 127L46 127.5L44.5 128L44.5 127Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M50.5 127L52 127.5L50.5 128L50.5 127Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M460.5 127L462 127.5L460.5 128L460.5 127Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M466.5 127L468 127.5L466.5 128L466.5 127Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M44.5 240L47 240.5L44.5 241L44.5 240Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M466.5 240L468 240.5L466.5 241L466.5 240Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M41.5 241L41.5 242L41.5 241Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M470.5 241L470.5 242L470.5 241Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M39.5 242L40 242.5L34.5 248L34 247.5L39.5 242Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M472.5 242L478 247.5L477.5 248L472 242.5L472.5 242Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M33.5 249L33.5 250L33.5 249Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M478.5 249L478.5 250L478.5 249Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M32.5 252L33 254.5L32 254.5L32.5 252Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M479.5 252L480 253.5L479 253.5L479.5 252Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M32.5 257L33 259.5L32 259.5L32.5 257Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M479.5 258L480 259.5L479 259.5L479.5 258Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M33.5 262L33.5 263L33.5 262Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M478.5 262L478.5 263L478.5 262Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M34.5 264L40 269.5L39.5 270L34 264.5L34.5 264Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M477.5 264Q479 265 476.5 266Q475 265 477.5 264Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M473.5 268Q475 269 472.5 270Q471 269 473.5 268Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M41.5 270L41.5 271L41.5 270Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M470.5 270L470.5 271L470.5 270Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M44.5 271L46 271.5L44.5 272L44.5 271Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M466.5 271L468 271.5L466.5 272L466.5 271Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M108.5 304L110 304.5L108.5 305L108.5 304Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M162.5 304L164 304.5L162.5 305L162.5 304Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M220.5 304L222 304.5L220.5 305L220.5 304Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M226.5 304L228 304.5L226.5 305L226.5 304Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M284.5 304L286 304.5L284.5 305L284.5 304Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M338.5 304L340 304.5L338.5 305L338.5 304Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M396.5 304L398 304.5L396.5 305L396.5 304Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M402.5 304L404 304.5L402.5 305L402.5 304Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M105.5 305L105.5 306L105.5 305Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M166.5 305L166.5 306L166.5 305Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M217.5 305L217.5 306L217.5 305Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M230.5 305L230.5 306L230.5 305Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M281.5 305L281.5 306L281.5 305Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M342.5 305L342.5 306L342.5 305Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M393.5 305L393.5 306L393.5 305Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M406.5 305L406.5 306L406.5 305Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M103.5 306Q105 307 102.5 308Q101 307 103.5 306Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M168.5 306L174 311.5L173.5 312L168 306.5L168.5 306Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M215.5 306Q217 307 214.5 308Q213 307 215.5 306Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M232.5 306L238 311.5L237.5 312L232 306.5L232.5 306Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M279.5 306Q281 307 278.5 308Q277 307 279.5 306Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M344.5 306L350 311.5L349.5 312L344 306.5L344.5 306Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M391.5 306Q393 307 390.5 308Q389 307 391.5 306Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M408.5 306L414 311.5L413.5 312L408 306.5L408.5 306Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M99.5 310Q101 311 98.5 312Q97 311 99.5 310Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M211.5 310Q213 311 210.5 312Q209 311 211.5 310Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M275.5 310Q277 311 274.5 312Q273 311 275.5 310Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M387.5 310Q389 311 386.5 312Q385 311 387.5 310Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M97.5 313L97.5 314L97.5 313Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M174.5 313L174.5 314L174.5 313Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M209.5 313L209.5 314L209.5 313Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M238.5 313L238.5 314L238.5 313Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M273.5 313L273.5 314L273.5 313Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M350.5 313L350.5 314L350.5 313Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M385.5 313L385.5 314L385.5 313Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M414.5 313L414.5 314L414.5 313Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M96.5 316L97 317.5L96 317.5L96.5 316Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M175.5 316L176 317.5L175 317.5L175.5 316Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M208.5 316L209 317.5L208 317.5L208.5 316Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M239.5 316L240 317.5L239 317.5L239.5 316Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M272.5 316L273 317.5L272 317.5L272.5 316Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M351.5 316L352 317.5L351 317.5L351.5 316Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M384.5 316L385 317.5L384 317.5L384.5 316Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M415.5 316L416 317.5L415 317.5L415.5 316Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M44.5 384L46 384.5L44.5 385L44.5 384Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M50.5 384L52 384.5L50.5 385L50.5 384Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M460.5 384L462 384.5L460.5 385L460.5 384Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M466.5 384L468 384.5L466.5 385L466.5 384Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M41.5 385L41.5 386L41.5 385Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M54.5 385L54.5 386L54.5 385Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M457.5 385L457.5 386L457.5 385Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M470.5 385L470.5 386L470.5 385Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M39.5 386L40 386.5L34.5 392L34 391.5L39.5 386Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M56.5 386L62 391.5L61.5 392L56 386.5L56.5 386Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M455.5 386Q457 387 454.5 388Q453 387 455.5 386Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M472.5 386L478 391.5L477.5 392L472 386.5L472.5 386Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M451.5 390Q453 391 450.5 392Q449 391 451.5 390Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M33.5 393L33.5 394L33.5 393Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M62.5 393L62.5 394L62.5 393Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M449.5 393L449.5 394L449.5 393Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M478.5 393L478.5 394L478.5 393Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M32.5 396L33 397.5L32 397.5L32.5 396Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M63.5 396L64 397.5L63 397.5L63.5 396Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M448.5 396L449 397.5L448 397.5L448.5 396Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M479.5 396L480 397.5L479 397.5L479.5 396Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M175.5 401L176 403.5L175 403.5L175.5 401Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M96.5 402L97 403.5L96 403.5L96.5 402Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M208.5 402L209 403.5L208 403.5L208.5 402Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M239.5 402L240 403.5L239 403.5L239.5 402Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M272.5 402L273 403.5L272 403.5L272.5 402Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M351.5 402L352 403.5L351 403.5L351.5 402Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M384.5 402L385 403.5L384 403.5L384.5 402Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M415.5 402L416 403.5L415 403.5L415.5 402Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M97.5 406L97.5 407L97.5 406Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M174.5 406L174.5 407L174.5 406Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M209.5 406L209.5 407L209.5 406Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M238.5 406L238.5 407L238.5 406Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M273.5 406L273.5 407L273.5 406Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M350.5 406L350.5 407L350.5 406Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M385.5 406L385.5 407L385.5 406Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M414.5 406L414.5 407L414.5 406Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M98.5 408L104 413.5L103.5 414L98 408.5L98.5 408Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M173.5 408Q175 409 172.5 410Q171 409 173.5 408Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M210.5 408L216 413.5L215.5 414L210 408.5L210.5 408Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M237.5 408L238 408.5L232.5 414L232 413.5L237.5 408Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M274.5 408L280 413.5L279.5 414L274 408.5L274.5 408Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M349.5 408L350 408.5L344.5 414L344 413.5L349.5 408Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M386.5 408L392 413.5L391.5 414L386 408.5L386.5 408Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M413.5 408L414 408.5L408.5 414L408 413.5L413.5 408Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M170.5 411L171 411.5L168.5 414L168 413.5L170.5 411Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M105.5 414L105.5 415L105.5 414Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M166.5 414L166.5 415L166.5 414Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M217.5 414L217.5 415L217.5 414Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M230.5 414L230.5 415L230.5 414Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M281.5 414L281.5 415L281.5 414Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M342.5 414L342.5 415L342.5 414Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M393.5 414L393.5 415L393.5 414Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M406.5 414L406.5 415L406.5 414Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M108.5 415L110 415.5L108.5 416L108.5 415Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M162.5 415L164 415.5L162.5 416L162.5 415Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M220.5 415L222 415.5L220.5 416L220.5 415Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M226.5 415L228 415.5L226.5 416L226.5 415Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M284.5 415L286 415.5L284.5 416L284.5 415Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M338.5 415L340 415.5L338.5 416L338.5 415Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M396.5 415L398 415.5L396.5 416L396.5 415Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M402.5 415L404 415.5L402.5 416L402.5 415Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M114.5 448L116 448.5L114.5 449L114.5 448Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M396.5 448L398 448.5L396.5 449L396.5 448Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M118.5 449L118.5 450L118.5 449Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M393.5 449L393.5 450L393.5 449Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M120.5 450L126 455.5L125.5 456L120 450.5L120.5 450Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M391.5 450Q393 451 390.5 452Q389 451 391.5 450Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M387.5 454Q389 455 386.5 456Q385 455 387.5 454Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M126.5 457L126.5 458L126.5 457Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M385.5 457L385.5 458L385.5 457Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M127.5 460L128 461.5L127 461.5L127.5 460Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M384.5 460L385 461.5L384 461.5L384.5 460Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M32.5 466L33 467.5L32 467.5L32.5 466Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M127.5 466L128 467.5L127 467.5L127.5 466Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M384.5 466L385 467.5L384 467.5L384.5 466Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M479.5 466L480 467.5L479 467.5L479.5 466Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M33.5 470L33.5 471L33.5 470Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M126.5 470L126.5 471L126.5 470Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M385.5 470L385.5 471L385.5 470Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M478.5 470L478.5 471L478.5 470Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M34.5 472L40 477.5L39.5 478L34 472.5L34.5 472Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M125.5 472L126 472.5L120.5 478L120 477.5L125.5 472Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M386.5 472L392 477.5L391.5 478L386 472.5L386.5 472Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M477.5 472L478 472.5L472.5 478L472 477.5L477.5 472Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M41.5 478L41.5 479L41.5 478Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M118.5 478L118.5 479L118.5 478Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M393.5 478L393.5 479L393.5 478Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M470.5 478L470.5 479L470.5 478Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M44.5 479L46 479.5L44.5 480L44.5 479Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M114.5 479L116 479.5L114.5 480L114.5 479Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M396.5 479L398 479.5L396.5 480L396.5 479Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M466.5 479L468 479.5L466.5 480L466.5 479Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:fillAlpha="0.8039216"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeAlpha="0.8039216"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M46.5 32L113.5 32L119.5 34L126 40.5L128 46.5L128 49.5L126 55.5L119.5 62L113.5 64L64 64L64 113.5L62 119.5L55.5 126L49.5 128L46.5 128L40.5 126L34 119.5L32 113.5L32 46.5L34 40.5L37.5 36L42.5 33Q45.75 33.75 46.5 32Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M398.5 32L465.5 32L471.5 34L476 37.5L479 42.5Q478.25 45.75 480 46.5L480 113.5L478 119.5L474.5 124L469.5 127L462.5 128L456.5 126L450 119.5L448 113.5L448 64L398.5 64L392.5 62L386 55.5L384 49.5L384 46.5L386 40.5L389.5 36L394.5 33Q397.75 33.75 398.5 32Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M110.5 96L161.5 96L167.5 98L174 104.5L176 110.5L176 240L207.5 240L208 239.5L208 110.5L210 104.5L213.5 100L218.5 97L225.5 96L231.5 98L236 101.5L239 106.5Q238.25 109.75 240 110.5L240 240L271.5 240L272 239.5L272 110.5L274 104.5L277.5 100L282.5 97Q285.75 97.75 286.5 96L337.5 96L343.5 98L350 104.5L352 110.5L352 240L383.5 240L384 239.5L384 110.5L386 104.5L389.5 100L394.5 97L401.5 96L407.5 98L414 104.5L416 110.5L416 240L465.5 240L471.5 242L478 248.5L480 254.5L480 257.5L478 263.5L474.5 268L469.5 271Q466.25 270.25 465.5 272L46.5 272L40.5 270L34 263.5L32 255.5L33 254.5Q32.33 250.33 34 248.5L40.5 242Q42.33 240.33 46.5 241L47.5 240L96 240L96 110.5L98 104.5L101.5 100L106.5 97Q109.75 97.75 110.5 96Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M110.5 304L161.5 304L167.5 306L174 312.5L176 318.5L176 400.5Q174 401.5 175 405.5L172 409.5L172 411L170.5 411L165.5 415Q162.25 414.25 161.5 416L110.5 416L104.5 414L98 407.5L96 401.5L96 318.5L98 312.5L101.5 308L106.5 305Q109.75 305.75 110.5 304Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M222.5 304L225.5 304L231.5 306L238 312.5L240 318.5L240 401.5L238 407.5L231.5 414L225.5 416L222.5 416L216.5 414L210 407.5L208 401.5L208 318.5L210 312.5L213.5 308L218.5 305Q221.75 305.75 222.5 304Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M286.5 304L337.5 304L343.5 306L350 312.5L352 318.5L352 401.5L350 407.5L343.5 414L337.5 416L286.5 416L280.5 414L274 407.5L272 401.5L272 318.5L274 312.5L277.5 308L282.5 305Q285.75 305.75 286.5 304Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M398.5 304L401.5 304L407.5 306L414 312.5L416 318.5L416 401.5L414 407.5L407.5 414L401.5 416L398.5 416L392.5 414L386 407.5L384 401.5L384 318.5L386 312.5L389.5 308L394.5 305Q397.75 305.75 398.5 304Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M46.5 384L49.5 384L55.5 386L62 392.5L64 398.5L64 448L113.5 448L119.5 450L126 456.5L128 462.5L128 465.5L126 471.5L119.5 478L113.5 480L46.5 480L40.5 478L34 471.5L32 465.5L32 398.5L34 392.5L40.5 386L46.5 384Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M462.5 384L465.5 384L471.5 386L478 392.5L480 398.5L480 465.5L478 471.5L471.5 478L465.5 480L398.5 480L392.5 478L386 471.5L384 465.5L384 462.5L386 456.5L389.5 452L394.5 449Q397.75 449.75 398.5 448L448 448L448 398.5L450 392.5L453.5 388L458.5 385Q461.75 385.75 462.5 384Z"
+        android:fillColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeColor="@color/lightSimetri8_to_nightWhite"
+        android:strokeWidth="1" />
+</vector>

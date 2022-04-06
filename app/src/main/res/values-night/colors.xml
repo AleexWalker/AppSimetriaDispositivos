@@ -11,7 +11,8 @@
     <color name="letra_boton">#ffffff</color>
     <color name="textModify">#002753</color>
     <color name="primary_text_and_stroke_50">#80FFFFFF</color>
-    <color name="stroke_item_services_menu">#ffffff</color>
+    <color name="lightSimetri8_to_nightWhite">#ffffff</color>
+    <color name="lightWhite_to_nightSimetria8">#002249</color>
 
     <!--Item Colors -->
     <color name="dashboard_item_1">#ec407a</color>

@@ -2,7 +2,7 @@
 <resources>
     <color name="primary">#009FFF</color>
     <color name="background">#F7F7FA</color>
-    <color name="card_bvackground">#FFFFFF</color>
+    <color name="card_bvackground">#ffffff</color>
 
     <!--Text Colors -->
     <color name="primary_text_and_stroke">#002753</color>
@@ -11,7 +11,8 @@
     <color name="letra_boton">#27325F</color>
     <color name="textModify">#FFFFFF</color>
     <color name="primary_text_and_stroke_50">#80002753</color>
-    <color name="stroke_item_services_menu">#002249</color>
+    <color name="lightSimetri8_to_nightWhite">#002249</color>
+    <color name="lightWhite_to_nightSimetria8">#ffffff</color>
 
     <!--Item Colors -->
     <color name="dashboard_item_1">#ec407a</color>

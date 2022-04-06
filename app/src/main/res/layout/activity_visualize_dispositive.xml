@@ -108,6 +108,7 @@
     </com.google.android.material.card.MaterialCardView>
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintVisualizeInfo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
 
@@ -119,7 +120,7 @@
 
         <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_275sdp"
+            android:layout_height="@dimen/_315sdp"
 
             app:cardCornerRadius="@dimen/_10sdp"
             app:cardElevation="@dimen/_8sdp"
@@ -448,107 +449,161 @@
                     android:background="@color/white"
 
                     app:layout_constraintTop_toBottomOf="@+id/constraintCardModify3"
-                    app:layout_constraintBottom_toTopOf="@id/botonRojo"
+                    app:layout_constraintBottom_toTopOf="@id/constraintCardModify4"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
 
                     android:layout_marginStart="@dimen/_30sdp"
                     android:layout_marginEnd="@dimen/_30sdp"/>
 
-                <com.google.android.material.card.MaterialCardView
-                    android:id="@+id/botonRojo"
-                    android:layout_width="@dimen/_30sdp"
-                    android:layout_height="@dimen/_30sdp"
-
-                    app:cardCornerRadius="@dimen/_30sdp"
-                    app:cardElevation="@dimen/_3sdp"
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintCardModify4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
 
                     app:layout_constraintTop_toBottomOf="@+id/constraintCardModify3"
+                    app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@id/botonNaranja"
-                    app:layout_constraintBottom_toBottomOf="parent"
-
-                    android:layout_marginTop="@dimen/_25sdp"
-                    android:layout_marginEnd="@dimen/_55sdp">
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-
-                        android:background="#ED473B">
-
-                        <ImageView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-
-                            android:src="@drawable/cross1"/>
-
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-
-                </com.google.android.material.card.MaterialCardView>
-
-                <com.google.android.material.card.MaterialCardView
-                    android:id="@+id/botonNaranja"
-                    android:layout_width="@dimen/_30sdp"
-                    android:layout_height="@dimen/_30sdp"
-
-                    app:cardCornerRadius="@dimen/_30sdp"
-                    app:cardElevation="@dimen/_3sdp"
-
-                    app:layout_constraintEnd_toStartOf="@+id/botonRojo"
-                    app:layout_constraintTop_toBottomOf="@+id/constraintCardModify3"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/botonVerde"
-
                     android:layout_marginTop="@dimen/_25sdp">
 
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                    <ImageView
+                        android:id="@+id/imagenPhoneCardModify"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_30sdp"
 
-                        android:background="@color/color_simetria_2">
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
 
-                        <ImageView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
+                        android:src="@drawable/smartphone"
+                        android:contentDescription="@string/desc"/>
 
-                            android:src="@drawable/plus"/>
+                    <TextView
+                        android:id="@+id/phoneManufacturer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
 
-                    </androidx.constraintlayout.widget.ConstraintLayout>
+                        android:text="Marca"
+                        android:textSize="@dimen/_8sdp"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:textColor="@color/white"
 
-                </com.google.android.material.card.MaterialCardView>
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/imagenPhoneCardModify"
+                        app:layout_constraintBottom_toTopOf="@+id/phoneModel"
 
-                <com.google.android.material.card.MaterialCardView
-                    android:id="@+id/botonVerde"
-                    android:layout_width="@dimen/_30sdp"
-                    android:layout_height="@dimen/_30sdp"
+                        android:layout_marginStart="@dimen/_20sdp" />
 
-                    app:cardCornerRadius="@dimen/_30sdp"
-                    app:cardElevation="@dimen/_3sdp"
+                    <TextView
+                        android:id="@+id/phoneModel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
 
-                    app:layout_constraintEnd_toStartOf="@+id/botonNaranja"
-                    app:layout_constraintTop_toBottomOf="@+id/constraintCardModify3"
-                    app:layout_constraintBottom_toBottomOf="parent"
+                        android:text="Modelo"
+                        android:textSize="@dimen/_8sdp"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:textColor="@color/white"
+
+                        app:layout_constraintTop_toBottomOf="@+id/phoneManufacturer"
+                        app:layout_constraintStart_toEndOf="@+id/imagenPhoneCardModify"
+                        app:layout_constraintBottom_toBottomOf="parent"
+
+                        android:layout_marginStart="@dimen/_20sdp"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    app:layout_constraintTop_toBottomOf="@+id/constraintCardModify4"
                     app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
 
-                    android:layout_marginTop="@dimen/_25sdp"
-                    android:layout_marginStart="@dimen/_55sdp">
+                    android:layout_marginTop="@dimen/_10sdp">
 
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/botonRojo"
+                        android:layout_width="@dimen/_90sdp"
+                        android:layout_height="@dimen/_30sdp"
 
-                        android:background="@color/dashboard_item_5">
+                        app:cardCornerRadius="@dimen/_10sdp"
+                        app:cardElevation="@dimen/_4sdp"
 
-                        <ImageView
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/botonNaranja"
+                        app:layout_constraintBottom_toBottomOf="parent"
+
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_8sdp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
 
-                            android:src="@drawable/check"/>
+                            android:background="#ED473B">
 
-                    </androidx.constraintlayout.widget.ConstraintLayout>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
 
-                </com.google.android.material.card.MaterialCardView>
+                                android:text="ELIMINAR"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:textSize="@dimen/_10sdp"
+                                android:textColor="@color/white"
+
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"/>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/botonNaranja"
+                        android:layout_width="@dimen/_90sdp"
+                        android:layout_height="@dimen/_30sdp"
+
+                        app:cardCornerRadius="@dimen/_10sdp"
+                        app:cardElevation="@dimen/_4sdp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/botonRojo"
+
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_8sdp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+
+                            android:background="@color/color_simetria_2">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+
+                                android:text="MODIFICAR"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:textSize="@dimen/_10sdp"
+                                android:textColor="@color/white"
+
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"/>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
