@@ -15,6 +15,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import com.example.appsimetria.auth.Login
+import com.example.appsimetria.bluetooth.AdapterBLE
 import com.example.appsimetria.databinding.ActivityServicesMenuBinding
 import com.example.appsimetria.dispositives.MenuDispositive
 import com.example.appsimetria.dispositives.VisualizeDispositive
@@ -109,6 +110,11 @@ class ServicesMenu : AppCompatActivity() {
 
         binding.includeVisualizeDispositives.cardVisualizeClickable.setOnClickListener {
             startActivity(Intent(this, VisualizeDispositive::class.java))
+            overridePendingTransition(android.R.anim.fade_in, android.R.anim.slide_out_right)
+        }
+
+        binding.includeBLEDispositives.cardBleClickable.setOnClickListener {
+            startActivity(Intent(this, AdapterBLE::class.java))
             overridePendingTransition(android.R.anim.fade_in, android.R.anim.slide_out_right)
         }
     }

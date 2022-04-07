@@ -5,7 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <com.google.android.material.card.MaterialCardView
-        android:id="@+id/cardAddClickable"
+        android:id="@+id/cardBleClickable"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_55sdp"
         app:cardElevation="@dimen/_5sdp"
@@ -30,7 +30,7 @@
         android:background="?android:attr/selectableItemBackground">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/constraintAdd"
+            android:id="@+id/constraintBleDispositives"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@color/white">
