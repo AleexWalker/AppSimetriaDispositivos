@@ -9,23 +9,28 @@ import android.widget.Toast
 import androidx.core.content.ContextCompat
 import com.example.appsimetria.R
 import com.example.appsimetria.ServicesMenu
-import kotlinx.android.synthetic.main.activity_login.*
+import com.example.appsimetria.databinding.ActivityLoginBinding
 import kotlinx.android.synthetic.main.custom_toast_login_1.*
 import kotlinx.android.synthetic.main.custom_toast_login_2.*
+import kotlin.system.exitProcess
 
 class Login : AppCompatActivity() {
+
+    private lateinit var binding: ActivityLoginBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_login)
+        binding = ActivityLoginBinding.inflate(layoutInflater)
+        setContentView(binding.root)
         window.statusBarColor = ContextCompat.getColor(this, R.color.primary_statusbar)
 
-        textoRegistrar.setOnClickListener {
+        binding.textoRegistrar?.setOnClickListener {
             val intentRegister = Intent(this, Register::class.java)
             startActivity(intentRegister)
             overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
         }
 
-        botonLogin.setOnClickListener {
+        binding.botonLogin?.setOnClickListener {
             val password = findViewById<TextView>(R.id.contraseña)
             val user = findViewById<TextView>(R.id.usuario)
 
@@ -41,6 +46,12 @@ class Login : AppCompatActivity() {
                 }
             }
         }
+    }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+        finish()
+        exitProcess(0)
     }
 
     private fun toastPersonalizadoLogin1() {

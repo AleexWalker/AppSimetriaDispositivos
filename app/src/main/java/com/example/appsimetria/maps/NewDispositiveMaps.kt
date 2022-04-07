@@ -66,7 +66,8 @@ class NewDispositiveMaps : AppCompatActivity(), OnMapReadyCallback, GoogleMap.On
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         val mapFragment = supportFragmentManager
             .findFragmentById(R.id.map) as SupportMapFragment
-        mapFragment.getMapAsync(this)
+        mapFragment
+            .getMapAsync(this)
 
         geocoder = Geocoder(applicationContext, Locale.getDefault())
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(this)
@@ -95,8 +96,9 @@ class NewDispositiveMaps : AppCompatActivity(), OnMapReadyCallback, GoogleMap.On
         mMap.uiSettings.isZoomControlsEnabled = true
         mMap.uiSettings.isMyLocationButtonEnabled = true
         mMap.uiSettings.isIndoorLevelPickerEnabled = true
-        mMap.uiSettings.isIndoorLevelPickerEnabled = true
         mMap.uiSettings.isMapToolbarEnabled = true
+
+        mMap.isTrafficEnabled = true
 
         mMap.setOnMarkerDragListener(this)
         mMap.setOnMyLocationButtonClickListener(this)
@@ -150,7 +152,8 @@ class NewDispositiveMaps : AppCompatActivity(), OnMapReadyCallback, GoogleMap.On
     }
 
     override fun onMyLocationButtonClick(): Boolean {
-        mMap.animateCamera(CameraUpdateFactory
+        mMap
+            .animateCamera(CameraUpdateFactory
             .newLatLngZoom(LatLng(latitud, longitud), 18f))
         return true
     }
@@ -225,7 +228,6 @@ class NewDispositiveMaps : AppCompatActivity(), OnMapReadyCallback, GoogleMap.On
 
         data["Marca"] = Build.MANUFACTURER.replaceFirstChar { it.toUpperCase() }
         data["Modelo"] = Build.MODEL
-
 
         baseDatos
             .collection("Dispositivos")

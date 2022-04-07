@@ -7,23 +7,28 @@ import android.view.Gravity
 import android.widget.Toast
 import com.example.appsimetria.R
 import com.example.appsimetria.ServicesMenu
+import com.example.appsimetria.databinding.ActivityRegisterBinding
 import kotlinx.android.synthetic.main.activity_register.*
 import kotlinx.android.synthetic.main.custom_toast_register_1.*
 import kotlinx.android.synthetic.main.custom_toast_register_2.*
 
 class Register : AppCompatActivity() {
+
+    private lateinit var binding: ActivityRegisterBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_register)
+        binding = ActivityRegisterBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        textoLoginRegister.setOnClickListener {
+        binding.textoLoginRegister.setOnClickListener {
             val intentLogIn = Intent(this, Login::class.java)
             startActivity(intentLogIn)
 
             overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
         }
 
-        botonRegister.setOnClickListener {
+        binding.botonRegister.setOnClickListener {
             if (contraseñaRegister.text.toString() == confirmarContraseñaRegister.text.toString()) {
                 if (validPassword(contraseñaRegister.text.toString())) {
                     val intentMenu = Intent(this, ServicesMenu::class.java)
@@ -37,7 +42,7 @@ class Register : AppCompatActivity() {
         }
     }
 
-    internal fun validPassword(password : String): Boolean {
+    private fun validPassword(password : String): Boolean {
         if (password.length <= 5) return false
         if (password.firstOrNull { it.isDigit() } == null) return false
         if (password.filter { it.isLetter() }.firstOrNull { it.isUpperCase() } == null) return false

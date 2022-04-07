@@ -102,7 +102,7 @@ class VisualizeDispositive : AppCompatActivity() {
             }
 
             private fun loadFirebaseData(value: DocumentSnapshot) {
-                hashDispositivos["Calle"] = value!!.getString("Calle").toString()
+                hashDispositivos["Calle"] = value.getString("Calle").toString()
                 hashDispositivos["Numero"] = value.getString("Numero").toString()
                 hashDispositivos["Codigo Postal"] = value.getString("Codigo Postal").toString()
                 hashDispositivos["Localidad"] = value.getString("Localidad").toString()

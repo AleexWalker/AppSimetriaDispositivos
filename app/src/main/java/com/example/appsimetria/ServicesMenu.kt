@@ -266,4 +266,12 @@ class ServicesMenu : AppCompatActivity() {
         val date = Date()
         return output.format(date)
     }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+
+        finish()
+        startActivity(Intent(this, Login::class.java))
+        overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.fade_out)
+    }
 }

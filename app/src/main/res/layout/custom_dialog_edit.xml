@@ -125,7 +125,7 @@
                     app:layout_constraintStart_toEndOf="@+id/imagenUsuarioCardModify"
                     app:layout_constraintTop_toTopOf="parent"
 
-                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginStart="@dimen/_15sdp"
                     tools:ignore="TouchTargetSizeCheck" />
 
                 <EditText
@@ -189,7 +189,7 @@
                     app:layout_constraintStart_toEndOf="@+id/imagenUsuarioCardModify"
                     app:layout_constraintTop_toBottomOf="@+id/textoCalle"
 
-                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginStart="@dimen/_15sdp"
                     tools:ignore="TouchTargetSizeCheck" />
 
                 <EditText
@@ -261,11 +261,9 @@
                     android:textStyle="bold"
 
                     app:layout_constraintStart_toEndOf="@+id/imagenLatLngCardModify"
-                    app:layout_constraintTop_toTopOf="@+id/latModify"
+                    app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="@+id/latModify"
-                    app:layout_constraintEnd_toStartOf="@+id/latModify"
-
-                    android:layout_marginStart="@dimen/_20sdp"/>
+                    app:layout_constraintEnd_toStartOf="@+id/latModify" />
 
                 <EditText
                     android:id="@+id/latModify"
@@ -282,11 +280,9 @@
                     android:textSize="@dimen/_8sdp"
 
                     app:layout_constraintBottom_toTopOf="@+id/lngModify"
-                    app:layout_constraintStart_toEndOf="@+id/textoLatitudEdicion"
+                    app:layout_constraintStart_toStartOf="@+id/lngModify"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
 
-                    android:layout_marginEnd="@dimen/_30sdp"
                     tools:ignore="TouchTargetSizeCheck" />
 
                 <TextView
@@ -300,12 +296,9 @@
                     android:textSize="@dimen/_8sdp"
                     android:textStyle="bold"
 
-                    app:layout_constraintStart_toEndOf="@+id/imagenLatLngCardModify"
+                    app:layout_constraintStart_toStartOf="@+id/textoLatitudEdicion"
                     app:layout_constraintTop_toTopOf="@+id/lngModify"
-                    app:layout_constraintBottom_toBottomOf="@+id/lngModify"
-                    app:layout_constraintEnd_toStartOf="@+id/lngModify"
-
-                    android:layout_marginStart="@dimen/_20sdp"/>
+                    app:layout_constraintBottom_toBottomOf="@+id/lngModify" />
 
                 <EditText
                     android:id="@+id/lngModify"
