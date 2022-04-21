@@ -14,5 +14,6 @@ class AdapterBLE : AppCompatActivity() {
         setContentView(binding.root)
 
 
+
     }
 }
