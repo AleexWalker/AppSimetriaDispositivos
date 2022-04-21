@@ -164,4 +164,54 @@
 
     </com.google.android.material.card.MaterialCardView>
 
+    <TextView
+        android:id="@+id/textoServiciosBLE"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Dispositivos BLE"
+        android:textColor="@color/primary_text_and_stroke"
+        android:textSize="@dimen/_18sdp"
+        android:textStyle="bold"
+        android:fontFamily="@font/montserrat_medium"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardBluetooth"
+        app:layout_constraintBottom_toTopOf="@+id/recyclerListBLE"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_20sdp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerListBLE"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+
+        app:layout_constraintTop_toBottomOf="@+id/textoServiciosBLE"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/imagenSimetriaBLE"
+
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginEnd="@dimen/_8sdp"
+
+        tools:listitem="@layout/item_custom_scan_result"/>
+
+    <ImageView
+        android:id="@+id/imagenSimetriaBLE"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_10sdp"
+        android:src="@drawable/simetria_sin_logo_night_mode_inverse"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        android:layout_marginBottom="@dimen/_5sdp"
+
+        android:contentDescription="@string/desc" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
