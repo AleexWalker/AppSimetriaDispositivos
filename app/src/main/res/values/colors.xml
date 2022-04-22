@@ -9,10 +9,11 @@
     <color name="secondary_text">#9B9A9D</color>
     <color name="white">#ffffff</color>
     <color name="letra_boton">#27325F</color>
-    <color name="textModify">#FFFFFF</color>
     <color name="primary_text_and_stroke_50">#80002753</color>
     <color name="lightSimetri8_to_nightWhite">#002249</color>
+    <color name="lightWhite_to_nightSimetria7">#FFFFFF</color>
     <color name="lightWhite_to_nightSimetria8">#ffffff</color>
+    <color name="lightWhite_to_nightCardBackground">#ffffff</color>
 
     <!--Item Colors -->
     <color name="dashboard_item_1">#ec407a</color>

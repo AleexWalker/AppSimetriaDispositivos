@@ -197,7 +197,8 @@
         android:layout_marginStart="@dimen/_8sdp"
         android:layout_marginEnd="@dimen/_8sdp"
 
-        tools:listitem="@layout/item_custom_scan_result"/>
+        tools:listitem="@layout/item_custom_scan_result"
+        tools:itemCount="10"/>
 
     <ImageView
         android:id="@+id/imagenSimetriaBLE"
