@@ -72,12 +72,12 @@
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/cardEscaneo"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="@dimen/_32sdp"
 
         android:layout_marginTop="@dimen/_110sdp"
-        android:layout_marginStart="@dimen/_30sdp"
-        android:layout_marginEnd="@dimen/_30sdp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
         android:translationZ="@dimen/_100sdp"
 
         app:strokeWidth="@dimen/_1sdp"
@@ -121,7 +121,6 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
 
                 android:layout_marginTop="@dimen/_5sdp"
                 android:layout_marginBottom="@dimen/_5sdp"

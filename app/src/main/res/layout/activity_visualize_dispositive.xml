@@ -57,18 +57,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             android:contentDescription="@string/desc" />
 
-        <ImageView
-            android:id="@+id/imagenMenu"
-            android:layout_width="28dp"
-            android:layout_height="28dp"
-            android:layout_marginEnd="@dimen/_20sdp"
-            android:layout_marginTop="@dimen/_18sdp"
-            android:src="@drawable/menu1"
-
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:contentDescription="@string/desc" />
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <com.google.android.material.card.MaterialCardView
@@ -123,7 +111,7 @@
             android:layout_height="@dimen/_315sdp"
 
             app:cardCornerRadius="@dimen/_10sdp"
-            app:cardElevation="@dimen/_8sdp"
+            app:cardElevation="@dimen/_4sdp"
 
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -528,7 +516,7 @@
                         android:layout_height="@dimen/_30sdp"
 
                         app:cardCornerRadius="@dimen/_10sdp"
-                        app:cardElevation="@dimen/_4sdp"
+                        app:cardElevation="@dimen/_2sdp"
 
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -568,7 +556,7 @@
                         android:layout_height="@dimen/_30sdp"
 
                         app:cardCornerRadius="@dimen/_10sdp"
-                        app:cardElevation="@dimen/_4sdp"
+                        app:cardElevation="@dimen/_2sdp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toStartOf="@+id/botonRojo"
 

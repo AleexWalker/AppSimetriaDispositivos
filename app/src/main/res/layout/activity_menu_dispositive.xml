@@ -56,18 +56,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             android:contentDescription="@string/desc" />
 
-        <ImageView
-            android:id="@+id/imagenMenu"
-            android:layout_width="28dp"
-            android:layout_height="28dp"
-            android:layout_marginEnd="@dimen/_20sdp"
-            android:layout_marginTop="@dimen/_18sdp"
-            android:src="@drawable/menu1"
-
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:contentDescription="@string/desc" />
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <com.google.android.material.card.MaterialCardView
@@ -129,8 +117,8 @@
         app:layout_constraintEnd_toEndOf="parent"
 
         android:layout_marginTop="@dimen/_5sdp"
-        android:layout_marginStart="@dimen/_30sdp"
-        android:layout_marginEnd="@dimen/_30sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
         android:layout_marginBottom="@dimen/_10sdp"
         android:fontFamily="@font/montserrat_medium"/>
 
@@ -145,8 +133,8 @@
         app:layout_constraintEnd_toEndOf="parent"
 
         android:layout_marginTop="@dimen/_5sdp"
-        android:layout_marginStart="@dimen/_30sdp"
-        android:layout_marginEnd="@dimen/_30sdp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
         android:layout_marginBottom="@dimen/_20sdp"
 
         tools:listitem="@layout/item_adapter_dispositive"/>

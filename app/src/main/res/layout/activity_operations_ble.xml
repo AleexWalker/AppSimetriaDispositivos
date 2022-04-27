@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/card_bvackground"
-    tools:context=".bluetooth.AdapterBLE">
+    tools:context=".bluetooth.OperationsBLE">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintArribaOpciones"
@@ -58,13 +58,11 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <com.google.android.material.card.MaterialCardView
-        android:id="@+id/cardBluetooth"
+        android:id="@+id/cardBLE"
         android:layout_width="0dp"
         android:layout_height="@dimen/_32sdp"
 
-        android:layout_marginTop="@dimen/_110sdp"
-        android:layout_marginStart="@dimen/_15sdp"
-        android:layout_marginEnd="@dimen/_15sdp"
+        android:translationZ="@dimen/_100sdp"
 
         app:strokeWidth="@dimen/_1sdp"
         app:strokeColor="@color/color_simetria_7"
@@ -73,7 +71,11 @@
 
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintEnd_toEndOf="parent"
+
+        android:layout_marginTop="@dimen/_110sdp"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginEnd="@dimen/_15sdp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -81,25 +83,28 @@
             android:background="@color/white"
             android:translationZ="@dimen/_100sdp">
 
-            <TextView
-                android:id="@id/textoEscaneoActivo"
-                android:layout_width="wrap_content"
+            <EditText
+                android:id="@+id/MTUTextBLE"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:textSize="@dimen/_9sdp"
-                android:textColor="#002b52"
-                android:fontFamily="@font/montserrat_medium"
-                android:textStyle="bold"
+                android:inputType="number"
+                android:backgroundTint="@color/color_simetria_7"
+                android:textColor="@color/color_simetria_7"
 
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                android:layout_marginStart="@dimen/_12sdp"/>
+                app:layout_constraintEnd_toStartOf="@+id/cardBufferMTU"
+
+                android:layout_marginStart="@dimen/_10sdp" />
 
             <com.google.android.material.card.MaterialCardView
-                android:id="@+id/cardEscaneoImagen"
-                android:layout_width="wrap_content"
+                android:id="@+id/cardBufferMTU"
+                android:layout_width="@dimen/_48sdp"
                 android:layout_height="@dimen/_28sdp"
                 app:cardCornerRadius="@dimen/_30sdp"
+
+                android:elevation="@dimen/_1sdp"
 
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -115,22 +120,23 @@
                     android:layout_height="match_parent"
                     android:background="@color/primary">
 
-                    <Button
-                        android:id="@+id/scan_button"
-                        style="@style/Widget.AppCompat.Button.Borderless"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="Start Scan"
-                        android:textColor="@color/white"
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:text="MTU"
                         android:textStyle="bold"
-
-                        android:textSize="@dimen/_8sdp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
+                        android:textSize="@dimen/_14sdp"
+                        android:lines="1"
+                        android:textColor="@color/white"
 
                         app:layout_constraintTop_toTopOf="parent"
-                        tools:ignore="TouchTargetSizeCheck" />
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"/>
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -153,57 +159,100 @@
 
     </com.google.android.material.card.MaterialCardView>
 
-    <TextView
-        android:id="@+id/textoServiciosBLE"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Dispositivos BLE"
-        android:textColor="@color/primary_text_and_stroke"
-        android:textSize="@dimen/_18sdp"
-        android:textStyle="bold"
-        android:fontFamily="@font/montserrat_medium"
-
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardBluetooth"
-        app:layout_constraintBottom_toTopOf="@+id/recyclerListBLE"
-        app:layout_constraintEnd_toEndOf="parent"
-
-        android:layout_marginStart="@dimen/_15sdp"
-        android:layout_marginTop="@dimen/_5sdp"
-        android:layout_marginEnd="@dimen/_15sdp" />
-
-    <ProgressBar
-        android:id="@+id/progressBarBLE"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:translationZ="@dimen/_10sdp"
-        android:visibility="visible"
-        style="?android:attr/progressBarStyleLarge"
-        android:progressDrawable="@drawable/custom_progress_bar"
-
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerListBLE"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:scrollbars="vertical"
-        android:scrollbarThumbVertical="@color/lightSimetri8_to_nightWhite"
+        android:orientation="vertical"
 
-        app:layout_constraintTop_toBottomOf="@+id/textoServiciosBLE"
+        app:layout_constraintTop_toBottomOf="@+id/cardBLE"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/imagenSimetriaBLE"
+        app:layout_constraintBottom_toTopOf="@+id/imagenSimetriaBLE">
 
-        android:layout_marginTop="@dimen/_8sdp"
-        android:layout_marginStart="@dimen/_15sdp"
-        android:layout_marginEnd="@dimen/_15sdp"
+        <TextView
+            android:id="@+id/textoCaracteristicas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Características"
+            android:textColor="@color/primary_text_and_stroke"
+            android:textSize="@dimen/_18sdp"
+            android:textStyle="bold"
+            android:fontFamily="@font/montserrat_medium"
+    
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardBLE"
+            app:layout_constraintBottom_toTopOf="@+id/recyclerCaracteristicasBLE"
+            app:layout_constraintEnd_toEndOf="parent"
+    
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_15sdp" />
+    
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerCaracteristicasBLE"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_80sdp"
+            android:layout_weight="1"
+            android:scrollbars="vertical"
+            android:scrollbarThumbVertical="@color/color_simetria_7"
 
-        tools:listitem="@layout/item_custom_ble_scan_result"
-        tools:itemCount="10"/>
+            app:layout_constraintTop_toBottomOf="@+id/textoCaracteristicas"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/textoLogBLE"
+    
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+    
+            tools:listitem="@layout/item_custom_ble_characteristic"
+            tools:itemCount="4"/>
+    
+        <TextView
+            android:id="@+id/textoLogBLE"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Logcat"
+            android:textColor="@color/primary_text_and_stroke"
+            android:textSize="@dimen/_18sdp"
+            android:textStyle="bold"
+            android:fontFamily="@font/montserrat_medium"
+    
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textoCaracteristicas"
+            app:layout_constraintBottom_toTopOf="@+id/scrollLogBLE"
+            app:layout_constraintEnd_toEndOf="parent"
+    
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_15sdp" />
+    
+        <ScrollView
+            android:id="@+id/scrollLogBLE"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+    
+            app:layout_constraintTop_toBottomOf="@+id/textoLogBLE"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/imagenSimetriaBLE"
+    
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_15sdp">
+            
+            <TextView
+                android:id="@+id/logTextView"
+                android:scrollbars="vertical"
+                android:gravity="bottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_medium"/>
+            
+        </ScrollView>
+
+    </LinearLayout>
 
     <ImageView
         android:id="@+id/imagenSimetriaBLE"
@@ -218,6 +267,5 @@
         android:layout_marginBottom="@dimen/_5sdp"
 
         android:contentDescription="@string/desc" />
-
-
+    
 </androidx.constraintlayout.widget.ConstraintLayout>

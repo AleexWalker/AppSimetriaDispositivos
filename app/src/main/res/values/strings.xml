@@ -18,4 +18,6 @@
     <string name="title_activity_maps">MapsActivity</string>
     <string name="desc">contentDescription</string>
     <string name="title_activity_delete_dispositive_maps">DeleteDispositiveMaps</string>
+
+    <string name="ble_playground">BLE Playground</string>
 </resources>

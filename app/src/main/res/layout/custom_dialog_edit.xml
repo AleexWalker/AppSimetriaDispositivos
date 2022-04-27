@@ -11,11 +11,8 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/_380sdp"
 
-        app:strokeWidth="@dimen/_1sdp"
-        app:strokeColor="@color/white"
-
         app:cardCornerRadius="@dimen/_10sdp"
-        app:cardElevation="@dimen/_8sdp"
+        app:cardElevation="@dimen/_4sdp"
 
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -480,7 +477,7 @@
                     android:layout_height="@dimen/_30sdp"
 
                     app:cardCornerRadius="@dimen/_10sdp"
-                    app:cardElevation="@dimen/_8sdp"
+                    app:cardElevation="@dimen/_4sdp"
 
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -520,7 +517,7 @@
                     android:layout_height="@dimen/_30sdp"
 
                     app:cardCornerRadius="@dimen/_10sdp"
-                    app:cardElevation="@dimen/_8sdp"
+                    app:cardElevation="@dimen/_4sdp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/botonRojoDialog"
 
