@@ -18,6 +18,9 @@ import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Build
+import android.util.Log
+import android.view.View
+import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -25,6 +28,7 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.SimpleItemAnimator
 import com.example.appsimetria.BuildConfig
 import com.example.appsimetria.ServicesMenu
+import com.example.appsimetria.bluetooth.adapter.CharacteristicAdapter
 import com.example.appsimetria.bluetooth.adapter.ScanResultAdapter
 import com.example.appsimetria.bluetooth.connections.ConnectionEventListener
 import com.example.appsimetria.bluetooth.connections.ConnectionManager
@@ -34,6 +38,10 @@ private const val ENABLE_BLUETOOTH_REQUEST_CODE = 1
 private const val LOCATION_PERMISSION_REQUEST_CODE = 2
 
 class AdapterBLE : AppCompatActivity() {
+
+    companion object {
+        val instance = AdapterBLE()
+    }
 
     private lateinit var binding: ActivityAdapterBleBinding
 
@@ -63,12 +71,18 @@ class AdapterBLE : AppCompatActivity() {
     private val scanResults = mutableListOf<ScanResult>()
     private val scanResultAdapter: ScanResultAdapter by lazy {
         ScanResultAdapter(scanResults) { result ->
+
+            binding.progressBarBLE.visibility = View.VISIBLE
+            //binding.recyclerListBLE.isClickable = false
+            //binding.recyclerListBLE.isFocusable = false
+
             if (isScanning) {
                 stopBleScan()
             }
             with(result.device) {
                 Timber.w("Connecting to $address")
-                ConnectionManager.connect(this, this@AdapterBLE)
+                Toast.makeText(this@AdapterBLE, "Conectando a dispositivo ${result.device.address}", Toast.LENGTH_LONG).show()
+                ConnectionManager.connect(this, this@AdapterBLE, binding.progressBarBLE)
             }
         }
     }
@@ -111,6 +125,7 @@ class AdapterBLE : AppCompatActivity() {
         }
     }
 
+    @Deprecated("Deprecated in Java")
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         when (requestCode) {
@@ -239,6 +254,17 @@ class AdapterBLE : AppCompatActivity() {
                     startActivity(it)
                 }
                 ConnectionManager.unregisterListener(this)
+
+                /**
+                val characteristics by lazy {
+                    ConnectionManager.servicesOnDevice(gatt.device)?.flatMap { service ->
+                        service.characteristics ?: listOf()
+                    } ?: listOf()
+                }
+                CharacteristicAdapter(characteristics) { characteristic ->
+                    ConnectionManager.writeCharacteristic(gatt.device, characteristic, "123456".toByteArray())
+                }
+                */
             }
             onDisconnect = {
                 runOnUiThread {

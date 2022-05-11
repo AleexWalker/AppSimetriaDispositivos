@@ -174,10 +174,10 @@
 
     <ProgressBar
         android:id="@+id/progressBarBLE"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
         android:translationZ="@dimen/_10sdp"
-        android:visibility="visible"
+        android:visibility="invisible"
         style="?android:attr/progressBarStyleLarge"
         android:progressDrawable="@drawable/custom_progress_bar"
 
@@ -201,9 +201,63 @@
         android:layout_marginTop="@dimen/_8sdp"
         android:layout_marginStart="@dimen/_15sdp"
         android:layout_marginEnd="@dimen/_15sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
 
         tools:listitem="@layout/item_custom_ble_scan_result"
         tools:itemCount="10"/>
+
+    <TextView
+        android:id="@+id/textConexion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Estado conexión"
+        android:fontFamily="@font/montserrat_medium"
+        android:textSize="@dimen/_7sdp"
+
+        app:layout_constraintTop_toBottomOf="@+id/recyclerListBLE"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        android:layout_marginStart="@dimen/_15sdp"/>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardEstadoConexionConectando"
+        android:layout_width="@dimen/_7sdp"
+        android:layout_height="@dimen/_7sdp"
+
+        android:backgroundTint="@color/color_simetria_3"
+
+        app:layout_constraintTop_toTopOf="@+id/textConexion"
+        app:layout_constraintStart_toEndOf="@+id/textConexion"
+        app:layout_constraintBottom_toBottomOf="@+id/textConexion"
+
+        android:layout_marginStart="@dimen/_10sdp"/>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardEstadoConexionConectado"
+        android:layout_width="@dimen/_7sdp"
+        android:layout_height="@dimen/_7sdp"
+
+        android:backgroundTint="@color/dashboard_item_5"
+
+        app:layout_constraintTop_toTopOf="@+id/textConexion"
+        app:layout_constraintStart_toEndOf="@+id/cardEstadoConexionConectando"
+        app:layout_constraintBottom_toBottomOf="@+id/textConexion"
+
+        android:layout_marginStart="@dimen/_2sdp"/>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardEstadoConexionNoConectado"
+        android:layout_width="@dimen/_7sdp"
+        android:layout_height="@dimen/_7sdp"
+
+        android:backgroundTint="@color/material_color_rojo_1"
+
+        app:layout_constraintTop_toTopOf="@+id/textConexion"
+        app:layout_constraintStart_toEndOf="@+id/cardEstadoConexionConectado"
+        app:layout_constraintBottom_toBottomOf="@+id/textConexion"
+
+        android:layout_marginStart="@dimen/_2sdp"/>
 
     <ImageView
         android:id="@+id/imagenSimetriaBLE"
@@ -215,9 +269,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
 
-        android:layout_marginBottom="@dimen/_5sdp"
-
         android:contentDescription="@string/desc" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

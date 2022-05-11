@@ -116,6 +116,7 @@ class OperationsBLE : AppCompatActivity() {
     }
 
     private fun setupRecyclerView() {
+        binding.textoCaracteristicas.append(device.address)
         binding.recyclerCaracteristicasBLE.apply {
             adapter = characteristicAdapter
             layoutManager = LinearLayoutManager(
@@ -180,9 +181,9 @@ class OperationsBLE : AppCompatActivity() {
             yesButton {
                 with(hexField.text.toString()) {
                     if (isNotBlank() && isNotEmpty()) {
-                        val bytes = hexToBytes()
-                        log("Writing to ${characteristic.uuid}: ${bytes.toHexString()}")
-                        ConnectionManager.writeCharacteristic(device, characteristic, bytes)
+                        //val bytes = hexToBytes()
+                        //log("Writing to ${characteristic.uuid}: ${bytes.toHexString()}")
+                        ConnectionManager.writeCharacteristic(device, characteristic, hexField.text.toString().toByteArray())
                     } else {
                         log("Please enter a hex payload to write to ${characteristic.uuid}")
                     }

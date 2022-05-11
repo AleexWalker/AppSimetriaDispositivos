@@ -173,7 +173,7 @@
             android:id="@+id/textoCaracteristicas"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Características"
+            android:text="Características "
             android:textColor="@color/primary_text_and_stroke"
             android:textSize="@dimen/_18sdp"
             android:textStyle="bold"
