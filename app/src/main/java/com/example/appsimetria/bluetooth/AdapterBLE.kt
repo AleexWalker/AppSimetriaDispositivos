@@ -48,7 +48,6 @@ class AdapterBLE : AppCompatActivity() {
     /*******************************************
      * Properties
      *******************************************/
-
     private val bluetoothAdapter: BluetoothAdapter by lazy {
         val bluetoothManager = getSystemService(Context.BLUETOOTH_SERVICE) as BluetoothManager
         bluetoothManager.adapter

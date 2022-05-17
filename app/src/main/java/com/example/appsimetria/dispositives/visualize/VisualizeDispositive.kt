@@ -1,4 +1,4 @@
-package com.example.appsimetria.dispositives
+package com.example.appsimetria.dispositives.visualize
 
 import android.annotation.SuppressLint
 import android.content.ContentValues

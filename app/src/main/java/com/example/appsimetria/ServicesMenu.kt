@@ -6,7 +6,6 @@ import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
 import android.graphics.drawable.AnimatedVectorDrawable
-import android.os.Build
 import android.os.Bundle
 import android.util.Log
 import android.view.*
@@ -18,7 +17,7 @@ import com.example.appsimetria.auth.Login
 import com.example.appsimetria.bluetooth.AdapterBLE
 import com.example.appsimetria.databinding.ActivityServicesMenuBinding
 import com.example.appsimetria.dispositives.MenuDispositive
-import com.example.appsimetria.dispositives.VisualizeDispositive
+import com.example.appsimetria.dispositives.visualize.VisualizeDispositive
 import com.example.appsimetria.maps.DeleteDispositiveMaps
 import com.example.appsimetria.maps.NewDispositiveMaps
 import com.google.firebase.firestore.FirebaseFirestore
@@ -27,12 +26,6 @@ import com.google.zxing.integration.android.IntentIntegrator
 import kotlinx.android.synthetic.main.activity_services_menu.*
 import kotlinx.android.synthetic.main.custom_toast_opciones_1.*
 import kotlinx.android.synthetic.main.custom_toast_opciones_2.*
-import kotlinx.android.synthetic.main.item_principal_add_dispositive.view.*
-import kotlinx.android.synthetic.main.item_principal_add_dispositive.view.hourCard
-import kotlinx.android.synthetic.main.item_principal_add_dispositive.view.textDispositive
-import kotlinx.android.synthetic.main.item_principal_delete_dispositive.view.*
-import kotlinx.android.synthetic.main.item_principal_menu_dispositive.*
-import kotlinx.android.synthetic.main.item_principal_menu_dispositive.view.*
 import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.collections.HashMap

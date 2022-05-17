@@ -48,5 +48,6 @@
     <color name="material_color_rojo_2">#ba000d</color>
     <color name="material_color_rojo_1">#f44336</color>
     <color name="material_color_rojo_3">#ff7961</color>
+    <color name="viewTop">#667AFF</color>
 
 </resources>

@@ -4,14 +4,12 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import android.view.Gravity
-import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.appsimetria.ServicesMenu
 import com.example.appsimetria.databinding.ActivityMenuDispositiveBinding
+import com.example.appsimetria.dispositives.visualize.VisualizeDispositive
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.FirebaseFirestoreSettings
 import kotlinx.android.synthetic.main.activity_menu_dispositive.*

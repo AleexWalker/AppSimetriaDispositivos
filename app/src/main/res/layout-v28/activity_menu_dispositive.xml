@@ -15,7 +15,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:animationCache="true"
-        android:background="@color/primary">
+        android:background="@color/viewTop">
 
         <ImageView
             android:id="@+id/imagenAtrasMenuDispositive"
@@ -147,9 +147,8 @@
         app:layout_constraintEnd_toEndOf="parent"
 
         android:layout_marginTop="@dimen/_2sdp"
-        android:layout_marginStart="@dimen/_20sdp"
-        android:layout_marginEnd="@dimen/_20sdp"
         android:layout_marginBottom="@dimen/_20sdp"
+        android:paddingHorizontal="@dimen/_20sdp"
 
         android:clickable="true"
         android:focusable="true"
