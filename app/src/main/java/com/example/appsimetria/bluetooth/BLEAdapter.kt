@@ -2,12 +2,10 @@ package com.example.appsimetria.bluetooth
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.appsimetria.databinding.ActivityAdapterBleBinding
 import timber.log.Timber
 import android.Manifest
 import android.annotation.SuppressLint
 import android.app.Activity
-import android.app.ProgressDialog
 import android.bluetooth.BluetoothAdapter
 import android.bluetooth.BluetoothDevice
 import android.bluetooth.BluetoothManager
@@ -18,7 +16,6 @@ import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Build
-import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
@@ -27,11 +24,11 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.SimpleItemAnimator
 import com.example.appsimetria.BuildConfig
-import com.example.appsimetria.ServicesMenu
-import com.example.appsimetria.bluetooth.adapter.CharacteristicAdapter
+import com.example.appsimetria.MainMenu
 import com.example.appsimetria.bluetooth.adapter.ScanResultAdapter
 import com.example.appsimetria.bluetooth.connections.ConnectionEventListener
 import com.example.appsimetria.bluetooth.connections.ConnectionManager
+import com.example.appsimetria.databinding.ActivityBleAdapterBinding
 import org.jetbrains.anko.alert
 
 private const val ENABLE_BLUETOOTH_REQUEST_CODE = 1
@@ -40,10 +37,11 @@ private const val LOCATION_PERMISSION_REQUEST_CODE = 2
 class AdapterBLE : AppCompatActivity() {
 
     companion object {
+        //lateinit var applicationCon: Context
         val instance = AdapterBLE()
     }
 
-    private lateinit var binding: ActivityAdapterBleBinding
+    private lateinit var binding: ActivityBleAdapterBinding
 
     /*******************************************
      * Properties
@@ -95,7 +93,7 @@ class AdapterBLE : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityAdapterBleBinding.inflate(layoutInflater)
+        binding = ActivityBleAdapterBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         if (BuildConfig.DEBUG) {
@@ -111,7 +109,7 @@ class AdapterBLE : AppCompatActivity() {
         setupRecyclerView()
 
         binding.imagenAtras.setOnClickListener {
-            startActivity(Intent(this, ServicesMenu::class.java))
+            startActivity(Intent(this, MainMenu::class.java))
         }
 
     }
@@ -248,7 +246,7 @@ class AdapterBLE : AppCompatActivity() {
     private val connectionEventListener by lazy {
         ConnectionEventListener().apply {
             onConnectionSetupComplete = { gatt ->
-                Intent(this@AdapterBLE, OperationsBLE::class.java).also {
+                Intent(this@AdapterBLE, BLEOperations::class.java).also {
                     it.putExtra(BluetoothDevice.EXTRA_DEVICE, gatt.device)
                     startActivity(it)
                 }
@@ -288,5 +286,9 @@ class AdapterBLE : AppCompatActivity() {
 
     private fun Activity.requestPermission(permission: String, requestCode: Int) {
         ActivityCompat.requestPermissions(this, arrayOf(permission), requestCode)
+    }
+
+    fun showToastMethod() {
+        Toast.makeText(this, "Prueba", Toast.LENGTH_SHORT).show()
     }
 }

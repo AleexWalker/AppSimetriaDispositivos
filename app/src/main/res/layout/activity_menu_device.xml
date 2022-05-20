@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/card_bvackground"
-    tools:context=".dispositives.MenuDispositive">
+    tools:context=".dispositives.DeviceMenu">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintArribaOpciones"
@@ -23,7 +23,7 @@
             android:layout_height="40dp"
             android:layout_marginStart="@dimen/_20sdp"
             android:layout_marginTop="@dimen/_15sdp"
-            android:src="@drawable/back1"
+            android:src="@drawable/menu_main_back"
 
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -40,7 +40,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/simetria"
+            app:srcCompat="@drawable/simetria_logo_2"
             android:contentDescription="@string/desc" />
 
         <ImageView
@@ -104,7 +104,7 @@
 
     <TextView
         android:id="@+id/textoServiciosList"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Servicios"
         android:textColor="@color/primary_text_and_stroke"
@@ -116,30 +116,29 @@
         app:layout_constraintBottom_toTopOf="@+id/recyclerList"
         app:layout_constraintEnd_toEndOf="parent"
 
-        android:layout_marginTop="@dimen/_5sdp"
-        android:layout_marginStart="@dimen/_10sdp"
-        android:layout_marginEnd="@dimen/_10sdp"
-        android:layout_marginBottom="@dimen/_10sdp"
-        android:fontFamily="@font/montserrat_medium"/>
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+
+        android:fontFamily="@font/montserrat_medium"
+        app:layout_constraintHorizontal_bias="0"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerList"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_350sdp"
+        android:layout_height="0dp"
 
         app:layout_constraintTop_toBottomOf="@+id/textoServiciosList"
-
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/bottomImageSimetria"
 
-        android:layout_marginTop="@dimen/_5sdp"
-        android:layout_marginStart="@dimen/_20sdp"
-        android:layout_marginEnd="@dimen/_20sdp"
-        android:layout_marginBottom="@dimen/_20sdp"
+        android:layout_marginVertical="@dimen/_10sdp"
+        android:paddingHorizontal="@dimen/_20sdp"
 
         tools:listitem="@layout/item_adapter_dispositive"/>
 
     <ImageView
+        android:id="@+id/bottomImageSimetria"
         android:layout_width="@dimen/_30sdp"
         android:layout_height="@dimen/_10sdp"
         android:src="@drawable/simetria_sin_logo_night_mode_inverse"

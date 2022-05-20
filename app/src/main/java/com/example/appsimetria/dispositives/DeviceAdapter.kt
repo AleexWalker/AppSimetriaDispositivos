@@ -1,21 +1,38 @@
 package com.example.appsimetria.dispositives
 
+import android.content.Context
+import android.content.Intent
+import android.util.Log
 import android.view.*
 import android.widget.TextView
+import android.widget.Toast
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
 import com.example.appsimetria.R
+import com.example.appsimetria.maps.MapsDeleteDevice
+import kotlinx.android.synthetic.main.item_adapter_dispositive.view.*
 import kotlin.collections.ArrayList
 
-class AdapterDispositive(private val listaDispositivos: ArrayList<ItemAdapterDispositive>,
-                         private val clickListener: (ItemAdapterDispositive) -> Unit): RecyclerView.Adapter<AdapterDispositive.MyViewHolder>() {
+class DeviceAdapter(private val listaDispositivos: ArrayList<DeviceAdapterItem>,
+                    private val clickListener: (DeviceAdapterItem) -> Unit): RecyclerView.Adapter<DeviceAdapter.MyViewHolder>() {
 
     class MyViewHolder(itemView: View, clickAtPosition: (String) -> Unit): RecyclerView.ViewHolder(itemView) {
         val dispositivo: TextView = itemView.findViewById(R.id.itemDispositivo)
         val localidad: TextView = itemView.findViewById(R.id.ciudadItemDispositivo)
+        val itemMapsDevices: ConstraintLayout = itemView.findViewById(R.id.itemMapsDevices)
+        val context: Context? = itemView.context
 
         init {
             itemView.setOnClickListener {
                 clickAtPosition(adapterPosition.toString())
+            }
+
+            itemMapsDevices.setOnClickListener {
+                val intentSeleccionado = Intent(this@MyViewHolder.context, MapsDeleteDevice::class.java)
+                //intentSeleccionado.putExtra("Seleccionado", dispositivo.toString())
+                Log.e("DEVICE", dispositivo.toString())
+                itemView.context.startActivity(intentSeleccionado)
+                Toast.makeText(this@MyViewHolder.context, "Prueba de Toast", Toast.LENGTH_SHORT).show()
             }
         }
     }

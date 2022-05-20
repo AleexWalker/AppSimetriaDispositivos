@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.appsimetria.R
 import com.example.appsimetria.bluetooth.adapter.CharacteristicAdapter
-import com.example.appsimetria.databinding.ActivityOperationsBleBinding
 import java.text.SimpleDateFormat
 
 import android.annotation.SuppressLint
@@ -28,6 +27,7 @@ import com.example.appsimetria.bluetooth.connections.isReadable
 import com.example.appsimetria.bluetooth.connections.isWritable
 import com.example.appsimetria.bluetooth.connections.isWritableWithoutResponse
 import com.example.appsimetria.bluetooth.connections.toHexString
+import com.example.appsimetria.databinding.ActivityBleOperationsBinding
 import org.jetbrains.anko.alert
 import org.jetbrains.anko.noButton
 import org.jetbrains.anko.selector
@@ -36,9 +36,9 @@ import java.util.Date
 import java.util.Locale
 import java.util.UUID
 
-class OperationsBLE : AppCompatActivity() {
+class BLEOperations : AppCompatActivity() {
 
-    private lateinit var binding: ActivityOperationsBleBinding
+    private lateinit var binding: ActivityBleOperationsBinding
 
     private lateinit var device: BluetoothDevice
     private val dateFormatter = SimpleDateFormat("MMM d, HH:mm:ss", Locale.US)
@@ -69,7 +69,7 @@ class OperationsBLE : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityOperationsBleBinding.inflate(layoutInflater)
+        binding = ActivityBleOperationsBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         device = intent.getParcelableExtra(BluetoothDevice.EXTRA_DEVICE)
@@ -120,7 +120,7 @@ class OperationsBLE : AppCompatActivity() {
         binding.recyclerCaracteristicasBLE.apply {
             adapter = characteristicAdapter
             layoutManager = LinearLayoutManager(
-                this@OperationsBLE,
+                this@BLEOperations,
                 RecyclerView.VERTICAL,
                 false
             )

@@ -13,7 +13,7 @@ class CustomObject {
     }
 
     fun startActivity() {
-        val intent = Intent(context, OperationsBLE::class.java)
+        val intent = Intent(context, BLEOperations::class.java)
         context!!.startActivity(intent)
     }
 }

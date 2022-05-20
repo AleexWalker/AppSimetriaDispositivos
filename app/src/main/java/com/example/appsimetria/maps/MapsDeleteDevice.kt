@@ -2,25 +2,30 @@ package com.example.appsimetria.maps
 
 import android.Manifest
 import android.annotation.SuppressLint
-import android.content.ContentValues.TAG
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.content.res.Resources
-import android.graphics.Bitmap
 import android.graphics.Color
-import android.graphics.drawable.BitmapDrawable
 import android.graphics.drawable.ColorDrawable
 import android.location.Location
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.Gravity
 import android.view.LayoutInflater
 import android.widget.Toast
+
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
+import androidx.lifecycle.ViewModelProvider
+
 import com.example.appsimetria.R
-import com.example.appsimetria.ServicesMenu
-import com.example.appsimetria.databinding.ActivityDeleteDispositiveMapsBinding
+import com.example.appsimetria.MainMenu
+import com.example.appsimetria.databinding.ActivityMapsDeleteDeviceBinding
+import com.example.appsimetria.requests.MainViewModel
+import com.example.appsimetria.requests.MainViewModelFactory
+import com.example.appsimetria.requests.models.DispositivoGetAll
+import com.example.appsimetria.requests.repository.Repository
+
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
 import com.google.android.gms.maps.*
@@ -28,20 +33,22 @@ import com.google.android.gms.maps.*
 import com.google.android.gms.maps.model.*
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.FirebaseFirestoreSettings
-import kotlinx.android.synthetic.main.activity_delete_dispositive_maps.*
 import kotlinx.android.synthetic.main.custom_dialog_close.view.*
 import kotlinx.android.synthetic.main.custom_toast_maps_add_1.*
-import java.lang.Exception
 
-class DeleteDispositiveMaps : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMarkerClickListener, GoogleMap.OnMyLocationButtonClickListener, GoogleMap.OnMarkerDragListener {
+class MapsDeleteDevice : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMarkerClickListener, GoogleMap.OnMyLocationButtonClickListener, GoogleMap.OnMarkerDragListener {
 
     private lateinit var mMap: GoogleMap
     private lateinit var lastLocation: Location
     private lateinit var fusedLocationClient: FusedLocationProviderClient
-    private lateinit var binding: ActivityDeleteDispositiveMapsBinding
+    private lateinit var binding: ActivityMapsDeleteDeviceBinding
 
+    private lateinit var viewModel: MainViewModel
     private lateinit var baseDatos: FirebaseFirestore
 
+    private var arrayDispositivos: ArrayList<DispositivoGetAll> = arrayListOf()
+
+    private val arrayMarker: ArrayList<Marker> = arrayListOf()
     private var latitud: Double = 0.0
     private var longitud: Double = 0.0
 
@@ -51,14 +58,17 @@ class DeleteDispositiveMaps : AppCompatActivity(), OnMapReadyCallback, GoogleMap
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityDeleteDispositiveMapsBinding.inflate(layoutInflater)
+        binding = ActivityMapsDeleteDeviceBinding.inflate(layoutInflater)
         setContentView(binding.root)
         baseDatos = FirebaseFirestore.getInstance()
         baseDatos.firestoreSettings = FirebaseFirestoreSettings.Builder().build()
 
+        val repository = Repository()
+        val viewModelFactory = MainViewModelFactory(repository)
+        viewModel = ViewModelProvider(this, viewModelFactory)[MainViewModel::class.java]
+
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
-        val mapFragment = supportFragmentManager
-             .findFragmentById(R.id.map) as SupportMapFragment
+        val mapFragment = supportFragmentManager.findFragmentById(R.id.map) as SupportMapFragment
         mapFragment.getMapAsync(this)
 
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(this)
@@ -83,23 +93,26 @@ class DeleteDispositiveMaps : AppCompatActivity(), OnMapReadyCallback, GoogleMap
         mMap.uiSettings.isMyLocationButtonEnabled = true
         mMap.uiSettings.isIndoorLevelPickerEnabled = true
 
+        mMap.isTrafficEnabled = true
+
         mMap.setOnMyLocationButtonClickListener(this)
         mMap.setOnMarkerClickListener(this)
         mMap.setOnMarkerDragListener(this)
 
-        item_boton_delete_maps_type.setOnClickListener {
-            if (mMap.mapType == GoogleMap.MAP_TYPE_NORMAL)
-                mMap.mapType = GoogleMap.MAP_TYPE_SATELLITE
-            else
-                mMap.mapType = GoogleMap.MAP_TYPE_NORMAL
+        with(binding){
+            itemBotonDeleteMapsType.imagenMapsType.setOnClickListener {
+                if (mMap.mapType == GoogleMap.MAP_TYPE_NORMAL)
+                    mMap.mapType = GoogleMap.MAP_TYPE_SATELLITE
+                else
+                    mMap.mapType = GoogleMap.MAP_TYPE_NORMAL
+            }
+            itemBotonDeleteMapsBack.imagenMapsBack.setOnClickListener {
+                startActivity(Intent(this@MapsDeleteDevice, MainMenu::class.java))
+            }
         }
 
-        item_boton_delete_maps_back.setOnClickListener {
-            startActivity(Intent(this, ServicesMenu::class.java))
-        }
-
+        getAllDevices()
         setUpMap()
-        loadDispositivo()
     }
 
     private fun setUpMap() {
@@ -108,7 +121,7 @@ class DeleteDispositiveMaps : AppCompatActivity(), OnMapReadyCallback, GoogleMap
                 Manifest.permission.ACCESS_FINE_LOCATION
             ) != PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(this, arrayOf(android.Manifest.permission.ACCESS_FINE_LOCATION),
-                DeleteDispositiveMaps.LOCATION_REQUEST_CODE
+                MapsDeleteDevice.LOCATION_REQUEST_CODE
             )
             return
         }
@@ -158,17 +171,26 @@ class DeleteDispositiveMaps : AppCompatActivity(), OnMapReadyCallback, GoogleMap
         }
 
         dialogView.custom_alert_accept.setOnClickListener {
-            alertDialog.dismiss()
-            baseDatos
-                .collection("Dispositivos")
-                .document(p0.title.toString())
-                .delete()
-                .addOnSuccessListener { Log.d(TAG, "DocumentSnapshot successfully deleted!")
-                    toastPersonalizadoDeleteMaps1()}
-                .addOnFailureListener { e -> Log.w(TAG, "Error deleting document", e) }
 
+            arrayDispositivos.forEach {
+                if (p0.title.toString() == it.mac) {
+                    viewModel.postDeleteDevice(it.dispositivo.toString())
+                    viewModel.postResponse.observe(this, androidx.lifecycle.Observer { response ->
+                        Log.e("Main", response.status.toString())
+                        Log.e("Main", response.title)
+                        Log.e("Main", response.message)
+                    })
+                }
+            }
             rechargeMap()
+            alertDialog.dismiss()
         }
+    }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+        finish()
+        startActivity(Intent(this, MainMenu::class.java))
     }
 
     private fun placeMarkerOnMap(title: String, currentLatLong: LatLng) {
@@ -180,9 +202,45 @@ class DeleteDispositiveMaps : AppCompatActivity(), OnMapReadyCallback, GoogleMap
             .draggable(true)
             .visible(true))
         marker!!.showInfoWindow()
+
+        arrayMarker.add(marker)
+        //moveCameraToMarker()
     }
 
-    @SuppressLint("SetTextI18n")
+    private fun toastPersonalizadoDeleteMaps1() {
+        val layoutToast =  layoutInflater.inflate(R.layout.custom_toast_maps_delete_1, constraintToastMaps1)
+        Toast(this).apply {
+            duration = Toast.LENGTH_SHORT
+            setGravity(Gravity.BOTTOM, 0, 90)
+            view = layoutToast
+        }.show()
+    }
+
+    private fun rechargeMap() {
+        mMap.clear()
+        startActivity(Intent(this, this::class.java))
+        //loadDispositivo()
+    }
+
+    private fun getAllDevices() {
+        viewModel.getAllDevices()
+        viewModel.getResponse.observe(this, androidx.lifecycle.Observer { response ->
+
+            response.result.forEach {
+                arrayDispositivos.add(it)
+            }
+            arrayDispositivos.forEach {
+                placeMarkerOnMap(it.mac, LatLng(it.latitud.toDouble(), it.longitud.toDouble()))
+            }
+        })
+    }
+}
+
+/**
+ * FIREBASE FUNCTIONS
+ */
+
+    /**@SuppressLint("SetTextI18n")
     private fun loadDispositivo() {
         baseDatos
             .collection("Dispositivos")
@@ -207,27 +265,33 @@ class DeleteDispositiveMaps : AppCompatActivity(), OnMapReadyCallback, GoogleMap
                 }
             }
             .addOnFailureListener {
-                e -> Log.e(TAG, "Error writing the document", e)
+                    e -> Log.e(TAG, "Error writing the document", e)
             }
-    }
+    }*/
 
-    private fun toastPersonalizadoDeleteMaps1() {
-        val layoutToast =  layoutInflater.inflate(R.layout.custom_toast_maps_delete_1, constraintToastMaps1)
-        Toast(this).apply {
-            duration = Toast.LENGTH_SHORT
-            setGravity(Gravity.BOTTOM, 0, 90)
-            view = layoutToast
-        }.show()
-    }
+    /**
+    baseDatos
+        .collection("Dispositivos")
+        .document(p0.title.toString())
+        .delete()
+        .addOnSuccessListener { Log.d(TAG, "DocumentSnapshot successfully deleted!")
+        toastPersonalizadoDeleteMaps1()}
+        .addOnFailureListener { e -> Log.w(TAG, "Error deleting document", e) }
+     */
 
-    @SuppressLint("UseCompatLoadingForDrawables")
-    private fun customMarker(): Bitmap {
-        val bitmapImage: BitmapDrawable = resources.getDrawable(R.drawable.marker) as BitmapDrawable
-        return Bitmap.createScaledBitmap(bitmapImage.bitmap, 100, 100, false)
+    /**
+    private fun moveCameraToMarker() {
+        val seleccionado = intent.extras!!.getString("seleccionado")
+        for (i in 0 until arrayMarker.size) {
+            if (arrayMarker[i].title == seleccionado) {
+                mMap
+                    .animateCamera(CameraUpdateFactory
+                    .newLatLngZoom(arrayMarker[i].position, 18f))
+            } else {
+                mMap
+                    .animateCamera(CameraUpdateFactory
+                    .newLatLngZoom(LatLng(lastLocation.latitude, lastLocation.longitude), 18f))
+            }
+        }
     }
-
-    private fun rechargeMap() {
-        mMap.clear()
-        loadDispositivo()
-    }
-}
+     */

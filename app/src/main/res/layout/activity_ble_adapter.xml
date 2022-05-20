@@ -39,7 +39,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/simetria"
+            app:srcCompat="@drawable/simetria_logo_2"
             android:contentDescription="@string/desc" />
 
         <ImageView
@@ -120,7 +120,7 @@
                         style="@style/Widget.AppCompat.Button.Borderless"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="Start Scan"
+                        android:text="@string/MENU_BLE_BUTTON"
                         android:textColor="@color/white"
                         android:textStyle="bold"
 
@@ -157,7 +157,7 @@
         android:id="@+id/textoServiciosBLE"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Dispositivos BLE"
+        android:text="@string/MENU_BLE_DISPOSITIVE"
         android:textColor="@color/primary_text_and_stroke"
         android:textSize="@dimen/_18sdp"
         android:textStyle="bold"
@@ -191,7 +191,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:scrollbars="vertical"
-        android:scrollbarThumbVertical="@color/lightSimetri8_to_nightWhite"
+        android:scrollbarThumbVertical="@color/primary"
 
         app:layout_constraintTop_toBottomOf="@+id/textoServiciosBLE"
         app:layout_constraintStart_toStartOf="parent"
@@ -199,9 +199,10 @@
         app:layout_constraintBottom_toTopOf="@+id/imagenSimetriaBLE"
 
         android:layout_marginTop="@dimen/_8sdp"
-        android:layout_marginStart="@dimen/_15sdp"
-        android:layout_marginEnd="@dimen/_15sdp"
+        android:paddingHorizontal="@dimen/_20sdp"
         android:layout_marginBottom="@dimen/_5sdp"
+
+        android:background="?android:attr/selectableItemBackground"
 
         tools:listitem="@layout/item_custom_ble_scan_result"
         tools:itemCount="10"/>
@@ -210,7 +211,7 @@
         android:id="@+id/textConexion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Estado conexión"
+        android:text="@string/MENU_BLE_CONNECTION"
         android:fontFamily="@font/montserrat_medium"
         android:textSize="@dimen/_7sdp"
 

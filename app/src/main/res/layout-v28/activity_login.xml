@@ -17,7 +17,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/simetria" />
+        app:srcCompat="@drawable/simetria_logo_2" />
 
     <ImageView
         android:id="@+id/simetriaSinLogoLogIn"
@@ -25,7 +25,7 @@
         android:layout_height="50dp"
         android:layout_marginStart="@dimen/_30sdp"
         android:layout_marginEnd="@dimen/_30sdp"
-        android:src="@drawable/simetria_sin_logo"
+        android:src="@drawable/simetria_logo_4"
 
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -180,6 +180,6 @@
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/simetria1" />
+        app:srcCompat="@drawable/simetria_logo_3" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

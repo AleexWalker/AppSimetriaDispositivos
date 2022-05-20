@@ -8,7 +8,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.core.content.ContextCompat
 import com.example.appsimetria.R
-import com.example.appsimetria.ServicesMenu
+import com.example.appsimetria.MainMenu
 import com.example.appsimetria.databinding.ActivityLoginBinding
 import kotlinx.android.synthetic.main.custom_toast_login_1.*
 import kotlinx.android.synthetic.main.custom_toast_login_2.*
@@ -38,7 +38,7 @@ class Login : AppCompatActivity() {
                 toastPersonalizadoLogin2()
             } else {
                 if (user.text.toString() == password.text.toString()){
-                    val intentMenu = Intent(this, ServicesMenu::class.java)
+                    val intentMenu = Intent(this, MainMenu::class.java)
                     startActivity(intentMenu)
                     overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.fade_out)
                 } else {

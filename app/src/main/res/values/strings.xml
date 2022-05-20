@@ -1,16 +1,38 @@
 <resources>
+    <string name="API_URL">https://gesmach.essmartweb.com</string>
     <string name="app_name">Simetria Prueba</string>
+
+    <string name="MENU_DISPOSITIVE_EMPTY">¡No se encuentran dispositivos disponibles en el servidor!</string>
+    <string name="MENU_DISPOSITIVE_AUTOCOMPLETE_HINT">IDENTIFICADOR</string>
+    <string name="RESULTSCANNER">CC:00:BE:00:00:04</string>
+
+    <string name="MENU_BLE_BUTTON">Start Scan</string>
+    <string name="MENU_BLE_DISPOSITIVE">Dispositivos BLE</string>
+    <string name="MENU_BLE_CONNECTION">Estado conexión</string>
+
+    <string name="MENU_VISUALIZE_STREET">Calle</string>
+    <string name="MENU_VISUALIZE_PC">Codigo Postal</string>
+    <string name="MENU_VISUALIZE_LOCATION">Localidad</string>
+    <string name="MENU_VISUALIZE_POBLATION">Poblacion</string>
+    <string name="MENU_VISUALIZE_CITY">Ciudad</string>
+    <string name="MENU_VISUALIZE_COMMUNITY">Comunidad</string>
+    <string name="MENU_VISUALIZE_PROVINCIA">Provincia</string>
+    <string name="MENU_VISUALIZE_COUNTRY">Pais</string>
+    <string name="MENU_VISUALIZE_LNG">360.0000000</string>
+    <string name="MENU_VISUALIZE_LAT">360.0000000</string>
+    <string name="MENU_VISUALIZE_DATE">Fecha</string>
+    <string name="MENU_VISUALIZE_HOUR">Hora</string>
+    <string name="MENU_VISUALIZE_MANUFACTURER">Marca</string>
+    <string name="MENU_VISUALIZE_MODEL">Modelo</string>
+    <string name="MENU_VISUALIZE_DELETE_DISPOSITIVE">ELIMINAR</string>
+    <string name="MENU_VISUALIZE_MODIFY_DISPOSITIVE">MODIFICAR</string>
+
+    <string name="MENU_MENU_DISPOSITIVE_TEXT">Dispositivos</string>
+
     <string name="title_activity_menu_navegacion">MenuNavegacion</string>
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Android Studio</string>
-    <string name="nav_header_subtitle">user@example.com</string>
-    <string name="nav_header_desc">Navigation header</string>
+
     <string name="action_settings">Settings</string>
 
-    <string name="menu_home">ADD</string>
-    <string name="menu_gallery">DELETE</string>
-    <string name="menu_slideshow">MODIFY</string>
     <string name="title_activity_bottom_navigation">BottomNavigation</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/card_bvackground"
-    tools:context=".bluetooth.OperationsBLE">
+    tools:context=".bluetooth.BLEOperations">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintArribaOpciones"
@@ -39,7 +39,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/simetria"
+            app:srcCompat="@drawable/simetria_logo_2"
             android:contentDescription="@string/desc" />
 
         <ImageView

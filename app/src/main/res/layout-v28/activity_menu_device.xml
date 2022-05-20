@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/card_bvackground"
-    tools:context=".dispositives.MenuDispositive">
+    tools:context=".dispositives.DeviceMenu">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintArribaOpciones"
@@ -23,7 +23,7 @@
             android:layout_height="40dp"
             android:layout_marginStart="@dimen/_20sdp"
             android:layout_marginTop="@dimen/_15sdp"
-            android:src="@drawable/back1"
+            android:src="@drawable/menu_main_back"
 
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -40,7 +40,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/simetria"
+            app:srcCompat="@drawable/simetria_logo_2"
             android:contentDescription="@string/desc" />
 
         <ImageView
@@ -95,7 +95,7 @@
 
                 android:fontFamily="@font/montserrat_medium"
                 android:gravity="center_vertical|start"
-                android:hint="IDENTIFICADOR"
+                android:hint="@string/MENU_DISPOSITIVE_AUTOCOMPLETE_HINT"
                 android:inputType="textShortMessage"
 
                 android:textColor="@color/cardview_dark_background"
@@ -121,7 +121,7 @@
         android:id="@+id/textoServiciosList"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Dispositivos"
+        android:text="@string/MENU_MENU_DISPOSITIVE_TEXT"
         android:textColor="@color/primary_text_and_stroke"
         android:textSize="@dimen/_18sdp"
         android:textStyle="bold"
@@ -131,11 +131,27 @@
         app:layout_constraintBottom_toTopOf="@+id/recyclerList"
         app:layout_constraintEnd_toEndOf="parent"
 
-        android:layout_marginTop="@dimen/_2sdp"
+        android:layout_marginVertical="@dimen/_8sdp"
         android:layout_marginStart="@dimen/_20sdp"
         android:layout_marginEnd="@dimen/_20sdp"
-        android:layout_marginBottom="@dimen/_2sdp"
         android:fontFamily="@font/montserrat_medium"/>
+
+    <TextView
+        android:id="@+id/textoDispositivo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/MENU_DISPOSITIVE_EMPTY"
+        android:fontFamily="@font/montserrat_light"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_10ssp"
+        android:visibility="invisible"
+
+        app:layout_constraintTop_toBottomOf="@+id/textoServiciosList"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_10sdp"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerList"
@@ -152,8 +168,8 @@
 
         android:clickable="true"
         android:focusable="true"
-        android:background="?android:attr/selectableItemBackground"
 
+        android:background="?android:attr/selectableItemBackground"
         tools:listitem="@layout/item_adapter_dispositive" />
 
     <ImageView

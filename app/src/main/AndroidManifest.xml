@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.appsimetria">
 
@@ -13,6 +14,8 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <uses-permission android:name="android.permission.BLUETOOTH" />
     <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
@@ -21,37 +24,39 @@
     <application
         android:allowBackup="true"
         android:hardwareAccelerated="true"
-        android:icon="@drawable/simetria"
+        android:icon="@drawable/simetria_logo_2"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_icon_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppSimetria">
-        <activity
-            android:name=".bluetooth.OperationsBLE"
-            android:exported="false" />
-        <activity
-            android:name=".bluetooth.AdapterBLE"
-            android:exported="false" />
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
 
+        <activity android:name=".dispositives.mapsinfo.DispositiveMapsInfo"
+            android:exported="false"/>
         <activity
-            android:name=".dispositives.MenuDispositive"
+            android:name=".bluetooth.BLEOperations"
+            android:exported="false" />
+        <activity
+            android:name=".bluetooth.AdapterBLE"
+            android:exported="false" />
+        <activity
+            android:name=".dispositives.DeviceMenu"
             android:exported="false"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name=".dispositives.visualize.VisualizeDispositive"
+            android:name=".dispositives.visualize.VisualizeDevice"
             android:exported="false"
             android:screenOrientation="sensorPortrait" />
         <activity
-            android:name=".maps.DeleteDispositiveMaps"
+            android:name=".maps.MapsDeleteDevice"
             android:exported="false"
             android:label="@string/title_activity_delete_dispositive_maps"
             android:screenOrientation="fullSensor" />
         <activity
-            android:name=".maps.NewDispositiveMaps"
+            android:name=".maps.MapsAddDevice"
             android:exported="false"
             android:label="@string/title_activity_maps"
             android:screenOrientation="fullSensor" />
@@ -70,7 +75,7 @@
             android:screenOrientation="fullSensor"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name=".ServicesMenu"
+            android:name=".MainMenu"
             android:exported="true"
             android:screenOrientation="sensorPortrait">
             <intent-filter>

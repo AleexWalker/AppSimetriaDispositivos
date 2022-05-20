@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.view.Gravity
 import android.widget.Toast
 import com.example.appsimetria.R
-import com.example.appsimetria.ServicesMenu
+import com.example.appsimetria.MainMenu
 import com.example.appsimetria.databinding.ActivityRegisterBinding
 import kotlinx.android.synthetic.main.activity_register.*
 import kotlinx.android.synthetic.main.custom_toast_register_1.*
@@ -31,7 +31,7 @@ class Register : AppCompatActivity() {
         binding.botonRegister.setOnClickListener {
             if (contraseñaRegister.text.toString() == confirmarContraseñaRegister.text.toString()) {
                 if (validPassword(contraseñaRegister.text.toString())) {
-                    val intentMenu = Intent(this, ServicesMenu::class.java)
+                    val intentMenu = Intent(this, MainMenu::class.java)
                     startActivity(intentMenu)
                 } else {
                     toastPersonalizadoRegister2()
