@@ -9,7 +9,7 @@
     android:layout_centerVertical="true"
     android:fontFamily="@font/montserrat_medium"
     android:textStyle="bold"
-    android:textColor="@color/primary"
+    android:textColor="@color/black50"
     android:textSize="@dimen/_12sdp"
     android:layout_marginStart="@dimen/_25sdp"
 

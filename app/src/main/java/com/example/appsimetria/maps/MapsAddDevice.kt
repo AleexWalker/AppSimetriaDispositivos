@@ -226,10 +226,10 @@ class MapsAddDevice : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMarke
         )
 
         viewModel.postResponse.observe(this, androidx.lifecycle.Observer { response ->
-            Log.e("Main", response.status.toString())
-            Log.e("Main", response.title)
-            Log.e("Main", response.message)
-            Log.e("Main", response.result.toString())
+            Log.i("PostAdd", response.status.toString())
+            Log.i("PostAdd", response.title)
+            Log.i("PostAdd", response.message)
+            Log.i("PostAdd", response.result.toString())
 
         })
     }
@@ -255,10 +255,10 @@ class MapsAddDevice : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMarke
         )
 
         viewModel.postResponse.observe(this, androidx.lifecycle.Observer { response ->
-            Log.e("Main", response.status.toString())
-            Log.e("Main", response.title)
-            Log.e("Main", response.message)
-            Log.e("Main", response.result.toString())
+            Log.i("PostUpdate", response.status.toString())
+            Log.i("PostUpdate", response.title)
+            Log.i("PostUpdate", response.message)
+            Log.i("PostUpdate", response.result.toString())
         })
     }
 

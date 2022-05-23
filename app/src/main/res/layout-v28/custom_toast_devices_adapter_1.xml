@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/constraintToastOpciones1">
+    android:id="@+id/constraintToastDevicesAdapter1">
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/CardToastOpciones1"
@@ -32,7 +32,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center_horizontal|center_vertical"
-                android:text="¡Escaneo Cancelado!"
+                android:text="¡Situando dispostivo en el mapa!"
                 android:fontFamily="@font/montserrat_medium"
                 android:layout_marginStart="@dimen/_15sdp"
                 android:layout_marginEnd="@dimen/_15sdp"

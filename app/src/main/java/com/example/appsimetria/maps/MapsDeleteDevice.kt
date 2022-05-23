@@ -46,6 +46,11 @@ class MapsDeleteDevice : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMa
     private lateinit var viewModel: MainViewModel
     private lateinit var baseDatos: FirebaseFirestore
 
+    private lateinit var markerLatLong: LatLng
+    private var seleccionado: String? = null
+    private var latitudSeleccionado: Double = 0.0
+    private var longitudSeleccionado: Double = 0.0
+
     private var arrayDispositivos: ArrayList<DispositivoGetAll> = arrayListOf()
 
     private val arrayMarker: ArrayList<Marker> = arrayListOf()
@@ -72,6 +77,17 @@ class MapsDeleteDevice : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMa
         mapFragment.getMapAsync(this)
 
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(this)
+
+        seleccionado = intent.getStringExtra("Seleccionado")
+        if (seleccionado != null) {
+            latitudSeleccionado = intent.getStringExtra("Latitud")!!.toDouble()
+            longitudSeleccionado = intent.getStringExtra("Longitud")!!.toDouble()
+        }
+
+        Log.e("SELECCIONADO", seleccionado.toString())
+        Log.e("SELECCIONADO", latitudSeleccionado.toString())
+        Log.e("SELECCIONADO", longitudSeleccionado.toString())
+
     }
 
     override fun onMapReady(googleMap: GoogleMap) {
@@ -89,15 +105,17 @@ class MapsDeleteDevice : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMa
             Log.e("MapsActivity", "Can't find map style. Error: ", e)
         }
 
-        mMap.uiSettings.isZoomControlsEnabled = true
-        mMap.uiSettings.isMyLocationButtonEnabled = true
-        mMap.uiSettings.isIndoorLevelPickerEnabled = true
+        with(mMap) {
+            uiSettings.isZoomControlsEnabled = true
+            uiSettings.isMyLocationButtonEnabled = true
+            uiSettings.isIndoorLevelPickerEnabled = true
 
-        mMap.isTrafficEnabled = true
+            isTrafficEnabled = true
 
-        mMap.setOnMyLocationButtonClickListener(this)
-        mMap.setOnMarkerClickListener(this)
-        mMap.setOnMarkerDragListener(this)
+            setOnMyLocationButtonClickListener(this@MapsDeleteDevice)
+            setOnMarkerClickListener(this@MapsDeleteDevice)
+            setOnMarkerDragListener(this@MapsDeleteDevice)
+        }
 
         with(binding){
             itemBotonDeleteMapsType.imagenMapsType.setOnClickListener {
@@ -132,9 +150,15 @@ class MapsDeleteDevice : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMa
                 lastLocation = location
                 val currentLatLong = LatLng(location.latitude, location.longitude)
 
-                mMap
-                    .animateCamera(CameraUpdateFactory
-                        .newLatLngZoom(currentLatLong, 18f))
+                if (seleccionado != null){
+                    mMap
+                        .animateCamera(CameraUpdateFactory
+                            .newLatLngZoom(LatLng(latitudSeleccionado, longitudSeleccionado), 18f))
+                } else {
+                    mMap
+                        .animateCamera(CameraUpdateFactory
+                            .newLatLngZoom(currentLatLong, 18f))
+                }
 
                 latitud = location.latitude
                 longitud = location.longitude
@@ -165,13 +189,12 @@ class MapsDeleteDevice : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMa
         val alertDialog = builderDialogView.show()
         alertDialog.window!!.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
 
-        dialogView.custom_alert_decline.setOnClickListener {
+        dialogView.custom_text_decline.setOnClickListener {
             alertDialog.dismiss()
             rechargeMap()
         }
 
-        dialogView.custom_alert_accept.setOnClickListener {
-
+        dialogView.custom_text_accept.setOnClickListener {
             arrayDispositivos.forEach {
                 if (p0.title.toString() == it.mac) {
                     viewModel.postDeleteDevice(it.dispositivo.toString())

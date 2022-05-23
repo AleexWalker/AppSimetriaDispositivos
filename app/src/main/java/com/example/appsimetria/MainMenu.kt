@@ -32,7 +32,7 @@ import com.google.firebase.firestore.FirebaseFirestoreSettings
 import com.google.zxing.integration.android.IntentIntegrator
 
 import kotlinx.android.synthetic.main.activity_main_menu.*
-import kotlinx.android.synthetic.main.custom_toast_opciones_1.*
+import kotlinx.android.synthetic.main.custom_toast_main_menu_1.*
 import kotlinx.android.synthetic.main.custom_toast_opciones_2.*
 import kotlinx.android.synthetic.main.item_principal_menu_dispositive.*
 
@@ -141,7 +141,7 @@ class MainMenu : AppCompatActivity() {
         val result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data)
         if (result != null) {
             if (result.contents == null) {
-                toastPersonalizadoOpciones1()
+                toastPersonalizadoMainMenu1()
             } else {
                 Toast.makeText(this, "Dispositivo Escaneado: " + result.contents.substring(0, result.contents.length - 4), Toast.LENGTH_LONG).show()
 
@@ -166,7 +166,7 @@ class MainMenu : AppCompatActivity() {
      * FUNCTIONS
      */
     private fun startFunctions() {
-        window.statusBarColor = ContextCompat.getColor(this, R.color.primary)
+        window.statusBarColor = ContextCompat.getColor(this, R.color.viewTop)
 
         loadData()
         loadAllData()
@@ -286,8 +286,8 @@ class MainMenu : AppCompatActivity() {
     /**
      * CUSTOM TOASTS
      */
-    private fun toastPersonalizadoOpciones1() {
-        val layoutToast =  layoutInflater.inflate(R.layout.custom_toast_opciones_1, constraintToastOpciones1)
+    private fun toastPersonalizadoMainMenu1() {
+        val layoutToast =  layoutInflater.inflate(R.layout.custom_toast_main_menu_1, constraintToastDevicesAdapter1)
         Toast(this).apply {
             duration = Toast.LENGTH_SHORT
             setGravity(Gravity.BOTTOM, 0, 100)

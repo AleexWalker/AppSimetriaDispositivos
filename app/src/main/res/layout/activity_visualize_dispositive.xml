@@ -16,7 +16,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:animationCache="true"
-        android:background="@color/primary">
+        android:background="@color/viewTop">
 
         <ImageView
             android:id="@+id/imagenAtrasModify"
@@ -69,7 +69,7 @@
         android:translationZ="@dimen/_100sdp"
 
         app:strokeWidth="@dimen/_1sdp"
-        app:strokeColor="@color/color_simetria_7"
+        app:strokeColor="@color/white"
         app:cardCornerRadius="@dimen/_50sdp"
         app:cardElevation="@dimen/_5sdp"
 
@@ -87,6 +87,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:paddingStart="@dimen/_10sdp"
+                android:backgroundTint="@color/black50"
 
                 tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck"
                 tools:layout_editor_absoluteX="26dp" />
@@ -110,30 +111,28 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/_315sdp"
 
+            app:strokeWidth="@dimen/_1sdp"
+            app:strokeColor="@color/white"
+
             app:cardCornerRadius="@dimen/_10sdp"
-            app:cardElevation="@dimen/_4sdp"
+            app:cardElevation="@dimen/_10sdp"
 
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
 
-            android:layout_marginStart="@dimen/_20sdp"
-            android:layout_marginEnd="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginHorizontal="@dimen/_20sdp"
             android:layout_marginBottom="@dimen/_20sdp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/primary"
-
-                android:paddingStart="@dimen/_20sdp"
-                android:paddingEnd="@dimen/_20sdp"
-                android:paddingTop="@dimen/_10sdp"
-                android:paddingBottom="@dimen/_10sdp">
+                android:background="@color/white">
 
                 <TextView
-                    android:id="@+id/dispositivoModify"
+                    android:id="@+id/dispositivoVisualize"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
 
@@ -141,21 +140,24 @@
                     android:textSize="@dimen/_18sdp"
                     android:textStyle="bold"
                     android:fontFamily="@font/montserrat_medium"
-                    android:textColor="@color/white"
+                    android:textColor="@color/black50"
                     android:textAlignment="center"
 
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent" />
+                    app:layout_constraintEnd_toEndOf="parent"
+
+                    android:layout_marginHorizontal="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_10sdp"/>
 
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_1sdp"
 
-                    android:background="#FFFFFF"
+                    android:background="@color/black25"
 
-                    app:layout_constraintTop_toBottomOf="@+id/dispositivoModify"
-                    app:layout_constraintBottom_toTopOf="@+id/constraintCardModify1"
+                    app:layout_constraintTop_toBottomOf="@+id/dispositivoVisualize"
+                    app:layout_constraintBottom_toTopOf="@+id/constraintCardVisualize1"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
 
@@ -163,14 +165,16 @@
                     android:layout_marginEnd="@dimen/_30sdp"/>
 
                 <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/constraintCardModify1"
+                    android:id="@+id/constraintCardVisualize1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
 
-                    app:layout_constraintTop_toBottomOf="@+id/dispositivoModify"
+                    app:layout_constraintTop_toBottomOf="@+id/dispositivoVisualize"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    android:layout_marginTop="@dimen/_25sdp">
+                    android:layout_marginTop="@dimen/_25sdp"
+
+                    android:layout_marginHorizontal="@dimen/_20sdp">
 
                     <ImageView
                         android:id="@+id/imagenUsuarioCardModify"
@@ -185,26 +189,43 @@
                         android:contentDescription="@string/desc"/>
 
                     <TextView
-                        android:id="@+id/textoCalle"
+                        android:id="@+id/textoCalleVisualize"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="@dimen/_20sdp"
 
                         android:fontFamily="@font/montserrat_medium"
-                        android:inputType="textMultiLine"
                         android:text="@string/MENU_VISUALIZE_STREET"
 
-                        android:textColor="@color/white"
+                        android:textColor="@color/black50"
                         android:textSize="@dimen/_7sdp"
                         android:textStyle="bold"
 
-                        app:layout_constraintBottom_toTopOf="@+id/textoPoblacion"
+                        app:layout_constraintBottom_toTopOf="@+id/textoPoblacionVisualize"
                         app:layout_constraintStart_toEndOf="@+id/imagenUsuarioCardModify"
                         app:layout_constraintTop_toTopOf="parent"
                         tools:ignore="TouchTargetSizeCheck" />
 
                     <TextView
-                        android:id="@+id/textoCodigoPostal"
+                        android:id="@+id/textoNumeroVisualize"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:fontFamily="@font/montserrat_medium"
+                        android:text="@string/MENU_VISUALIZE_NUMBER"
+
+                        android:textColor="@color/black50"
+                        android:textSize="@dimen/_7sdp"
+                        android:textStyle="bold"
+
+                        app:layout_constraintStart_toEndOf="@+id/textoCalleVisualize"
+                        app:layout_constraintTop_toTopOf="@+id/textoCalleVisualize"
+                        app:layout_constraintBottom_toBottomOf="@+id/textoCalleVisualize"
+
+                        tools:ignore="TouchTargetSizeCheck" />
+
+                    <TextView
+                        android:id="@+id/textoCodigoPostalVisualize"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textStyle="bold"
@@ -212,7 +233,7 @@
                         android:text="@string/MENU_VISUALIZE_PC"
                         android:textSize="@dimen/_7sdp"
                         android:fontFamily="@font/montserrat_medium"
-                        android:textColor="@color/white"
+                        android:textColor="@color/black50"
 
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -221,18 +242,18 @@
                         android:layout_marginEnd="@dimen/_30sdp"/>
 
                     <TextView
-                        android:id="@+id/textoPoblacion"
+                        android:id="@+id/textoPoblacionVisualize"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
 
                         android:text="@string/MENU_VISUALIZE_POBLATION"
                         android:textSize="@dimen/_7sdp"
                         android:fontFamily="@font/montserrat_medium"
-                        android:textColor="@color/white"
+                        android:textColor="@color/black50"
 
                         app:layout_constraintStart_toEndOf="@+id/imagenUsuarioCardModify"
-                        app:layout_constraintTop_toBottomOf="@+id/textoCalle"
-                        app:layout_constraintBottom_toTopOf="@+id/textoProvincia"
+                        app:layout_constraintTop_toBottomOf="@+id/textoCalleVisualize"
+                        app:layout_constraintBottom_toTopOf="@+id/textoProvinciaVisualize"
 
                         android:layout_marginStart="@dimen/_20sdp"/>
 
@@ -254,20 +275,20 @@
                         android:layout_marginEnd="@dimen/_30sdp"/>-->
 
                     <TextView
-                        android:id="@+id/textoProvincia"
+                        android:id="@+id/textoProvinciaVisualize"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
 
                         android:layout_marginStart="@dimen/_20sdp"
                         android:fontFamily="@font/montserrat_medium"
                         android:text="@string/MENU_VISUALIZE_PROVINCIA"
-                        android:textColor="@color/white"
+                        android:textColor="@color/black50"
 
                         android:textSize="@dimen/_7sdp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toEndOf="@+id/imagenUsuarioCardModify"
 
-                        app:layout_constraintTop_toBottomOf="@+id/textoPoblacion" />
+                        app:layout_constraintTop_toBottomOf="@+id/textoPoblacionVisualize" />
 
                     <!--<TextView
                         android:id="@+id/textoPais"
@@ -293,10 +314,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_1sdp"
 
-                    android:background="@color/white"
+                    android:background="@color/black25"
 
-                    app:layout_constraintTop_toBottomOf="@+id/constraintCardModify1"
-                    app:layout_constraintBottom_toTopOf="@+id/constraintCardModify2"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintCardVisualize1"
+                    app:layout_constraintBottom_toTopOf="@+id/constraintCardVisualize2"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
 
@@ -304,14 +325,16 @@
                     android:layout_marginEnd="@dimen/_30sdp"/>
 
                 <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/constraintCardModify2"
+                    android:id="@+id/constraintCardVisualize2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
 
-                    app:layout_constraintTop_toBottomOf="@+id/constraintCardModify1"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintCardVisualize1"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    android:layout_marginTop="@dimen/_25sdp">
+                    android:layout_marginTop="@dimen/_25sdp"
+
+                    android:layout_marginHorizontal="@dimen/_20sdp">
 
                     <ImageView
                         android:id="@+id/imagenLatLngCardModify"
@@ -326,32 +349,32 @@
                         android:contentDescription="@string/desc" />
 
                     <TextView
-                        android:id="@+id/latModify"
+                        android:id="@+id/latitudVisualize"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
 
                         android:text="@string/MENU_VISUALIZE_LAT"
                         android:textSize="@dimen/_8sdp"
                         android:fontFamily="@font/montserrat_medium"
-                        android:textColor="@color/white"
+                        android:textColor="@color/black50"
 
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintStart_toEndOf="@+id/imagenLatLngCardModify"
-                        app:layout_constraintBottom_toTopOf="@+id/lngModify"
+                        app:layout_constraintBottom_toTopOf="@+id/longitudVisualize"
 
                         android:layout_marginStart="@dimen/_20sdp" />
 
                     <TextView
-                        android:id="@+id/lngModify"
+                        android:id="@+id/longitudVisualize"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
 
                         android:text="@string/MENU_VISUALIZE_LNG"
                         android:textSize="@dimen/_8sdp"
                         android:fontFamily="@font/montserrat_medium"
-                        android:textColor="@color/white"
+                        android:textColor="@color/black50"
 
-                        app:layout_constraintTop_toBottomOf="@+id/latModify"
+                        app:layout_constraintTop_toBottomOf="@+id/latitudVisualize"
                         app:layout_constraintStart_toEndOf="@+id/imagenLatLngCardModify"
                         app:layout_constraintBottom_toBottomOf="parent"
 
@@ -363,10 +386,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_1sdp"
 
-                    android:background="@color/white"
+                    android:background="@color/black25"
 
-                    app:layout_constraintTop_toBottomOf="@+id/constraintCardModify2"
-                    app:layout_constraintBottom_toTopOf="@+id/constraintCardModify3"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintCardVisualize2"
+                    app:layout_constraintBottom_toTopOf="@+id/constraintCardVisualize3"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
 
@@ -374,14 +397,16 @@
                     android:layout_marginEnd="@dimen/_30sdp"/>
 
                 <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/constraintCardModify3"
+                    android:id="@+id/constraintCardVisualize3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
 
-                    app:layout_constraintTop_toBottomOf="@+id/constraintCardModify2"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintCardVisualize2"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    android:layout_marginTop="@dimen/_25sdp">
+                    android:layout_marginTop="@dimen/_25sdp"
+
+                    android:layout_marginHorizontal="@dimen/_20sdp">
 
                     <ImageView
                         android:id="@+id/imagenCalendarCardModify"
@@ -396,32 +421,32 @@
                         android:contentDescription="@string/desc"/>
 
                     <TextView
-                        android:id="@+id/fechaModify"
+                        android:id="@+id/fechaVisualize"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
 
                         android:text="@string/MENU_VISUALIZE_DATE"
                         android:textSize="@dimen/_8sdp"
                         android:fontFamily="@font/montserrat_medium"
-                        android:textColor="@color/white"
+                        android:textColor="@color/black50"
 
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintStart_toEndOf="@+id/imagenCalendarCardModify"
-                        app:layout_constraintBottom_toTopOf="@+id/horaModify"
+                        app:layout_constraintBottom_toTopOf="@+id/horaVisualize"
 
                         android:layout_marginStart="@dimen/_20sdp" />
 
                     <TextView
-                        android:id="@+id/horaModify"
+                        android:id="@+id/horaVisualize"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
 
                         android:text="@string/MENU_VISUALIZE_HOUR"
                         android:textSize="@dimen/_8sdp"
                         android:fontFamily="@font/montserrat_medium"
-                        android:textColor="@color/white"
+                        android:textColor="@color/black50"
 
-                        app:layout_constraintTop_toBottomOf="@+id/fechaModify"
+                        app:layout_constraintTop_toBottomOf="@+id/fechaVisualize"
                         app:layout_constraintStart_toEndOf="@+id/imagenCalendarCardModify"
                         app:layout_constraintBottom_toBottomOf="parent"
 
@@ -433,10 +458,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_1sdp"
 
-                    android:background="@color/white"
+                    android:background="@color/black25"
 
-                    app:layout_constraintTop_toBottomOf="@+id/constraintCardModify3"
-                    app:layout_constraintBottom_toTopOf="@id/constraintCardModify4"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintCardVisualize3"
+                    app:layout_constraintBottom_toTopOf="@id/constraintCardVisualize4"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
 
@@ -444,14 +469,16 @@
                     android:layout_marginEnd="@dimen/_30sdp"/>
 
                 <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/constraintCardModify4"
+                    android:id="@+id/constraintCardVisualize4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
 
-                    app:layout_constraintTop_toBottomOf="@+id/constraintCardModify3"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintCardVisualize3"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    android:layout_marginTop="@dimen/_25sdp">
+                    android:layout_marginTop="@dimen/_25sdp"
+
+                    android:layout_marginHorizontal="@dimen/_20sdp">
 
                     <ImageView
                         android:id="@+id/imagenPhoneCardModify"
@@ -466,32 +493,32 @@
                         android:contentDescription="@string/desc"/>
 
                     <TextView
-                        android:id="@+id/marcaDispositivo"
+                        android:id="@+id/marcaDispositivoVisualize"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
 
                         android:text="@string/MENU_VISUALIZE_MANUFACTURER"
                         android:textSize="@dimen/_8sdp"
                         android:fontFamily="@font/montserrat_medium"
-                        android:textColor="@color/white"
+                        android:textColor="@color/black50"
 
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintStart_toEndOf="@+id/imagenPhoneCardModify"
-                        app:layout_constraintBottom_toTopOf="@+id/modeloDispositivo"
+                        app:layout_constraintBottom_toTopOf="@+id/modeloDispositivoVisualize"
 
                         android:layout_marginStart="@dimen/_20sdp" />
 
                     <TextView
-                        android:id="@+id/modeloDispositivo"
+                        android:id="@+id/modeloDispositivoVisualize"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
 
                         android:text="@string/MENU_VISUALIZE_MODEL"
                         android:textSize="@dimen/_8sdp"
                         android:fontFamily="@font/montserrat_medium"
-                        android:textColor="@color/white"
+                        android:textColor="@color/black50"
 
-                        app:layout_constraintTop_toBottomOf="@+id/marcaDispositivo"
+                        app:layout_constraintTop_toBottomOf="@+id/marcaDispositivoVisualize"
                         app:layout_constraintStart_toEndOf="@+id/imagenPhoneCardModify"
                         app:layout_constraintBottom_toBottomOf="parent"
 
@@ -499,18 +526,96 @@
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
+                <View
+                    android:id="@+id/viewVisualizeHorizontal"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_1sdp"
+                    android:background="@color/white"
+
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintCardVisualize4"
+                    app:layout_constraintBottom_toBottomOf="parent"
+
+                    android:layout_marginBottom="@dimen/_10sdp"/>
+
                 <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/botonNaranja"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@color/color_simetria_2"
+
+                    app:layout_constraintTop_toBottomOf="@+id/viewVisualizeHorizontal"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/viewVisualizeVertical"
+                    app:layout_constraintBottom_toBottomOf="parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="@string/MENU_VISUALIZE_MODIFY_DISPOSITIVE"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:textSize="@dimen/_14sdp"
+                        android:textColor="@color/white"
+
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <View
+                    android:id="@+id/viewVisualizeVertical"
+                    android:layout_width="@dimen/_1sdp"
+                    android:layout_height="0dp"
+                    android:background="@color/white"
+
+                    app:layout_constraintTop_toBottomOf="@+id/viewVisualizeHorizontal"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/botonRojo"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@color/material_color_rojo_1"
+
+                    app:layout_constraintTop_toBottomOf="@+id/viewVisualizeHorizontal"
+                    app:layout_constraintStart_toEndOf="@+id/viewVisualizeVertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="@string/MENU_VISUALIZE_DELETE_DISPOSITIVE"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:textSize="@dimen/_14sdp"
+                        android:textColor="@color/white"
+
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <!--<androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
 
-                    app:layout_constraintTop_toBottomOf="@+id/constraintCardModify4"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintCardVisualize4"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
 
                     android:layout_marginTop="@dimen/_10sdp">
 
                     <com.google.android.material.card.MaterialCardView
-                        android:id="@+id/botonRojo"
+
                         android:layout_width="@dimen/_90sdp"
                         android:layout_height="@dimen/_30sdp"
 
@@ -531,26 +636,12 @@
 
                             android:background="#ED473B">
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-
-                                android:text="@string/MENU_VISUALIZE_DELETE_DISPOSITIVE"
-                                android:fontFamily="@font/montserrat_medium"
-                                android:textSize="@dimen/_10sdp"
-                                android:textColor="@color/white"
-
-                                app:layout_constraintTop_toTopOf="parent"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintEnd_toEndOf="parent"/>
-
                         </androidx.constraintlayout.widget.ConstraintLayout>
 
                     </com.google.android.material.card.MaterialCardView>
 
                     <com.google.android.material.card.MaterialCardView
-                        android:id="@+id/botonNaranja"
+
                         android:layout_width="@dimen/_90sdp"
                         android:layout_height="@dimen/_30sdp"
 
@@ -572,25 +663,11 @@
 
                             android:background="@color/color_simetria_2">
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-
-                                android:text="@string/MENU_VISUALIZE_MODIFY_DISPOSITIVE"
-                                android:fontFamily="@font/montserrat_medium"
-                                android:textSize="@dimen/_10sdp"
-                                android:textColor="@color/white"
-
-                                app:layout_constraintTop_toTopOf="parent"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintEnd_toEndOf="parent"/>
-
                         </androidx.constraintlayout.widget.ConstraintLayout>
 
                     </com.google.android.material.card.MaterialCardView>
 
-                </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>-->
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 

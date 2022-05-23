@@ -8,10 +8,12 @@ import android.util.Log
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
+import androidx.core.content.ContextCompat
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.appsimetria.MainMenu
+import com.example.appsimetria.R
 import com.example.appsimetria.databinding.ActivityMenuDeviceBinding
 import com.example.appsimetria.dispositives.visualize.VisualizeDevice
 import com.example.appsimetria.requests.MainViewModel
@@ -37,6 +39,7 @@ class DeviceMenu : AppCompatActivity() {
         setContentView(binding.root)
         baseDatos = FirebaseFirestore.getInstance()
         baseDatos.firestoreSettings = FirebaseFirestoreSettings.Builder().build()
+        window.statusBarColor = ContextCompat.getColor(this, R.color.viewTop)
 
         val repository = Repository()
         val viewModelFactory = MainViewModelFactory(repository)
@@ -69,7 +72,7 @@ class DeviceMenu : AppCompatActivity() {
                 result.result.forEach {
                     arrayDispositivos.add(it)
                     macDispositivos.add(it.mac)
-                    itemDispositivo.add(DeviceAdapterItem(it.mac, "${it.calle}, ${it.numero}, ${it.poblacion_nombre}"))
+                    itemDispositivo.add(DeviceAdapterItem(it.mac, "${it.calle}, ${it.numero}, ${it.poblacion_nombre}", it.latitud, it.longitud))
 
                     val adaptador = DeviceAdapter(itemDispositivo) {
                         val intentSeleccionado = Intent(this@DeviceMenu, VisualizeDevice::class.java)
