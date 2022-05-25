@@ -5,13 +5,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <com.google.android.material.card.MaterialCardView
-        android:id="@+id/cardAddClickable"
+        android:id="@+id/cardBleClickable"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_55sdp"
         app:cardElevation="@dimen/_5sdp"
-
-        app:strokeColor="@color/lightSimetri8_to_nightWhite"
-        app:strokeWidth="@dimen/_1sdp"
 
         app:cardCornerRadius="@dimen/_5sdp"
 
@@ -20,7 +17,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
 
-        android:layout_marginVertical="@dimen/_7sdp"
+        android:layout_marginVertical="@dimen/_10sdp"
         android:layout_marginStart="@dimen/_20sdp"
         android:layout_marginEnd="@dimen/_20sdp"
 
@@ -29,12 +26,13 @@
         android:background="?android:attr/selectableItemBackground">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/constraintAdd"
+            android:id="@+id/constraintBleDispositives"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@color/white">
 
             <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardIzquierdaBLEDevice"
                 android:layout_width="@dimen/_50sdp"
                 android:layout_height="match_parent"
                 app:cardCornerRadius="0dp"
@@ -57,16 +55,16 @@
                         android:layout_height="wrap_content"
                         android:textColor="@color/white"
 
-                        android:fontFamily="@font/montserrat_medium"
-                        android:text="1"
-                        android:textSize="@dimen/_24sdp"
+                        android:fontFamily="@font/montserrat_extralight"
+                        android:text="6"
+                        android:textSize="@dimen/_30sdp"
 
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        android:layout_marginTop="@dimen/_5sdp"/>
+                        app:layout_constraintBottom_toBottomOf="parent"/>
 
-                    <TextView
+                    <!--<TextView
                         android:id="@+id/todayCard"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -97,7 +95,7 @@
                         app:layout_constraintStart_toStartOf="@+id/todayCard"
                         app:layout_constraintBottom_toBottomOf="parent"
 
-                        android:layout_marginBottom="@dimen/_10sdp"/>
+                        android:layout_marginBottom="@dimen/_10sdp"/>-->
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -111,14 +109,14 @@
                 android:textSize="@dimen/_8sdp"
                 android:textStyle="bold"
 
-                android:text="AÑADIR/REUBICAR DISPOSITIVO EN MEMORIA"
+                android:text="CONEXIÓN MEDIANTE BLE"
                 android:fontFamily="@font/montserrat_medium"
 
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/cardIzquierdaBLEDevice"
+                app:layout_constraintEnd_toEndOf="parent"
 
-                android:layout_marginTop="@dimen/_5sdp"
-                android:layout_marginStart="@dimen/_65sdp"/>
+                android:layout_marginTop="@dimen/_5sdp" />
 
             <View
                 android:id="@+id/viewDispositive"
@@ -140,10 +138,11 @@
                 android:layout_height="@dimen/_20sdp"
 
                 app:layout_constraintTop_toBottomOf="@+id/viewDispositive"
-                app:layout_constraintStart_toStartOf="@+id/textMenuDispositives"
+                app:layout_constraintStart_toEndOf="@+id/cardIzquierdaBLEDevice"
 
                 android:src="@drawable/menu_main_barcode"
-                android:layout_marginTop="@dimen/_5sdp" />
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginStart="@dimen/_15sdp"/>
 
             <TextView
                 android:id="@+id/textDispositive"

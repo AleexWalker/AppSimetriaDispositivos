@@ -109,7 +109,7 @@
 
         <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_315sdp"
+            android:layout_height="@dimen/_340sdp"
 
             app:strokeWidth="@dimen/_1sdp"
             app:strokeColor="@color/white"
@@ -198,10 +198,10 @@
                         android:text="@string/MENU_VISUALIZE_STREET"
 
                         android:textColor="@color/black50"
-                        android:textSize="@dimen/_7sdp"
+                        android:textSize="@dimen/_10sdp"
                         android:textStyle="bold"
 
-                        app:layout_constraintBottom_toTopOf="@+id/textoPoblacionVisualize"
+                        app:layout_constraintBottom_toTopOf="@+id/textoCodigoPostalVisualize"
                         app:layout_constraintStart_toEndOf="@+id/imagenUsuarioCardModify"
                         app:layout_constraintTop_toTopOf="parent"
                         tools:ignore="TouchTargetSizeCheck" />
@@ -215,7 +215,7 @@
                         android:text="@string/MENU_VISUALIZE_NUMBER"
 
                         android:textColor="@color/black50"
-                        android:textSize="@dimen/_7sdp"
+                        android:textSize="@dimen/_10sdp"
                         android:textStyle="bold"
 
                         app:layout_constraintStart_toEndOf="@+id/textoCalleVisualize"
@@ -231,15 +231,12 @@
                         android:textStyle="bold"
 
                         android:text="@string/MENU_VISUALIZE_PC"
-                        android:textSize="@dimen/_7sdp"
+                        android:textSize="@dimen/_10sdp"
                         android:fontFamily="@font/montserrat_medium"
                         android:textColor="@color/black50"
 
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-
-                        android:layout_marginStart="@dimen/_20sdp"
-                        android:layout_marginEnd="@dimen/_30sdp"/>
+                        app:layout_constraintTop_toBottomOf="@+id/textoCalleVisualize"
+                        app:layout_constraintStart_toStartOf="@+id/textoCalleVisualize" />
 
                     <TextView
                         android:id="@+id/textoPoblacionVisualize"
@@ -247,12 +244,12 @@
                         android:layout_height="wrap_content"
 
                         android:text="@string/MENU_VISUALIZE_POBLATION"
-                        android:textSize="@dimen/_7sdp"
+                        android:textSize="@dimen/_10sdp"
                         android:fontFamily="@font/montserrat_medium"
                         android:textColor="@color/black50"
 
                         app:layout_constraintStart_toEndOf="@+id/imagenUsuarioCardModify"
-                        app:layout_constraintTop_toBottomOf="@+id/textoCalleVisualize"
+                        app:layout_constraintTop_toBottomOf="@+id/textoCodigoPostalVisualize"
                         app:layout_constraintBottom_toTopOf="@+id/textoProvinciaVisualize"
 
                         android:layout_marginStart="@dimen/_20sdp"/>
@@ -284,7 +281,7 @@
                         android:text="@string/MENU_VISUALIZE_PROVINCIA"
                         android:textColor="@color/black50"
 
-                        android:textSize="@dimen/_7sdp"
+                        android:textSize="@dimen/_10sdp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toEndOf="@+id/imagenUsuarioCardModify"
 
@@ -354,7 +351,7 @@
                         android:layout_height="wrap_content"
 
                         android:text="@string/MENU_VISUALIZE_LAT"
-                        android:textSize="@dimen/_8sdp"
+                        android:textSize="@dimen/_10sdp"
                         android:fontFamily="@font/montserrat_medium"
                         android:textColor="@color/black50"
 
@@ -370,7 +367,7 @@
                         android:layout_height="wrap_content"
 
                         android:text="@string/MENU_VISUALIZE_LNG"
-                        android:textSize="@dimen/_8sdp"
+                        android:textSize="@dimen/_10sdp"
                         android:fontFamily="@font/montserrat_medium"
                         android:textColor="@color/black50"
 
@@ -426,7 +423,7 @@
                         android:layout_height="wrap_content"
 
                         android:text="@string/MENU_VISUALIZE_DATE"
-                        android:textSize="@dimen/_8sdp"
+                        android:textSize="@dimen/_10sdp"
                         android:fontFamily="@font/montserrat_medium"
                         android:textColor="@color/black50"
 
@@ -442,7 +439,7 @@
                         android:layout_height="wrap_content"
 
                         android:text="@string/MENU_VISUALIZE_HOUR"
-                        android:textSize="@dimen/_8sdp"
+                        android:textSize="@dimen/_10sdp"
                         android:fontFamily="@font/montserrat_medium"
                         android:textColor="@color/black50"
 
@@ -498,7 +495,7 @@
                         android:layout_height="wrap_content"
 
                         android:text="@string/MENU_VISUALIZE_MANUFACTURER"
-                        android:textSize="@dimen/_8sdp"
+                        android:textSize="@dimen/_10sdp"
                         android:fontFamily="@font/montserrat_medium"
                         android:textColor="@color/black50"
 
@@ -514,7 +511,7 @@
                         android:layout_height="wrap_content"
 
                         android:text="@string/MENU_VISUALIZE_MODEL"
-                        android:textSize="@dimen/_8sdp"
+                        android:textSize="@dimen/_10sdp"
                         android:fontFamily="@font/montserrat_medium"
                         android:textColor="@color/black50"
 
@@ -537,7 +534,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/constraintCardVisualize4"
                     app:layout_constraintBottom_toBottomOf="parent"
 
-                    android:layout_marginBottom="@dimen/_10sdp"/>
+                    android:layout_marginBottom="@dimen/_15sdp"/>
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/botonNaranja"

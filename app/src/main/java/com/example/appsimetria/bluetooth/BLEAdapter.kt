@@ -16,6 +16,7 @@ import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Build
+import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
@@ -25,6 +26,7 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.SimpleItemAnimator
 import com.example.appsimetria.BuildConfig
 import com.example.appsimetria.MainMenu
+import com.example.appsimetria.R
 import com.example.appsimetria.bluetooth.adapter.ScanResultAdapter
 import com.example.appsimetria.bluetooth.connections.ConnectionEventListener
 import com.example.appsimetria.bluetooth.connections.ConnectionManager
@@ -69,7 +71,6 @@ class AdapterBLE : AppCompatActivity() {
     private val scanResultAdapter: ScanResultAdapter by lazy {
         ScanResultAdapter(scanResults) { result ->
 
-            binding.progressBarBLE.visibility = View.VISIBLE
             //binding.recyclerListBLE.isClickable = false
             //binding.recyclerListBLE.isFocusable = false
 
@@ -95,6 +96,7 @@ class AdapterBLE : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityBleAdapterBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        window.statusBarColor = ContextCompat.getColor(this, R.color.viewTop)
 
         if (BuildConfig.DEBUG) {
             Timber.plant(Timber.DebugTree())
@@ -110,6 +112,7 @@ class AdapterBLE : AppCompatActivity() {
 
         binding.imagenAtras.setOnClickListener {
             startActivity(Intent(this, MainMenu::class.java))
+            transition()
         }
 
     }
@@ -149,6 +152,16 @@ class AdapterBLE : AppCompatActivity() {
                 }
             }
         }
+    }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+        startActivity(Intent(this, MainMenu::class.java))
+        transition()
+    }
+
+    private fun transition() {
+        overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.fade_out)
     }
 
     /*******************************************

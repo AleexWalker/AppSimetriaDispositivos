@@ -170,10 +170,10 @@ class VisualizeDevice : AppCompatActivity() {
             if (binding.spinnerDispositivos.selectedItem.toString() == it.mac) {
                 with(dialogView) {
                     dispositivoVisualize.text = it.mac
-                    textoCalleVisualize.setText(it.calle)
-                    textoNumeroVisualize.setText(it.numero)
-                    textoCodigoPostalVisualize.setText(it.codigo_postal)
-                    textoPoblacionVisualize.setText(it.poblacion_nombre)
+                    textoCalleUpdate.setText(it.calle)
+                    textoNumeroUpdate.setText(it.numero)
+                    textoCodigoPostalUpdate.setText(it.codigo_postal)
+                    textoPoblacionUpdate.setText(it.poblacion_nombre)
                     textoProvinciaUpdate.setText(it.provincia_nombre)
 
                     latitudVisualize.text = it.latitud

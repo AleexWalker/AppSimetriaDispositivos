@@ -9,7 +9,7 @@
 
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_400sdp"
+        android:layout_height="@dimen/_440sdp"
 
         app:strokeColor="@color/white"
         app:strokeWidth="@dimen/_1sdp"
@@ -102,8 +102,8 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <EditText
-                    android:id="@+id/textoCalleVisualize"
-                    android:layout_width="@dimen/_105sdp"
+                    android:id="@+id/textoCalleUpdate"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
 
                     android:fontFamily="@font/montserrat_medium"
@@ -116,11 +116,11 @@
                     android:textColorHint="@color/black50"
                     android:backgroundTint="@color/black25"
 
-                    android:textSize="@dimen/_7sdp"
+                    android:textSize="@dimen/_10sdp"
                     android:textStyle="bold"
 
-                    app:layout_constraintBottom_toTopOf="@+id/textoPoblacionVisualize"
-                    app:layout_constraintEnd_toStartOf="@+id/textoNumeroVisualize"
+                    app:layout_constraintBottom_toTopOf="@+id/textoCodigoPostalUpdate"
+                    app:layout_constraintEnd_toStartOf="@+id/textoNumeroUpdate"
                     app:layout_constraintStart_toEndOf="@+id/imagenUsuarioCardModify"
                     app:layout_constraintTop_toTopOf="parent"
 
@@ -128,8 +128,8 @@
                     tools:ignore="TouchTargetSizeCheck" />
 
                 <EditText
-                    android:id="@+id/textoNumeroVisualize"
-                    android:layout_width="@dimen/_20sdp"
+                    android:id="@+id/textoNumeroUpdate"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
 
                     android:fontFamily="@font/montserrat_medium"
@@ -140,22 +140,20 @@
                     android:textColorHint="@color/black50"
                     android:backgroundTint="@color/black25"
 
-                    android:textSize="@dimen/_7sdp"
+                    android:textSize="@dimen/_10sdp"
                     android:textStyle="bold"
 
-                    app:layout_constraintBottom_toTopOf="@+id/textoPoblacionVisualize"
-                    app:layout_constraintEnd_toStartOf="@+id/textoCodigoPostalVisualize"
-                    app:layout_constraintStart_toEndOf="@+id/textoCalleVisualize"
-                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="@+id/textoCalleUpdate"
+                    app:layout_constraintStart_toEndOf="@+id/textoCalleUpdate"
+                    app:layout_constraintTop_toTopOf="@+id/textoCalleUpdate"
 
                     tools:ignore="TouchTargetSizeCheck" />
 
                 <EditText
-                    android:id="@+id/textoCodigoPostalVisualize"
-                    android:layout_width="@dimen/_30sdp"
+                    android:id="@+id/textoCodigoPostalUpdate"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
 
-                    android:layout_marginEnd="@dimen/_30sdp"
                     android:fontFamily="@font/montserrat_medium"
                     android:hint="CP"
                     android:inputType="textShortMessage"
@@ -164,17 +162,16 @@
                     android:textColorHint="@color/black50"
                     android:backgroundTint="@color/black25"
 
-                    android:textSize="@dimen/_7sdp"
+                    android:textSize="@dimen/_10sdp"
                     android:textStyle="bold"
-                    app:layout_constraintBottom_toBottomOf="@+id/textoCalleVisualize"
-                    app:layout_constraintEnd_toEndOf="parent"
 
-                    app:layout_constraintStart_toEndOf="@+id/textoNumeroVisualize"
-                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textoCalleUpdate"
+                    app:layout_constraintStart_toStartOf="@+id/textoCalleUpdate"
+
                     tools:ignore="TouchTargetSizeCheck" />
 
                 <EditText
-                    android:id="@+id/textoPoblacionVisualize"
+                    android:id="@+id/textoPoblacionUpdate"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
 
@@ -187,16 +184,16 @@
                     android:textColorHint="@color/black50"
                     android:backgroundTint="@color/black25"
 
-                    android:textSize="@dimen/_7sdp"
+                    android:textSize="@dimen/_10sdp"
                     app:layout_constraintBottom_toTopOf="@+id/textoProvinciaUpdate"
-                    app:layout_constraintStart_toStartOf="@+id/textoCalleVisualize"
-                    app:layout_constraintTop_toBottomOf="@+id/textoCalleVisualize"
+                    app:layout_constraintStart_toStartOf="@+id/textoCalleUpdate"
+                    app:layout_constraintTop_toBottomOf="@+id/textoCodigoPostalUpdate"
 
                     tools:ignore="TouchTargetSizeCheck" />
 
                 <EditText
                     android:id="@+id/textoProvinciaUpdate"
-                    android:layout_width="@dimen/_50sdp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
 
                     android:fontFamily="@font/montserrat_medium"
@@ -207,9 +204,9 @@
                     android:textColorHint="@color/black50"
                     android:backgroundTint="@color/black25"
 
-                    android:textSize="@dimen/_7sdp"
-                    app:layout_constraintTop_toBottomOf="@+id/textoPoblacionVisualize"
-                    app:layout_constraintStart_toStartOf="@+id/textoPoblacionVisualize"
+                    android:textSize="@dimen/_10sdp"
+                    app:layout_constraintTop_toBottomOf="@+id/textoPoblacionUpdate"
+                    app:layout_constraintStart_toStartOf="@+id/textoPoblacionUpdate"
                     app:layout_constraintBottom_toBottomOf="parent"
 
                     tools:ignore="TouchTargetSizeCheck" />
@@ -260,7 +257,7 @@
                     android:fontFamily="@font/montserrat_medium"
                     android:text="@string/MENU_VISUALIZE_EDIT_LAT"
                     android:textColor="@color/black50"
-                    android:textSize="@dimen/_8sdp"
+                    android:textSize="@dimen/_10sdp"
                     android:textStyle="bold"
 
                     app:layout_constraintStart_toEndOf="@+id/imagenLatLngCardModify"
@@ -283,7 +280,7 @@
                     android:textColor="@color/black50"
                     android:textColorHint="@color/black50"
 
-                    android:textSize="@dimen/_8sdp"
+                    android:textSize="@dimen/_10sdp"
 
                     app:layout_constraintTop_toTopOf="@+id/textoLatitudEdicion"
                     app:layout_constraintBottom_toBottomOf="@+id/textoLatitudEdicion"
@@ -300,7 +297,7 @@
                     android:fontFamily="@font/montserrat_medium"
                     android:text="@string/MENU_VISUALIZE_EDIT_LNG"
                     android:textColor="@color/black50"
-                    android:textSize="@dimen/_8sdp"
+                    android:textSize="@dimen/_10sdp"
                     android:textStyle="bold"
 
                     app:layout_constraintStart_toStartOf="@+id/textoLatitudEdicion"
@@ -320,7 +317,7 @@
                     android:textColor="@color/black50"
                     android:textColorHint="@color/black50"
 
-                    android:textSize="@dimen/_8sdp"
+                    android:textSize="@dimen/_10sdp"
 
                     app:layout_constraintTop_toTopOf="@+id/textoLongitudEdicion"
                     app:layout_constraintBottom_toBottomOf="@+id/textoLongitudEdicion"
@@ -373,7 +370,7 @@
                     android:layout_height="wrap_content"
 
                     android:text="Fecha"
-                    android:textSize="@dimen/_8sdp"
+                    android:textSize="@dimen/_10sdp"
                     android:fontFamily="@font/montserrat_medium"
 
                     android:textColor="@color/black50"
@@ -390,7 +387,7 @@
                     android:layout_height="wrap_content"
 
                     android:text="Hora"
-                    android:textSize="@dimen/_8sdp"
+                    android:textSize="@dimen/_10sdp"
                     android:fontFamily="@font/montserrat_medium"
 
                     android:textColor="@color/black50"
@@ -445,7 +442,7 @@
                     android:layout_height="wrap_content"
 
                     android:text="Marca"
-                    android:textSize="@dimen/_8sdp"
+                    android:textSize="@dimen/_10sdp"
                     android:fontFamily="@font/montserrat_medium"
 
                     android:textColor="@color/black50"
@@ -462,7 +459,7 @@
                     android:layout_height="wrap_content"
 
                     android:text="Modelo"
-                    android:textSize="@dimen/_8sdp"
+                    android:textSize="@dimen/_10sdp"
                     android:fontFamily="@font/montserrat_medium"
 
                     android:textColor="@color/black50"
@@ -484,7 +481,9 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/constraintCardVisualize4"
-                app:layout_constraintBottom_toBottomOf="parent" />
+                app:layout_constraintBottom_toBottomOf="parent"
+
+                android:layout_marginBottom="@dimen/_15sdp"/>
 
             <View
                 android:id="@+id/viewEditVertical"
@@ -495,7 +494,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/viewEditHorizontal"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"/>
+                app:layout_constraintBottom_toBottomOf="parent" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/botonVerdeDialog"

@@ -30,15 +30,22 @@
         <entry key="..\:/Users/USUARIO/Desktop/AppSimetria-master/app/src/main/res/layout-v28/custom_toast_login_1.xml" value="0.5" />
         <entry key="..\:/Users/USUARIO/Desktop/AppSimetria-master/app/src/main/res/layout-v28/custom_toast_login_2.xml" value="0.20969202898550723" />
         <entry key="..\:/Users/USUARIO/Desktop/AppSimetria-master/app/src/main/res/layout-v28/custom_toast_register_1.xml" value="0.20969202898550723" />
-        <entry key="..\:/Users/USUARIO/Desktop/AppSimetria-master/app/src/main/res/layout-v28/item_principal_add_dispositive.xml" value="0.3500905797101449" />
+        <entry key="..\:/Users/USUARIO/Desktop/AppSimetria-master/app/src/main/res/layout-v28/item_principal_add_device.xml" value="0.3822463768115942" />
+        <entry key="..\:/Users/USUARIO/Desktop/AppSimetria-master/app/src/main/res/layout-v28/item_principal_add_dispositive.xml" value="0.67" />
+        <entry key="..\:/Users/USUARIO/Desktop/AppSimetria-master/app/src/main/res/layout-v28/item_principal_delete_device.xml" value="0.3822463768115942" />
         <entry key="..\:/Users/USUARIO/Desktop/AppSimetria-master/app/src/main/res/layout-v28/item_principal_delete_dispositive.xml" value="0.3500905797101449" />
+        <entry key="..\:/Users/USUARIO/Desktop/AppSimetria-master/app/src/main/res/layout-v28/item_principal_menu_device.xml" value="0.3822463768115942" />
         <entry key="..\:/Users/USUARIO/Desktop/AppSimetria-master/app/src/main/res/layout-v28/item_principal_menu_dispositive.xml" value="0.3500905797101449" />
         <entry key="..\:/Users/USUARIO/Desktop/AppSimetria-master/app/src/main/res/layout/activity_adapter_ble.xml" value="0.33" />
+        <entry key="..\:/Users/USUARIO/Desktop/AppSimetria-master/app/src/main/res/layout/activity_ble_adapter.xml" value="0.38697916666666665" />
+        <entry key="..\:/Users/USUARIO/Desktop/AppSimetria-master/app/src/main/res/layout/activity_ble_operations.xml" value="0.38697916666666665" />
         <entry key="..\:/Users/USUARIO/Desktop/AppSimetria-master/app/src/main/res/layout/activity_delete_dispositive_maps.xml" value="0.22554347826086957" />
         <entry key="..\:/Users/USUARIO/Desktop/AppSimetria-master/app/src/main/res/layout/activity_dispositive_maps_info.xml" value="0.3500905797101449" />
         <entry key="..\:/Users/USUARIO/Desktop/AppSimetria-master/app/src/main/res/layout/activity_dispositive_menu.xml" value="0.33" />
         <entry key="..\:/Users/USUARIO/Desktop/AppSimetria-master/app/src/main/res/layout/activity_login.xml" value="0.3500905797101449" />
-        <entry key="..\:/Users/USUARIO/Desktop/AppSimetria-master/app/src/main/res/layout/activity_main_menu.xml" value="0.3500905797101449" />
+        <entry key="..\:/Users/USUARIO/Desktop/AppSimetria-master/app/src/main/res/layout/activity_main_menu.xml" value="0.33" />
+        <entry key="..\:/Users/USUARIO/Desktop/AppSimetria-master/app/src/main/res/layout/activity_main_menu_2.xml" value="0.38697916666666665" />
+        <entry key="..\:/Users/USUARIO/Desktop/AppSimetria-master/app/src/main/res/layout/activity_maps_add_device.xml" value="0.38697916666666665" />
         <entry key="..\:/Users/USUARIO/Desktop/AppSimetria-master/app/src/main/res/layout/activity_menu_device.xml" value="0.38697916666666665" />
         <entry key="..\:/Users/USUARIO/Desktop/AppSimetria-master/app/src/main/res/layout/activity_menu_dispositive.xml" value="0.3500905797101449" />
         <entry key="..\:/Users/USUARIO/Desktop/AppSimetria-master/app/src/main/res/layout/activity_modify.xml" value="0.38697916666666665" />
@@ -51,7 +58,9 @@
         <entry key="..\:/Users/USUARIO/Desktop/AppSimetria-master/app/src/main/res/layout/custom_close_dialog.xml" value="0.38697916666666665" />
         <entry key="..\:/Users/USUARIO/Desktop/AppSimetria-master/app/src/main/res/layout/custom_dialog_close.xml" value="0.5" />
         <entry key="..\:/Users/USUARIO/Desktop/AppSimetria-master/app/src/main/res/layout/custom_dialog_edit.xml" value="0.5" />
+        <entry key="..\:/Users/USUARIO/Desktop/AppSimetria-master/app/src/main/res/layout/custom_dialog_observation.xml" value="0.5" />
         <entry key="..\:/Users/USUARIO/Desktop/AppSimetria-master/app/src/main/res/layout/custom_progress_dialog.xml" value="0.3500905797101449" />
+        <entry key="..\:/Users/USUARIO/Desktop/AppSimetria-master/app/src/main/res/layout/custom_toast_main_menu_1.xml" value="0.75" />
         <entry key="..\:/Users/USUARIO/Desktop/AppSimetria-master/app/src/main/res/layout/custom_toast_maps_add_1.xml" value="0.5" />
         <entry key="..\:/Users/USUARIO/Desktop/AppSimetria-master/app/src/main/res/layout/custom_toast_maps_delete_1.xml" value="0.5" />
         <entry key="..\:/Users/USUARIO/Desktop/AppSimetria-master/app/src/main/res/layout/custom_toast_opciones_1.xml" value="0.5" />
@@ -70,10 +79,17 @@
         <entry key="..\:/Users/USUARIO/Desktop/AppSimetria-master/app/src/main/res/layout/item_custom_scan_result.xml" value="0.3500905797101449" />
         <entry key="..\:/Users/USUARIO/Desktop/AppSimetria-master/app/src/main/res/layout/item_dispositivo.xml" value="0.33" />
         <entry key="..\:/Users/USUARIO/Desktop/AppSimetria-master/app/src/main/res/layout/item_imagen.xml" value="0.2504528985507246" />
+        <entry key="..\:/Users/USUARIO/Desktop/AppSimetria-master/app/src/main/res/layout/item_principal_add_device_2.xml" value="1.0" />
+        <entry key="..\:/Users/USUARIO/Desktop/AppSimetria-master/app/src/main/res/layout/item_principal_ble_device.xml" value="0.3822463768115942" />
         <entry key="..\:/Users/USUARIO/Desktop/AppSimetria-master/app/src/main/res/layout/item_principal_ble_dispositive.xml" value="0.3500905797101449" />
+        <entry key="..\:/Users/USUARIO/Desktop/AppSimetria-master/app/src/main/res/layout/item_principal_delete_device_2.xml" value="0.9" />
+        <entry key="..\:/Users/USUARIO/Desktop/AppSimetria-master/app/src/main/res/layout/item_principal_incidence_device.xml" value="0.3822463768115942" />
+        <entry key="..\:/Users/USUARIO/Desktop/AppSimetria-master/app/src/main/res/layout/item_principal_incidence_device_2.xml" value="0.3822463768115942" />
+        <entry key="..\:/Users/USUARIO/Desktop/AppSimetria-master/app/src/main/res/layout/item_principal_visualize_device.xml" value="0.3822463768115942" />
         <entry key="..\:/Users/USUARIO/Desktop/AppSimetria-master/app/src/main/res/layout/item_principal_visualize_dispositive.xml" value="0.3500905797101449" />
         <entry key="..\:/Users/USUARIO/Desktop/AppSimetria-master/app/src/main/res/layout/item_spinner.xml" value="0.38697916666666665" />
         <entry key="..\:/Users/USUARIO/Desktop/AppSimetria-master/app/src/main/res/layout/item_visualize_dispositive.xml" value="0.5" />
+        <entry key="..\:/Users/USUARIO/Desktop/AppSimetria-master/app/src/main/res/layout/menu_drawer.xml" value="0.3859375" />
       </map>
     </option>
   </component>

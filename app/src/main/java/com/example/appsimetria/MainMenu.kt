@@ -18,7 +18,6 @@ import com.example.appsimetria.auth.Login
 import com.example.appsimetria.bluetooth.AdapterBLE
 import com.example.appsimetria.databinding.ActivityMainMenuBinding
 import com.example.appsimetria.dispositives.DeviceMenu
-import com.example.appsimetria.dispositives.mapsinfo.DispositiveMapsInfo
 import com.example.appsimetria.dispositives.visualize.VisualizeDevice
 import com.example.appsimetria.maps.MapsAddDevice
 import com.example.appsimetria.maps.MapsDeleteDevice
@@ -34,7 +33,7 @@ import com.google.zxing.integration.android.IntentIntegrator
 import kotlinx.android.synthetic.main.activity_main_menu.*
 import kotlinx.android.synthetic.main.custom_toast_main_menu_1.*
 import kotlinx.android.synthetic.main.custom_toast_opciones_2.*
-import kotlinx.android.synthetic.main.item_principal_menu_dispositive.*
+import kotlinx.android.synthetic.main.item_principal_menu_device.*
 
 import java.text.SimpleDateFormat
 import java.util.*
@@ -92,7 +91,7 @@ class MainMenu : AppCompatActivity() {
                 initScanner()
             }
 
-            includeAddDispositives.cardAddClickable.setOnClickListener {
+            includeAddDevice.cardAddClickable.setOnClickListener {
                 saveDataAdd(resultScanner, getCurrentDate())
                 loadAllData()
 
@@ -100,7 +99,7 @@ class MainMenu : AppCompatActivity() {
                 transition()
             }
 
-            includeDeleteDispositives.cardDeleteClickable.setOnClickListener {
+            includeDeleteDevice.cardDeleteClickable.setOnClickListener {
                 saveDataDelete(resultScanner, getCurrentDate())
                 loadAllData()
 
@@ -108,7 +107,7 @@ class MainMenu : AppCompatActivity() {
                 transition()
             }
 
-            includeMenuDispositives.cardMenuClickable.setOnClickListener {
+            includeMenuDevice.cardMenuClickable.setOnClickListener {
                 saveDataModify(resultScanner, getCurrentDate())
                 //loadAllData()
 
@@ -116,18 +115,13 @@ class MainMenu : AppCompatActivity() {
                 transition()
             }
 
-            includeVisualizeDispositives.cardVisualizeClickable.setOnClickListener {
+            includeVisualizeDevice.cardVisualizeClickable.setOnClickListener {
                 startActivity(Intent(this@MainMenu, VisualizeDevice::class.java))
                 transition()
             }
 
-            includeBLEDispositives.cardBleClickable.setOnClickListener {
+            includeBLEDevice.cardBleClickable.setOnClickListener {
                 startActivity(Intent(this@MainMenu, AdapterBLE::class.java))
-                transition()
-            }
-
-            logoSimetria.setOnClickListener {
-                startActivity(Intent(this@MainMenu, DispositiveMapsInfo::class.java))
                 transition()
             }
         }
@@ -179,7 +173,7 @@ class MainMenu : AppCompatActivity() {
             result.result.forEach {
                 listaDispositivos.add(it)
             }
-            binding.includeMenuDispositives.textDispositives.text = "Número de dispositivos: ${listaDispositivos.size}"
+            binding.includeMenuDevice.textDispositives.text = "Número de dispositivos: ${listaDispositivos.size}"
         })
     }
 
@@ -246,21 +240,17 @@ class MainMenu : AppCompatActivity() {
         val sharedPreferencesModify = getSharedPreferences("Modify", Context.MODE_PRIVATE)
 
         with(binding){
-            includeAddDispositives.textDispositive.text =
-                sharedPreferencesAdd.getString("add", null).toString()
-            includeAddDispositives.textLastModificationAdd.text =
-                sharedPreferencesAdd.getString("date", null)
-            includeAddDispositives.hourCard.text = getCurrentTime24HFormat()
+            includeAddDevice.textDispositive.text = sharedPreferencesAdd.getString("add", null).toString()
+            includeAddDevice.textLastModificationAdd.text = sharedPreferencesAdd.getString("date", null)
 
-            includeDeleteDispositives.textDispositive.text =
-                sharedPreferencesDelete.getString("delete", null).toString()
-            includeDeleteDispositives.textLastModificationDelete.text =
-                sharedPreferencesDelete.getString("date", null)
-            includeDeleteDispositives.hourCard.text = getCurrentTime24HFormat()
+            includeDeleteDevice.textDispositive.text = sharedPreferencesDelete.getString("delete", null).toString()
+            includeDeleteDevice.textLastModificationDelete.text = sharedPreferencesDelete.getString("date", null)
 
-            includeMenuDispositives.hourCard.text = getCurrentTime24HFormat()
+            //includeAddDispositives.hourCard.text = getCurrentTime24HFormat()
+            //includeDeleteDispositives.hourCard.text = getCurrentTime24HFormat()
+            //includeMenuDispositives.hourCard.text = getCurrentTime24HFormat()
+            //includeVisualizeDispositives.hourCard.text = getCurrentTime24HFormat()
 
-            includeVisualizeDispositives.hourCard.text = getCurrentTime24HFormat()
             //textoUltimoEscaneoModify.text = sharedPreferencesModify.getString("modify", null).toString()
             //textoDiaModify.text = sharedPreferencesModify.getString("date", null)
         }

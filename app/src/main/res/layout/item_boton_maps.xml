@@ -11,34 +11,29 @@
         android:layout_width="@dimen/_180sdp"
         android:layout_height="@dimen/_30sdp"
 
-        app:strokeColor="@color/white"
-        app:strokeWidth="@dimen/_1sdp"
-
-        app:cardCornerRadius="@dimen/_30sdp"
-        app:cardElevation="@dimen/_4sdp"
+        app:cardCornerRadius="@dimen/_4sdp"
+        app:cardElevation="@dimen/_7sdp"
 
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
 
-        android:layout_marginTop="@dimen/_8sdp"
-        android:layout_marginBottom="@dimen/_8sdp"
-        android:layout_marginStart="@dimen/_8sdp"
-        android:layout_marginEnd="@dimen/_8sdp">
+        android:layout_marginVertical="@dimen/_15sdp"
+        android:layout_marginHorizontal="@dimen/_15sdp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/primary">
+            android:background="@color/white50">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="AÑADIR DISPOSITIVO"
-                android:textColor="@color/white"
-                android:fontFamily="@font/montserrat_medium"
-                android:textSize="@dimen/_12sdp"
+                android:textColor="@color/black50"
+                android:fontFamily="@font/montserrat_light"
+                android:textSize="@dimen/_14sdp"
                 android:textStyle="bold"
 
                 app:layout_constraintTop_toTopOf="parent"
@@ -50,7 +45,6 @@
                 android:layout_marginEnd="@dimen/_10sdp"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-
 
     </com.google.android.material.card.MaterialCardView>
 

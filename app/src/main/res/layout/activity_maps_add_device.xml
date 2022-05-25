@@ -36,7 +36,7 @@
         map:layout_constraintEnd_toEndOf="parent"
         map:layout_constraintStart_toStartOf="parent"
 
-        android:layout_marginBottom="@dimen/_30sdp"/>
+        android:layout_marginBottom="@dimen/_8sdp"/>
 
     <include
         android:id="@+id/item_boton_add_maps_type"

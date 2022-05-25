@@ -5,13 +5,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <com.google.android.material.card.MaterialCardView
-        android:id="@+id/cardDeleteClickable"
+        android:id="@+id/cardAddClickable"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_55sdp"
         app:cardElevation="@dimen/_5sdp"
-
-        app:strokeColor="@color/lightSimetri8_to_nightWhite"
-        app:strokeWidth="@dimen/_1sdp"
 
         app:cardCornerRadius="@dimen/_5sdp"
 
@@ -20,7 +17,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
 
-        android:layout_marginVertical="@dimen/_7sdp"
+        android:layout_marginVertical="@dimen/_10sdp"
         android:layout_marginStart="@dimen/_20sdp"
         android:layout_marginEnd="@dimen/_20sdp"
 
@@ -29,11 +26,13 @@
         android:background="?android:attr/selectableItemBackground">
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintAdd"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@color/white">
 
             <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardIzquierdaAddDevice"
                 android:layout_width="@dimen/_50sdp"
                 android:layout_height="match_parent"
                 app:cardCornerRadius="0dp"
@@ -56,16 +55,16 @@
                         android:layout_height="wrap_content"
                         android:textColor="@color/white"
 
-                        android:fontFamily="@font/montserrat_medium"
-                        android:text="2"
-                        android:textSize="@dimen/_24sdp"
+                        android:fontFamily="@font/montserrat_extralight"
+                        android:text="3"
+                        android:textSize="@dimen/_30ssp"
 
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        android:layout_marginTop="@dimen/_5sdp"/>
+                        app:layout_constraintBottom_toBottomOf="parent" />
 
-                    <TextView
+                    <!--<TextView
                         android:id="@+id/todayCard"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -96,7 +95,7 @@
                         app:layout_constraintStart_toStartOf="@+id/todayCard"
                         app:layout_constraintBottom_toBottomOf="parent"
 
-                        android:layout_marginBottom="@dimen/_10sdp"/>
+                        android:layout_marginBottom="@dimen/_10sdp"/>-->
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -110,14 +109,14 @@
                 android:textSize="@dimen/_8sdp"
                 android:textStyle="bold"
 
-                android:text="ELIMINAR DISPOSITIVO EN MEMORIA/EXISTENTE"
+                android:text="DAR INCIDENCIA DE UN DISPOSITIVO"
                 android:fontFamily="@font/montserrat_medium"
 
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/cardIzquierdaAddDevice"
+                app:layout_constraintEnd_toEndOf="parent"
 
-                android:layout_marginTop="@dimen/_5sdp"
-                android:layout_marginStart="@dimen/_65sdp"/>
+                android:layout_marginTop="@dimen/_5sdp" />
 
             <View
                 android:id="@+id/viewDispositive"
@@ -139,10 +138,11 @@
                 android:layout_height="@dimen/_20sdp"
 
                 app:layout_constraintTop_toBottomOf="@+id/viewDispositive"
-                app:layout_constraintStart_toStartOf="@+id/textMenuDispositives"
+                app:layout_constraintStart_toEndOf="@+id/cardIzquierdaAddDevice"
 
                 android:src="@drawable/menu_main_barcode"
-                android:layout_marginTop="@dimen/_5sdp" />
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginStart="@dimen/_15sdp"/>
 
             <TextView
                 android:id="@+id/textDispositive"
@@ -161,7 +161,7 @@
                 android:layout_marginStart="@dimen/_5sdp" />
 
             <TextView
-                android:id="@+id/textLastModificationDelete"
+                android:id="@+id/textLastModificationAdd"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_5sdp"
@@ -172,13 +172,13 @@
 
                 android:textSize="@dimen/_8sdp"
                 app:layout_constraintBottom_toBottomOf="@+id/textDispositive"
+
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toEndOf="@+id/textDispositive"
                 app:layout_constraintTop_toTopOf="@+id/textDispositive"
 
-                app:layout_constraintHorizontal_bias="1.0"
-                android:layout_marginEnd="@dimen/_15sdp"
-                />
+                android:layout_marginEnd="@dimen/_15sdp"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -53,6 +53,7 @@
     <!-- Transparentes -->
     <color name="white75">#BFFFFFFF</color>
     <color name="white50">#80FFFFFF</color>
+    <color name="white45">#73FFFFFF</color>
     <color name="white25">#40FFFFFF</color>
 
     <color name="black">#000000</color>

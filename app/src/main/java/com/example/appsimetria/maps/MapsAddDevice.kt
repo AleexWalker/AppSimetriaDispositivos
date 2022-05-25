@@ -6,6 +6,8 @@ import android.content.Intent
 import android.content.SharedPreferences
 import android.content.pm.PackageManager
 import android.content.res.Resources
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.location.Address
 import android.location.Geocoder
 import android.location.Location
@@ -14,8 +16,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.Gravity
+import android.view.LayoutInflater
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
 import androidx.lifecycle.ViewModelProvider
 import com.example.appsimetria.MainMenu
 import com.example.appsimetria.R
@@ -32,6 +36,8 @@ import com.google.android.gms.maps.model.*
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
+import kotlinx.android.synthetic.main.custom_dialog_close.view.*
+import kotlinx.android.synthetic.main.custom_dialog_observation.view.*
 import kotlinx.android.synthetic.main.custom_toast_maps_add_1.*
 import java.text.SimpleDateFormat
 import java.util.*
@@ -65,6 +71,7 @@ class MapsAddDevice : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMarke
         super.onCreate(savedInstanceState)
         binding = ActivityMapsAddDeviceBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        window.statusBarColor = ContextCompat.getColor(this, R.color.black50)
 
         //Firestore Database & Load Scanner
         baseDatos = Firebase.firestore
@@ -129,14 +136,28 @@ class MapsAddDevice : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMarke
                 startActivity(Intent(this@MapsAddDevice, MainMenu::class.java))
             }
             itemBotonCard.cardAddDispositivo.setOnClickListener {
-                if (dispositivo_id == -1) {
-                    saveLatLngData(latitud, longitud)
-                    /**writeDispositivo(Dispositivo1(resultScanner,latitud.toString(),longitud.toString(),getCurrentDate(),getCurrentTime()))*/
-                    postAddDevice()
-                    startActivity(Intent(this@MapsAddDevice, MainMenu::class.java))
-                } else {
-                    postUpdateDevice()
-                    startActivity(Intent(this@MapsAddDevice, MainMenu::class.java))
+
+                val dialogView = LayoutInflater.from(this@MapsAddDevice).inflate(R.layout.custom_dialog_observation, null)
+                val builderDialogView = android.app.AlertDialog.Builder(this@MapsAddDevice)
+                    .setView(dialogView)
+                val alertDialog = builderDialogView.show()
+                alertDialog.window!!.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+
+                dialogView.custom_decline.setOnClickListener {
+                    alertDialog.dismiss()
+                }
+
+                dialogView.custom_accept.setOnClickListener {
+                    if (dispositivo_id == -1) {
+                        saveLatLngData(latitud, longitud)
+                        /**writeDispositivo(Dispositivo1(resultScanner,latitud.toString(),longitud.toString(),getCurrentDate(),getCurrentTime()))*/
+                        postAddDevice()
+                        startActivity(Intent(this@MapsAddDevice, MainMenu::class.java))
+                    } else {
+                        postUpdateDevice()
+                        startActivity(Intent(this@MapsAddDevice, MainMenu::class.java))
+                    }
+                    alertDialog.dismiss()
                 }
             }
         }

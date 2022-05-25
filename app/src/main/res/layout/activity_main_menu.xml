@@ -81,7 +81,7 @@
         android:translationZ="@dimen/_100sdp"
 
         app:strokeWidth="@dimen/_1sdp"
-        app:strokeColor="@color/color_simetria_7"
+        app:strokeColor="@color/white"
         app:cardCornerRadius="@dimen/_50sdp"
         app:cardElevation="@dimen/_5sdp"
 
@@ -116,7 +116,7 @@
                 app:cardCornerRadius="@dimen/_30sdp"
 
                 app:strokeWidth="@dimen/_1sdp"
-                app:strokeColor="@color/color_simetria_7"
+                app:strokeColor="@color/viewTop"
 
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -134,15 +134,18 @@
 
                     <ImageView
                         android:id="@+id/imagenAdd"
-                        android:layout_width="@dimen/_18sdp"
-                        android:layout_height="@dimen/_18sdp"
-                        android:src="@drawable/menu_main_barcode_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:contentDescription="@string/desc"
 
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/menu_main_barcode_2"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        android:contentDescription="@string/desc" />
+                        app:layout_constraintStart_toStartOf="parent"
+
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:tint="@color/white" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -176,7 +179,7 @@
 
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardEscaneo"
-        app:layout_constraintBottom_toTopOf="@+id/includeAddDispositives"
+        app:layout_constraintBottom_toTopOf="@+id/scrollMenu"
         app:layout_constraintEnd_toEndOf="parent"
 
         android:layout_marginStart="@dimen/_20sdp"
@@ -184,73 +187,102 @@
         android:layout_marginEnd="@dimen/_20sdp"
         android:fontFamily="@font/montserrat_medium"/>
 
-    <include
-        android:id="@+id/includeAddDispositives"
-        layout="@layout/item_principal_add_dispositive"
-        android:layout_width="wrap_content"
+    <ScrollView
+        android:id="@+id/scrollMenu"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scrollbarThumbVertical="@color/color_simetria_8"
 
-        android:layout_height="wrap_content"
-
-        android:layout_marginTop="@dimen/_5sdp"
+        app:layout_constraintTop_toBottomOf="@+id/textoServicios"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/bottomImageSimetria">
 
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textoServicios"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-        android:clickable="true"
-        android:focusable="true"
-        android:background="?android:attr/selectableItemBackground" />
+            <include
+                android:id="@+id/includeAddDevice"
+                layout="@layout/item_principal_add_device"
+                android:layout_width="wrap_content"
 
-    <include
-        android:id="@+id/includeDeleteDispositives"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        layout="@layout/item_principal_delete_dispositive"
+                android:layout_height="wrap_content"
 
-        app:layout_constraintTop_toBottomOf="@id/includeAddDispositives"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+                android:layout_marginTop="@dimen/_5sdp"
+                app:layout_constraintEnd_toEndOf="parent"
 
-    <include
-        android:id="@+id/includeMenuDispositives"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        layout="@layout/item_principal_menu_dispositive"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
 
-        app:layout_constraintTop_toBottomOf="@id/includeDeleteDispositives"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?android:attr/selectableItemBackground" />
 
-    <include
-        android:id="@+id/includeVisualizeDispositives"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        layout="@layout/item_principal_visualize_dispositive"
+            <include
+                android:id="@+id/includeDeleteDevice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                layout="@layout/item_principal_delete_device"
 
-        app:layout_constraintTop_toBottomOf="@id/includeMenuDispositives"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+                app:layout_constraintTop_toBottomOf="@id/includeAddDevice"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
 
-    <include
-        android:id="@+id/includeBLEDispositives"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        layout="@layout/item_principal_ble_dispositive"
+            <include
+                android:id="@+id/includeIncidenceDevice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                layout="@layout/item_principal_incidence_device"
 
-        app:layout_constraintTop_toBottomOf="@id/includeVisualizeDispositives"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+                app:layout_constraintTop_toBottomOf="@+id/includeDeleteDevice"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <include
+                android:id="@+id/includeMenuDevice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                layout="@layout/item_principal_menu_device"
+
+                app:layout_constraintTop_toBottomOf="@id/includeIncidenceDevice"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <include
+                android:id="@+id/includeVisualizeDevice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                layout="@layout/item_principal_visualize_device"
+
+                app:layout_constraintTop_toBottomOf="@id/includeMenuDevice"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <include
+                android:id="@+id/includeBLEDevice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                layout="@layout/item_principal_ble_device"
+
+                app:layout_constraintTop_toBottomOf="@id/includeVisualizeDevice"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
 
     <ImageView
         android:id="@+id/bottomImageSimetria"
         android:layout_width="@dimen/_30sdp"
-        android:layout_height="@dimen/_10sdp"
+        android:layout_height="@dimen/_5sdp"
         android:src="@drawable/simetria_sin_logo_night_mode_inverse"
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginBottom="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_1sdp"
 
         android:contentDescription="@string/desc" />
 

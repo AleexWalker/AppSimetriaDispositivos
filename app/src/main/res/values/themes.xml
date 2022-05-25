@@ -25,4 +25,9 @@
         <item name="colorControlActivated">@color/color_simetria_3</item>
     </style>
 
+    <style name="Theme.AppSimetria.MyRipple">
+        <item name="colorControlHighlight">@color/white</item>
+        <item name="android:background">?android:attr/selectableItemBackground</item>
+    </style>
+
 </resources>

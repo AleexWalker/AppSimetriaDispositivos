@@ -32,9 +32,12 @@
     <string name="MENU_VISUALIZE_EDIT_LNG">Longitud:</string>
     <string name="MENU_VISUALIZE_EDIT_LONGITUD">Longitud Dispositivo</string>
     <string name="MENU_VISUALIZE_EDIT_UPDATEBUTTON">ACTUALIZAR</string>
+    <string name="MENU_VISUALIZE_EDIT_CANCELBUTTON">CANCELAR</string>
 
     <string name="MENU_MENU_DISPOSITIVE_TEXT">Dispositivos</string>
     <string name="MENU_MENU_AUTOCOMPLETETEXTVIEW_HINT">IDENTIFICADOR</string>
+    <string name="MENU_MENU_DEVICES_ITEM_ID">EJEMPLO</string>
+    <string name="MENU_MENU_DEVICES_ITEM_CITY">Ciudad</string>
 
     <string name="title_activity_menu_navegacion">MenuNavegacion</string>
 
@@ -49,5 +52,4 @@
     <string name="title_activity_delete_dispositive_maps">DeleteDispositiveMaps</string>
 
     <string name="ble_playground">BLE Playground</string>
-    <string name="MENU_VISUALIZE_EDIT_CANCELBUTTON">CANCELAR</string>
 </resources>

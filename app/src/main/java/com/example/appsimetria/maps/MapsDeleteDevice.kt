@@ -16,6 +16,7 @@ import android.widget.Toast
 
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
 import androidx.lifecycle.ViewModelProvider
 
 import com.example.appsimetria.R
@@ -46,7 +47,10 @@ class MapsDeleteDevice : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMa
     private lateinit var viewModel: MainViewModel
     private lateinit var baseDatos: FirebaseFirestore
 
-    private lateinit var markerLatLong: LatLng
+    private var seleccionadoCamara: Boolean = false
+    private var latitudCamara: Double = 0.0
+    private var longitudCamara: Double = 0.0
+
     private var seleccionado: String? = null
     private var latitudSeleccionado: Double = 0.0
     private var longitudSeleccionado: Double = 0.0
@@ -65,6 +69,7 @@ class MapsDeleteDevice : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMa
         super.onCreate(savedInstanceState)
         binding = ActivityMapsDeleteDeviceBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        window.statusBarColor = ContextCompat.getColor(this, R.color.black)
         baseDatos = FirebaseFirestore.getInstance()
         baseDatos.firestoreSettings = FirebaseFirestoreSettings.Builder().build()
 
@@ -83,10 +88,19 @@ class MapsDeleteDevice : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMa
             latitudSeleccionado = intent.getStringExtra("Latitud")!!.toDouble()
             longitudSeleccionado = intent.getStringExtra("Longitud")!!.toDouble()
         }
+        seleccionadoCamara = intent.getBooleanExtra("SeleccionadoCamara", false)
+        if (seleccionadoCamara) {
+            latitudCamara = intent.getStringExtra("LatCamara")!!.toDouble()
+            longitudCamara = intent.getStringExtra("LonCamara")!!.toDouble()
+        }
 
         Log.e("SELECCIONADO", seleccionado.toString())
         Log.e("SELECCIONADO", latitudSeleccionado.toString())
         Log.e("SELECCIONADO", longitudSeleccionado.toString())
+
+        Log.e("CAMARA", seleccionadoCamara.toString())
+        Log.e("LATCAMARA", latitudCamara.toString())
+        Log.e("LONCAMARA", longitudCamara.toString())
 
     }
 
@@ -154,6 +168,10 @@ class MapsDeleteDevice : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMa
                     mMap
                         .animateCamera(CameraUpdateFactory
                             .newLatLngZoom(LatLng(latitudSeleccionado, longitudSeleccionado), 18f))
+                } else if (seleccionadoCamara) {
+                    mMap
+                        .animateCamera(CameraUpdateFactory
+                            .newLatLngZoom(LatLng(latitudCamara, longitudCamara), 15f))
                 } else {
                     mMap
                         .animateCamera(CameraUpdateFactory
@@ -191,7 +209,7 @@ class MapsDeleteDevice : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMa
 
         dialogView.custom_text_decline.setOnClickListener {
             alertDialog.dismiss()
-            rechargeMap()
+            rechargeMap(p0.position.latitude, p0.position.longitude)
         }
 
         dialogView.custom_text_accept.setOnClickListener {
@@ -205,8 +223,9 @@ class MapsDeleteDevice : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMa
                     })
                 }
             }
-            rechargeMap()
+            rechargeMap(p0.position.latitude, p0.position.longitude)
             alertDialog.dismiss()
+            toastPersonalizadoDeleteMaps1()
         }
     }
 
@@ -239,10 +258,13 @@ class MapsDeleteDevice : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMa
         }.show()
     }
 
-    private fun rechargeMap() {
+    private fun rechargeMap(latitud: Double, longitud: Double) {
         mMap.clear()
-        startActivity(Intent(this, this::class.java))
-        //loadDispositivo()
+        val intentCamara = Intent(this, this::class.java)
+        intentCamara.putExtra("SeleccionadoCamara", true)
+        intentCamara.putExtra("LatCamara", latitud.toString())
+        intentCamara.putExtra("LonCamara", longitud.toString())
+        startActivity(intentCamara)
     }
 
     private fun getAllDevices() {

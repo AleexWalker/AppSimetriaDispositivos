@@ -39,8 +39,7 @@ import android.util.Log
 import android.view.View
 
 import android.widget.ProgressBar
-import android.widget.Toast
-import com.example.appsimetria.bluetooth.AdapterBLE
+import kotlinx.android.synthetic.main.activity_ble_adapter.*
 
 import com.example.appsimetria.bluetooth.CustomObject
 

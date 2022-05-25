@@ -93,7 +93,7 @@
                 android:background="@android:color/transparent"
                 android:completionThreshold="1"
 
-                android:fontFamily="@font/montserrat_medium"
+                android:fontFamily="@font/montserrat_light"
                 android:gravity="center_vertical|start"
                 android:hint="@string/MENU_DISPOSITIVE_AUTOCOMPLETE_HINT"
                 android:inputType="textShortMessage"
@@ -108,8 +108,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
 
-                android:layout_marginStart="@dimen/_10sdp"
-                android:layout_marginEnd="@dimen/_10sdp">
+                android:layout_marginHorizontal="@dimen/_10sdp">
 
             </AutoCompleteTextView>
 
@@ -130,6 +129,7 @@
         app:layout_constraintTop_toBottomOf="@+id/cardEscaneoList"
         app:layout_constraintBottom_toTopOf="@+id/recyclerList"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="1"
 
         android:layout_marginVertical="@dimen/_8sdp"
         android:layout_marginStart="@dimen/_20sdp"
@@ -156,15 +156,17 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerList"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_350sdp"
+        android:layout_height="0dp"
 
         app:layout_constraintTop_toBottomOf="@+id/textoServiciosList"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/imagenSimetriaList"
 
         android:layout_marginTop="@dimen/_2sdp"
         android:layout_marginBottom="@dimen/_20sdp"
-        android:paddingHorizontal="@dimen/_20sdp"
+        android:paddingBottom="@dimen/_10sdp"
+        android:paddingHorizontal="@dimen/_15sdp"
 
         android:clickable="true"
         android:focusable="true"
@@ -176,7 +178,7 @@
         android:id="@+id/imagenSimetriaList"
         android:layout_width="@dimen/_30sdp"
         android:layout_height="@dimen/_10sdp"
-        android:src="@drawable/simetria_sin_logo_blanco"
+        android:src="@drawable/simetria_sin_logo_night_mode_inverse"
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
