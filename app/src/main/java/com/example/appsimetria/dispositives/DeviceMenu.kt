@@ -23,6 +23,9 @@ import com.example.appsimetria.requests.repository.Repository
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.FirebaseFirestoreSettings
 
+/**
+ * Clase para cargar todos los dispositivos del servidor en un RecyclerView donde se podrá proceder a la información detallada de cada dispositivo o acceder a la ubicación exacta de cualquiera de ellos.
+ */
 class DeviceMenu : AppCompatActivity() {
 
     private lateinit var baseDatos: FirebaseFirestore
@@ -94,8 +97,15 @@ class DeviceMenu : AppCompatActivity() {
         }
     }
 
-    /**private fun loadData() {
-        val itemDispositivo = ArrayList<ItemAdapterDispositive>()
+    override fun onBackPressed() {
+        super.onBackPressed()
+        startActivity(Intent(this, MainMenu::class.java))
+        overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.fade_out)
+    }
+}
+
+/**private fun loadData() {
+    val itemDispositivo = ArrayList<ItemAdapterDispositive>()
 
         baseDatos
             .collection("Dispositivos")
@@ -115,14 +125,7 @@ class DeviceMenu : AppCompatActivity() {
                 recyclerList.adapter = adaptador
                 recyclerList.layoutManager = LinearLayoutManager(applicationContext, LinearLayoutManager.VERTICAL, false)
             }
-        val adaptadorAutoComplete = ArrayAdapter<String>(this, android.R.layout.simple_dropdown_item_1line, macDispositivos)
-        autoCompleteDispositivo.setAdapter(adaptadorAutoComplete)
-        autoCompleteDispositivo.threshold = 1
-    }*/
-
-    override fun onBackPressed() {
-        super.onBackPressed()
-        startActivity(Intent(this, MainMenu::class.java))
-        overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.fade_out)
-    }
-}
+    val adaptadorAutoComplete = ArrayAdapter<String>(this, android.R.layout.simple_dropdown_item_1line, macDispositivos)
+    autoCompleteDispositivo.setAdapter(adaptadorAutoComplete)
+    autoCompleteDispositivo.threshold = 1
+}*/

@@ -135,7 +135,8 @@
         android:layout_marginVertical="@dimen/_10sdp"
         android:paddingHorizontal="@dimen/_20sdp"
 
-        tools:listitem="@layout/item_adapter_dispositive"/>
+        tools:listitem="@layout/item_adapter_dispositive"
+        tools:itemCount="0"/>
 
     <ImageView
         android:id="@+id/bottomImageSimetria"

@@ -37,6 +37,9 @@ import com.google.firebase.firestore.FirebaseFirestoreSettings
 import kotlinx.android.synthetic.main.custom_dialog_close.view.*
 import kotlinx.android.synthetic.main.custom_toast_maps_add_1.*
 
+/**
+ * Clase exactamente igual que MapsAddDevice: Mismas funciones y métodos.
+ */
 class MapsDeleteDevice : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMarkerClickListener, GoogleMap.OnMyLocationButtonClickListener, GoogleMap.OnMarkerDragListener {
 
     private lateinit var mMap: GoogleMap
@@ -199,6 +202,9 @@ class MapsDeleteDevice : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMa
 
     override fun onMarkerDragEnd(p0: Marker) {}
 
+    /**
+     * LayoutInflater: Cuando el usuario mantiene apretado sobre un Marker. Aparece un AlertDialog informando de que se procederá a eliminar dicho dispositivo.
+     */
     @SuppressLint("InflateParams")
     override fun onMarkerDragStart(p0: Marker) {
         val dialogView = LayoutInflater.from(this).inflate(R.layout.custom_dialog_close, null)

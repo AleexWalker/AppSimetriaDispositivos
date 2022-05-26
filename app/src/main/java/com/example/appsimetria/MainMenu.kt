@@ -6,6 +6,7 @@ import android.content.Intent
 import android.content.SharedPreferences
 import android.graphics.drawable.AnimatedVectorDrawable
 import android.os.Bundle
+import android.util.Log
 import android.view.*
 import android.widget.PopupMenu
 import android.widget.Toast
@@ -34,6 +35,7 @@ import kotlinx.android.synthetic.main.activity_main_menu.*
 import kotlinx.android.synthetic.main.custom_toast_main_menu_1.*
 import kotlinx.android.synthetic.main.custom_toast_opciones_2.*
 import kotlinx.android.synthetic.main.item_principal_menu_device.*
+import org.jetbrains.anko.toast
 
 import java.text.SimpleDateFormat
 import java.util.*
@@ -45,6 +47,8 @@ class MainMenu : AppCompatActivity() {
     private lateinit var baseDatos: FirebaseFirestore
     private lateinit var binding: ActivityMainMenuBinding
     private lateinit var viewModel: MainViewModel
+
+    private var escaneo: Boolean = false
 
     private var listaDispositivos: ArrayList<DispositivoGetAll> = arrayListOf()
 
@@ -87,10 +91,27 @@ class MainMenu : AppCompatActivity() {
                 showPopUp.show()
             }
 
+            /**
+             * Método de escaneo normal.
+             * Tras el escaner el usuario permanecerá en esta misma activity y se le informará de si el dispositivo escaneado existe en el servidor o no.
+             */
             cardEscaneoImagen.setOnClickListener {
                 initScanner()
             }
 
+            /**
+             * Método de escaneo rápido.
+             * Tras el escaner el usuario será llevado a la Activity de Maps.
+             */
+            cardEscaneoRapido.setOnClickListener {
+                escaneo = true
+                initScanner()
+                //startActivity(Intent(this@MainMenu, MapsAddDevice::class.java))
+            }
+
+            /**
+             * Activity de Maps donde el usuario podrá añadir un dispositivo más preciso con el escaneo normal.
+             */
             includeAddDevice.cardAddClickable.setOnClickListener {
                 saveDataAdd(resultScanner, getCurrentDate())
                 loadAllData()
@@ -99,6 +120,9 @@ class MainMenu : AppCompatActivity() {
                 transition()
             }
 
+            /**
+             * Activity de DeleteMaps donde el usuario podrá observar todos los dispositivos disponibles en el servidor.
+             */
             includeDeleteDevice.cardDeleteClickable.setOnClickListener {
                 saveDataDelete(resultScanner, getCurrentDate())
                 loadAllData()
@@ -107,6 +131,9 @@ class MainMenu : AppCompatActivity() {
                 transition()
             }
 
+            /**
+             * Menú donde se listan todos los dispositivos y se podrá acceder a la información detallada de cada uno o situarlo en el mapa
+             */
             includeMenuDevice.cardMenuClickable.setOnClickListener {
                 saveDataModify(resultScanner, getCurrentDate())
                 //loadAllData()
@@ -115,11 +142,18 @@ class MainMenu : AppCompatActivity() {
                 transition()
             }
 
+            /**
+             * Activity de información detallada de cada dispositivo.
+             */
             includeVisualizeDevice.cardVisualizeClickable.setOnClickListener {
                 startActivity(Intent(this@MainMenu, VisualizeDevice::class.java))
                 transition()
             }
 
+
+            /**
+             * BLE Adapter para detección de dispositivos y posterior transmisión de datos rwx
+             */
             includeBLEDevice.cardBleClickable.setOnClickListener {
                 startActivity(Intent(this@MainMenu, AdapterBLE::class.java))
                 transition()
@@ -129,6 +163,7 @@ class MainMenu : AppCompatActivity() {
 
     /**
      * OVERRIDES
+     * onActivityResult: Lanzará directamente a la cámara debido a la implementación del Escaner ZXing y posteriormente evaluará si ha sido efectuado el escaneo rápido o el normal.
      */
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
@@ -138,16 +173,43 @@ class MainMenu : AppCompatActivity() {
                 toastPersonalizadoMainMenu1()
             } else {
                 Toast.makeText(this, "Dispositivo Escaneado: " + result.contents.substring(0, result.contents.length - 4), Toast.LENGTH_LONG).show()
+                Log.e("Escaneo Valor", escaneo.toString())
+                if (escaneo) {
+                    saveDataAdd(resultScanner, getCurrentDate())
+                    loadAllData()
 
-                resultScanner = result.contents.substring(0, result.contents.length - 4)
-                saveData(resultScanner)
-                loadData()
+                    startActivity(Intent(this@MainMenu, MapsAddDevice::class.java))
+                    transition()
+                } else {
+                    listaDispositivos.forEach {
+                        if (result.contents.substring(0, result.contents.length - 4) == it.mac) {
+                            Toast.makeText(this, "Dispositivo existente", Toast.LENGTH_LONG).show()
+                        } else {
+                            Toast.makeText(this, "Dispositivo inexistente", Toast.LENGTH_LONG).show()
+                        }
+                    }
+
+                    resultScanner = result.contents.substring(0, result.contents.length - 4)
+                    saveData(resultScanner)
+                    loadData()
+                }
             }
         } else {
             super.onActivityResult(requestCode, resultCode, data)
         }
     }
 
+    /**
+     * Al volver a cargar en memoria esta Activity.
+     */
+    override fun onResume() {
+        super.onResume()
+        !escaneo
+    }
+
+    /**
+     * Cuando el usuario pulsa de la BottomNavigation el botón de volve hacia atrás.
+     */
     override fun onBackPressed() {
         super.onBackPressed()
 
@@ -158,6 +220,7 @@ class MainMenu : AppCompatActivity() {
 
     /**
      * FUNCTIONS
+     * Al iniciar esta misma Activity.
      */
     private fun startFunctions() {
         window.statusBarColor = ContextCompat.getColor(this, R.color.viewTop)
@@ -167,6 +230,9 @@ class MainMenu : AppCompatActivity() {
         getAllDevices()
     }
 
+    /**
+     * Llamada @GET para cargar todos los dispositivos desde el servidor en un ArrayList
+     */
     private fun getAllDevices() {
         viewModel.getAllDevices()
         viewModel.getResponse.observe(this, androidx.lifecycle.Observer { result ->
@@ -181,6 +247,9 @@ class MainMenu : AppCompatActivity() {
         overridePendingTransition(android.R.anim.fade_in, android.R.anim.slide_out_right)
     }
 
+    /**
+     * Iniciar el Escaner con sus parámetros.
+     */
     private fun initScanner(){
         val integrator = IntentIntegrator(this)
         integrator.setPrompt("ESCANEA EL DISPOSITIVO DESEADO")
@@ -189,6 +258,9 @@ class MainMenu : AppCompatActivity() {
         integrator.initiateScan()
     }
 
+    /**
+     * SaveData de los ajustes.
+     */
     @SuppressLint("CommitPrefEdits")
     private fun saveData(datos: String){
         val sharedPreferences = getSharedPreferences("Settings", Context.MODE_PRIVATE)
@@ -198,14 +270,20 @@ class MainMenu : AppCompatActivity() {
         editor.apply()
     }
 
+    /**
+     * Cargar los datos del escaneo activo (MaterialCardView del layout)
+     */
     @SuppressLint("SetTextI18n")
     private fun loadData() {
         val sharedPreferences = getSharedPreferences("Settings", Context.MODE_PRIVATE)
 
         resultScanner = sharedPreferences.getString("datos", null).toString()
-        textoEscaneoActivo.text = ("DISPOSITIVO EN MEMORIA: $resultScanner")
+        textoEscaneoActivo.text = ("DISPOSITIVO ACTUAL: $resultScanner")
     }
 
+    /**
+     * Guardar los datos de último dispositivo Añadido en local
+     */
     private fun saveDataAdd(datos: String, date: String){
         val sharedPreferences = getSharedPreferences("Add", Context.MODE_PRIVATE)
         val editor: SharedPreferences.Editor = sharedPreferences.edit()
@@ -215,6 +293,9 @@ class MainMenu : AppCompatActivity() {
         editor.apply()
     }
 
+    /**
+     * Guardar los datos de último dispositivo Eliminado en local
+     */
     private fun saveDataDelete(datos: String, date: String){
         val sharedPreferences = getSharedPreferences("Delete", Context.MODE_PRIVATE)
         val editor: SharedPreferences.Editor = sharedPreferences.edit()
@@ -224,6 +305,9 @@ class MainMenu : AppCompatActivity() {
         editor.apply()
     }
 
+    /**
+     * Guardar los datos de último dispositivo Modificado en local
+     */
     private fun saveDataModify(datos: String, date: String){
         val sharedPreferences = getSharedPreferences("Modify", Context.MODE_PRIVATE)
         val editor: SharedPreferences.Editor = sharedPreferences.edit()
@@ -233,6 +317,9 @@ class MainMenu : AppCompatActivity() {
         editor.apply()
     }
 
+    /**
+     * Cargar todos los datos anteriormente guardados.
+     */
     @SuppressLint("SetTextI18n")
     private fun loadAllData() {
         val sharedPreferencesAdd = getSharedPreferences("Add", Context.MODE_PRIVATE)

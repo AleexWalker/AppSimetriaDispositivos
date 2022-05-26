@@ -14,6 +14,9 @@ import com.example.appsimetria.maps.MapsDeleteDevice
 import kotlinx.android.synthetic.main.item_adapter_dispositive.view.*
 import kotlin.collections.ArrayList
 
+/**
+ * Adaptador para cargar los datos en un RecyclerView
+ */
 class DeviceAdapter(private val listaDispositivos: ArrayList<DeviceAdapterItem>,
                     private val clickListener: (DeviceAdapterItem) -> Unit): RecyclerView.Adapter<DeviceAdapter.MyViewHolder>() {
 

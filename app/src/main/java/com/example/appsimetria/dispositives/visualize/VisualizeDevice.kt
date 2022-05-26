@@ -39,6 +39,9 @@ import kotlinx.android.synthetic.main.custom_toast_visualize_delete_2.*
 import java.util.*
 import kotlin.collections.ArrayList
 
+/**
+ * Clase para observar la información detallada de dispositivo.
+ */
 class VisualizeDevice : AppCompatActivity() {
 
     private lateinit var baseDatos: FirebaseFirestore
@@ -90,7 +93,6 @@ class VisualizeDevice : AppCompatActivity() {
                 dialogView.custom_text_accept.setOnClickListener {
                     toastPersonalizadoDeleteVisualize1()
                     arrayDispositivos.forEach {
-                        Log.e("AAAAAAAAAA", spinnerDispositivos.selectedItem.toString())
                         if (spinnerDispositivos.selectedItem.toString() == it.mac) {
                             viewModel.postDeleteDevice(it.dispositivo.toString())
                             viewModel.postResponse.observe(this@VisualizeDevice, androidx.lifecycle.Observer { response ->
@@ -158,6 +160,11 @@ class VisualizeDevice : AppCompatActivity() {
         startActivity(Intent(this@VisualizeDevice, MainMenu::class.java))
     }
 
+    /**
+     * Generar un AlertDialog para cuando el usuario quiere modificar algún dispositivo.
+     * dialogView.botonVerdeDialog.setOnClickListener: Botón de actualizar los dispositivos el cual realiza una request @POST de Update.
+     * dialogView.botonRojoDialog.setOnClickListener: Botón de cancelar la modificación de datos.
+     */
     private fun ActivityVisualizeDispositiveBinding.loadDialogEdit() {
         val dialogView = LayoutInflater.from(this@VisualizeDevice)
             .inflate(R.layout.custom_dialog_edit, null)
@@ -240,6 +247,9 @@ class VisualizeDevice : AppCompatActivity() {
         })
     }
 
+    /**
+     * Cargamos el adaptador en el Spinner.
+     */
     private fun loadSpinnerAdapter() {
         val adaptador = ArrayAdapter(this, R.layout.item_spinner, macDispositivos)
         adaptador.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
@@ -249,6 +259,10 @@ class VisualizeDevice : AppCompatActivity() {
         }
     }
 
+    /**
+     * Comprobamos que el usuario proviene desde la Activity de MainMenu.
+     * Si el usuario procede desde la clase DeviceMenu pasamos por un Intent el dispositivo seleccionado y posteriormente lo asignamos al spinner.
+     */
     private fun comprobacionSpinner(): Int{
         seleccionado = intent.getStringExtra("Seleccionado")
         return if (seleccionado == null) {

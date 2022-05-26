@@ -43,6 +43,10 @@ import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.collections.ArrayList
 
+/**
+ * Clase de MapsAddDevice: Clase que se inicia directamente con la localización actual o estimada del usuario. Tras haberle localizado se procede a situar un Marker en dicha localización.
+ */
+
 class MapsAddDevice : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMarkerClickListener, GoogleMap.OnMarkerDragListener, GoogleMap.OnMyLocationButtonClickListener {
 
     private lateinit var mMap: GoogleMap
@@ -66,6 +70,10 @@ class MapsAddDevice : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMarke
     }
 
     data class Dispositivo1(val id: String, val latitud: String, val longitud: String, val fecha: String, val hora: String)
+
+    /**
+     * onCreate: Cargamos e inicializamos @param viewModel para poder acceder a todos los dispositivos guardados en el servidor.
+     */
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -97,6 +105,9 @@ class MapsAddDevice : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMarke
         resultScanner = sharedPreferences.getString("datos", null).toString()
     }
 
+    /**
+     * onMapReady: Cargar todas las opciones de GoogleMaps y los bindings de los diferentes botones
+     */
     override fun onMapReady(googleMap: GoogleMap) {
         mMap = googleMap
 
@@ -150,7 +161,6 @@ class MapsAddDevice : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMarke
                 dialogView.custom_accept.setOnClickListener {
                     if (dispositivo_id == -1) {
                         saveLatLngData(latitud, longitud)
-                        /**writeDispositivo(Dispositivo1(resultScanner,latitud.toString(),longitud.toString(),getCurrentDate(),getCurrentTime()))*/
                         postAddDevice()
                         startActivity(Intent(this@MapsAddDevice, MainMenu::class.java))
                     } else {
@@ -164,6 +174,9 @@ class MapsAddDevice : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMarke
         setUpMap()
     }
 
+    /**
+     * Pedimos los permisos al usuario. Al aceptarlos se localiza al usuario y se hace zoom a su ubicación.
+     */
     private fun setUpMap() {
         if (ActivityCompat.checkSelfPermission(
                 this,
@@ -190,6 +203,10 @@ class MapsAddDevice : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMarke
         }
     }
 
+    /**
+     * OVERRIDES
+     * Overrides de todas las implementaciones: OnMapReadyCallback, GoogleMap.OnMarkerClickListener, GoogleMap.OnMarkerDragListener, GoogleMap.OnMyLocationButtonClickListener
+     */
     override fun onMyLocationButtonClick(): Boolean {
         mMap
             .animateCamera(CameraUpdateFactory
@@ -199,6 +216,9 @@ class MapsAddDevice : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMarke
 
     override fun onMarkerClick(p0: Marker) = false
 
+    /**
+     * Función para situar los Markers en el mapa tras haber cargado todos los dispositivos.
+     */
     private fun placeMarkerOnMap(title: String, currentLatLong: LatLng) {
         val marker: Marker? = mMap.addMarker(MarkerOptions()
             .title(title)
@@ -227,6 +247,16 @@ class MapsAddDevice : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMarke
         return
     }
 
+    override fun onBackPressed() {
+        super.onBackPressed()
+        finish()
+        startActivity(Intent(this, MainMenu::class.java))
+        transition()
+    }
+
+    /**
+     * POST de Añadir dispositivo
+     */
     private fun postAddDevice() {
         val listGeocoder: List<Address> = geocoder.getFromLocation(latitud, longitud, 1)
 
@@ -255,6 +285,9 @@ class MapsAddDevice : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMarke
         })
     }
 
+    /**
+     * POST de Actualizar el dispositivo.
+     */
     private fun postUpdateDevice() {
         val listGeocoder: List<Address> = geocoder.getFromLocation(latitud, longitud, 1)
 
@@ -283,6 +316,9 @@ class MapsAddDevice : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMarke
         })
     }
 
+    /**
+     * GET de todos los dispositivos del servidor.
+     */
     private fun getAllDevices() {
         viewModel.getAllDevices()
         viewModel.getResponse.observe(this, androidx.lifecycle.Observer { response ->
@@ -295,10 +331,12 @@ class MapsAddDevice : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMarke
                     dispositivo_id = it.dispositivo
                 }
             }
-            Log.e("ID", dispositivo_id.toString())
         })
     }
 
+    /**
+     * Función para guardar los datos en local al arrastrar un dispositivo.
+     */
     private fun saveLatLngData(latitud : Double, longitud : Double) {
         val sharedPreferences = getSharedPreferences("LatLng", Context.MODE_PRIVATE)
         val editor: SharedPreferences.Editor = sharedPreferences.edit()
